@@ -1,0 +1,26 @@
+@import 'modern-css-reset';
+
+:root {
+  --padding-default: 16px;
+  --color-bg: #000;
+  --color-text: #fff;
+  --color-accent: #ff6f00;
+
+  --font-main: sans-serif;
+
+  --padding-mobile: 16px;
+  --padding-tablet: 24px;
+  --padding-desktop: 32px;
+
+  --margin-mobile: 24px;
+  --margin-tablet: 32px;
+  --margin-desktop: 48px;
+
+  --container-padding: 64px;
+  --title-mobile: 28px;
+  --title-desktop: 64px;
+  --text-size: 16px;
+}
+
+/* решта стилів */
+
