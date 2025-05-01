@@ -1,0 +1,6 @@
+@import '../../index.scss';
+
+.home {
+  @include responsive-width;
+  margin: 40px auto;
+}
