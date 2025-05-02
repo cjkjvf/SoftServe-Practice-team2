@@ -7,7 +7,7 @@
     align-items: flex-start;
     flex-direction: column;
     justify-content: center;
-    height: 80vh;
+    height: 100vh;
     @media (max-width: 768px) {
       align-items: center;
     }
@@ -22,6 +22,7 @@
       @media (max-width: 768px) {
         font-size: 24px;
         line-height: 25px;
+        margin-top: 0;
       }
     }
     form {
@@ -85,6 +86,72 @@
         color: red;
         font-size: 14px;
         margin-top: 5px;
+      }
+    }
+    .additional {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+      align-items: center;
+      width: 320px;
+      max-width: 100%;
+      margin-top: 30px;
+      @media (max-width: 768px) {
+        gap: 10px;
+      }
+      .register-link {
+        a {
+          font-family: Inter;
+          font-weight: 600;
+          font-size: 20px;
+          line-height: 24px;
+          letter-spacing: 0%;
+          color: #000000;
+          text-decoration: none;
+          cursor: pointer;
+        }
+      }
+      button {
+        width: 320px;
+        max-width: 100%;
+        background-color: #e8590c;
+        font-family: Inter;
+        font-weight: 400;
+        font-size: 18px;
+        line-height: 22px;
+        text-align: center;
+        color: #ffffff;
+        border-radius: 25px;
+        border: none;
+        padding: 5px;
+        box-sizing: border-box;
+      }
+      .list-icon {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        width: 100%;
+        @media (max-width: 768px) {
+          svg {
+          }
+        }
+      }
+      .beck-to-site {
+        margin-top: 30px;
+        @media (max-width: 768px) {
+          margin-top: 0;
+        }
+        a {
+          font-family: Inter;
+          font-weight: 600;
+          font-size: 20px;
+          line-height: 20px;
+          letter-spacing: 0%;
+          text-align: center;
+          color: #111826;
+          text-decoration: none;
+          cursor: pointer;
+        }
       }
     }
   }
