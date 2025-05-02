@@ -4,6 +4,7 @@ import Home from './components/Home/Home'
 import Catalog from './components/Catalog/Catalog'
 import Register from './components/Autorize/Register'
 import Login from './components/Autorize/Login'
+import ListActors from './components/ListActors/ListActors'
 
 function App() {
   return (
@@ -14,6 +15,7 @@ function App() {
           <Route path="/catalog" element={<Home />} />
           <Route path="/register" element={<Register />} />
           <Route path="/login" element={<Login />} />
+          <Route path="/list-acrots" element={<ListActors />} />
         </Routes>
       </Layout>
     </Router>
