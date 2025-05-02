@@ -158,28 +158,33 @@ const Filter = () => {
               <div className="down">день</div>
             </div>
           ) : (
-            <div
-              style={{
-                display: 'flex',
-                flexDirection: 'column',
-                justifyContent: 'left',
-                gap: '5px',
-              }}
-            >
-              <div className="pc up">
-                {additionalDays.find(x => x.id == selectDay).day}{' '}
-                {additionalDays.find(x => x.id == selectDay).month}
+            additionalDays.length > 0 && (
+              <div
+                style={{
+                  display: 'flex',
+                  flexDirection: 'column',
+                  justifyContent: 'left',
+                  gap: '5px',
+                }}
+              >
+                <div className="pc up">
+                  {additionalDays.find(x => x.id == selectDay).day}{' '}
+                  {additionalDays.find(x => x.id == selectDay).month}
+                </div>
+                <div className="mobile up">
+                  {
+                    additionalDays.find(x => x.id == selectDay)
+                      .weekdayAbbreviated
+                  }
+                </div>
+                <div className="pc down">
+                  {additionalDays.find(x => x.id == selectDay).weekday}
+                </div>
+                <div className="mobile down">
+                  {additionalDays.find(x => x.id == selectDay).day}
+                </div>
               </div>
-              <div className="mobile up">
-                {additionalDays.find(x => x.id == selectDay).weekdayAbbreviated}
-              </div>
-              <div className="pc down">
-                {additionalDays.find(x => x.id == selectDay).weekday}
-              </div>
-              <div className="mobile down">
-                {additionalDays.find(x => x.id == selectDay).day}
-              </div>
-            </div>
+            )
           )}
           <img
             onClick={() => setIsOpen(!isOpen)}
