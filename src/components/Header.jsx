@@ -1,6 +1,5 @@
 import "../styles/Header.css";
 import { Search, User, Menu } from "lucide-react";
-<img className="hero-bg" src={poster} alt="Mission Impossible" />
 
 export default function Header() {
   return (
