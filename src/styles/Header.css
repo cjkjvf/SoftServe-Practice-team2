@@ -5,7 +5,7 @@
   width: 100%;
   font-family: var(--font-main);
   background: var(--full-tranparent);
-  color: white;
+  color: var(--color-light, #fff);
   box-sizing: border-box;
   padding: 13px 54px;
   z-index: 10;
