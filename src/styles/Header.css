@@ -1,0 +1,47 @@
+@import "../global.css";
+
+.hero {
+  position: absolute;
+  width: 100%;
+  font-family: var(--font-main);
+  background: var(--full-tranparent);
+  color: var(--color-light, #fff);
+  box-sizing: border-box;
+  padding: 13px 54px;
+  z-index: 10;
+}
+
+.hero-nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  font-size: 20px;
+  font-weight: bold;
+  color: var(--color-light, #fff);
+  white-space: nowrap;
+  cursor: pointer;
+}
+
+.nav-icons {
+  display: flex;
+  gap: 21px;
+}
+
+.icon-circle {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  width: 48px;
+  height: 48px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.icon-circle:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+  
+}
