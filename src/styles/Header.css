@@ -1,14 +1,15 @@
 @import "../global.css";
 
 .hero {
-  position: absolute;
+  position: sticky;
   width: 100%;
   font-family: var(--font-main);
   background: var(--full-tranparent);
   color: var(--color-light, #fff);
   box-sizing: border-box;
   padding: 13px 54px;
-  z-index: 10;
+  z-index: 1000;
+  top: 0;
 }
 
 .hero-nav {
@@ -42,6 +43,11 @@
 }
 
 .icon-circle:hover {
-  background-color: rgba(255, 255, 255, 0.1);
-  
+  background-color: rgba(255, 255, 255, 0.423);
+  transform: scale(1.25);
+}
+
+.logo:hover {
+  color: var(--color-orange);
+  transform: scale(1.30);
 }

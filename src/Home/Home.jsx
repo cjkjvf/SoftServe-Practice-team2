@@ -1,12 +1,11 @@
 import React from 'react'
 import './Home.css'
-
+import PromoSlider from './PromoSlider';
 
 const Home = () => {
   return (
-    <div className="home">
-     <div style={{ height: '1200px', background: 'red' }}>Тест контенту</div>
-
+    <div className='home'>
+       <PromoSlider />
   
     </div>
   )

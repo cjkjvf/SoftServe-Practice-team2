@@ -1,0 +1,90 @@
+/* Контейнер слайду */
+.promo-slider {
+    position: relative;
+    padding-top: 0;
+    height: calc(100vh - 60px); 
+  }
+  
+  /* Стилі для слайду */
+  .slide {
+    display: flex;
+    width: 100%;
+    height: 900px; /* Висота слайду */
+    background-size: cover;
+    background-position: center;
+    position: relative; 
+  }
+  
+  @media (max-width: 1024px) {
+    .slide {
+      height: 600px; /* для планшетів */
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .slide {
+      height: 400px; /* для мобільних пристроїв */
+    }
+  }
+  
+  /* Накладка з градієнтом */
+  .slide-overlay {
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.85), rgba(0, 0, 0, 0.22));
+    position: absolute; /* Для повного покриття слайду */
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 64px;
+    color: white; /* Текст буде білим, щоб бути контрастним на темному фоні */
+  }
+  
+  @media (max-width: 1024px) {
+    .slide-overlay {
+      padding: 40px; /* для планшетів */
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .slide-overlay {
+      padding: 20px; /* для мобільних */
+    }
+  }
+  
+  /* Стилі для тексту на слайді */
+  .slide-info h1 {
+    font-size: 40px;
+    margin-bottom: 10px;
+  }
+  
+  @media (max-width: 768px) {
+    .slide-info h1 {
+      font-size: 24px; /* зменшення шрифта для мобільних */
+    }
+  }
+  
+  /* Стилі для кнопок навігації */
+  .swiper-button-next,
+  .swiper-button-prev {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5); /* Темний фон для кнопок */
+    color: white;
+    padding: 10px;
+    border-radius: 50%;
+  }
+  
+  .swiper-button-next {
+    right: 10px;
+  }
+  
+  .swiper-button-prev {
+    left: 10px;
+  }
+  
+  
+  
