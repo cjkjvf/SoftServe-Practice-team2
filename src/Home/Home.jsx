@@ -1,19 +1,15 @@
 import React from 'react'
 import './Home.css'
 
+
 const Home = () => {
-    return (
-        <>
-          <Header />
-    
-          <main className="main-content">
-           
-            <h1>Кіноафіша</h1>
-          </main>
-    
-          <Footer />
-        </>
-      );
-    }
+  return (
+    <div className="home">
+     <div style={{ height: '1200px', background: 'red' }}>Тест контенту</div>
+
+  
+    </div>
+  )
+}
 
 export default Home
