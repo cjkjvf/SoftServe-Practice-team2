@@ -17,9 +17,9 @@
   --padding-tablet: 24px;
   --padding-desktop: 32px;
 
-  --margin-mobile: 24px;
-  --margin-tablet: 32px;
-  --margin-desktop: 48px;
+  --margin-mobile: 0px;
+  --margin-tablet: 0px;
+  --margin-desktop: 0px;
 
   --container-padding: 64px;
   --title-mobile: 28px;
@@ -30,7 +30,6 @@
 .page-layout {
   display: flex;
   flex-direction: column;
-  min-height: 100vh;
 }
 
 .main-content {
