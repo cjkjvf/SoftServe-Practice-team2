@@ -1,5 +1,3 @@
-@import "../global.css";
-
 .footer {
     background-color: #000; 
     color:  var(--color-light, #fff);
@@ -29,5 +27,10 @@
     font-size: 11px;
     color: #bbb;
     margin: 0;
+  }
+  
+  .footer-nav :hover {
+    color: var(--color-orange);
+    transition: color 0.1s ease;
   }
   

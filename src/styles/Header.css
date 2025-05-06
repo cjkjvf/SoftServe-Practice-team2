@@ -1,14 +1,12 @@
 .hero {
-  position: fixed; /* Замінили на fixed, щоб Header був завжди зверху */
-  top: 0;
-  left: 0;
+  position: fixed; 
   width: 100%;
   font-family: var(--font-main);
   background: var(--full-tranparent);
   color: var(--color-light, #fff);
   box-sizing: border-box;
   padding: 13px 54px;
-  z-index: 1000; /* щоб він був зверху */
+  z-index: 1000; 
 }
 
 
@@ -20,7 +18,7 @@
 }
 
 .logo {
-  font-size: 20px;
+  font-size: 31px;
   font-weight: bold;
   color: var(--color-light, #fff);
   white-space: nowrap;
@@ -40,15 +38,17 @@
   width: 48px;
   height: 48px;
   cursor: pointer;
-  transition: background-color 0.3s ease;
+  transition: background-color 0.62s ease;
 }
 
 .icon-circle:hover {
   background-color: rgba(255, 255, 255, 0.423);
   transform: scale(1.25);
+  color: var(--color-orange);
 }
 
 .logo:hover {
   color: var(--color-orange);
   transform: scale(1.20);
+  transition: color 0.3s ease;
 }

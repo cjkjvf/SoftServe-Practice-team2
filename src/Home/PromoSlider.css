@@ -1,90 +1,101 @@
 /* Контейнер слайду */
 .promo-slider {
-    position: relative;
-    padding-top: 0;
-    height: calc(100vh - 60px); 
-  }
-  
-  /* Стилі для слайду */
-  .slide {
-    display: flex;
-    width: 100%;
-    height: 900px; /* Висота слайду */
-    background-size: cover;
-    background-position: center;
-    position: relative; 
-  }
-  
-  @media (max-width: 1024px) {
-    .slide {
-      height: 600px; /* для планшетів */
-    }
-  }
-  
-  @media (max-width: 768px) {
-    .slide {
-      height: 400px; /* для мобільних пристроїв */
-    }
-  }
-  
-  /* Накладка з градієнтом */
-  .slide-overlay {
-    background: linear-gradient(to top, rgba(0, 0, 0, 0.85), rgba(0, 0, 0, 0.22));
-    position: absolute; /* Для повного покриття слайду */
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    padding: 64px;
-    color: white; /* Текст буде білим, щоб бути контрастним на темному фоні */
-  }
-  
-  @media (max-width: 1024px) {
-    .slide-overlay {
-      padding: 40px; /* для планшетів */
-    }
-  }
-  
-  @media (max-width: 768px) {
-    .slide-overlay {
-      padding: 20px; /* для мобільних */
-    }
-  }
-  
-  /* Стилі для тексту на слайді */
+  position: relative;
+  height: 91vh; /* Висота слайдера на всю висоту екрана */
+  width: 100%; /* Ширина слайдера */
+  display: flex;
+  justify-content: center; /* Центруємо слайдер по горизонталі */
+  align-items: center; /* Центруємо слайдер по вертикалі */
+}
+
+/* Стилі для слайду */
+.slide {
+  display: flex;
+  width: 100%; /* Ширина слайду заповнює весь контейнер */
+  height: 100%; /* Висота слайду заповнює весь контейнер */
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  transition: transform 0.5s ease;
+}
+
+/* Накладка з градієнтом */
+.slide-overlay {
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.85), rgba(0, 0, 0, 0.22));
+  position: absolute; /* Для повного покриття слайду */
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* Центруємо контент по вертикалі */
+  align-items: center; /* Центруємо контент по горизонталі */
+  color: var(--color-light, #fff); /* Текст буде білим */
+  padding: 20px;
+}
+
+/* Стилі для тексту на слайді */
+.slide-info h1 {
+  font-size: 40px;
+  margin-bottom: 10px;
+  z-index: 2; /* Щоб текст був поверх накладки */
+  text-align: center; /* Вирівнюємо текст по центру */
+  word-wrap: break-word; /* Щоб довгі слова не виходили за межі */
+}
+
+@media (max-width: 768px) {
+  /* Зменшення шрифта для мобільних */
   .slide-info h1 {
-    font-size: 40px;
-    margin-bottom: 10px;
+    font-size: 24px;
   }
-  
-  @media (max-width: 768px) {
-    .slide-info h1 {
-      font-size: 24px; /* зменшення шрифта для мобільних */
-    }
+
+  /* Зменшення висоти слайдера для мобільних */
+  .promo-slider {
+    height: 50vh; /* Слайдер буде займати 50% висоти екрану на мобільних */
   }
-  
-  /* Стилі для кнопок навігації */
-  .swiper-button-next,
-  .swiper-button-prev {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    background-color: rgba(0, 0, 0, 0.5); /* Темний фон для кнопок */
-    color: white;
-    padding: 10px;
-    border-radius: 50%;
+}
+
+@media (max-width: 1024px) {
+  .promo-slider {
+    height: 70vh; /* Зменшуємо висоту слайдера для планшетів */
   }
-  
-  .swiper-button-next {
-    right: 10px;
+
+  .slide-info h1 {
+    font-size: 32px; /* Зменшення шрифта для планшетів */
   }
-  
-  .swiper-button-prev {
-    left: 10px;
+}
+
+/* Стилі для кнопок навігації */
+.swiper-button-next,
+.swiper-button-prev {
+  position: absolute;
+  top: 50%; /* Центруємо по вертикалі */
+  transform: translateY(-50%); /* Вирівнюємо по вертикалі */
+  background-color: rgba(0, 0, 0, 0.5); /* Темний фон для кнопок */
+  color: var(--color-light, #fff);
+  padding: 10px;
+  border-radius: 50%;
+  display: inline-block;
+  margin-right: 10px;
+}
+
+/* Адаптивність для мобільних пристроїв */
+@media (max-width: 768px) {
+  /* Слайдер буде заповнювати 100% висоти на мобільних */
+  .promo-slider {
+    height: 60vh;
   }
-  
+
+  /* Зменшення шрифта для тексту на мобільних */
+  .slide-info h1 {
+    font-size: 20px; /* Менший шрифт для мобільних */
+  }
+}
+
+
+
+
+
   
   
