@@ -1,5 +1,5 @@
-import "../styles/Header.css";
-import { Search, User, Menu } from "lucide-react";
+import "../styles/Header.css"
+import { Search, User, Menu } from "lucide-react"
 
 export default function Header() {
   return (
