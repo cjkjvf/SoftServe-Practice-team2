@@ -1,97 +1,104 @@
 /* Контейнер слайду */
 .promo-slider {
   position: relative;
-  height: 91vh; /* Висота слайдера на всю висоту екрана */
-  width: 100%; /* Ширина слайдера */
+  height: 93vh; 
+  width: 100%; 
   display: flex;
-  justify-content: center; /* Центруємо слайдер по горизонталі */
-  align-items: center; /* Центруємо слайдер по вертикалі */
+  justify-content: center;
+  align-items: center;
 }
 
-/* Стилі для слайду */
+/* Стилі для слайдера */
 .slide {
   display: flex;
-  width: 100%; /* Ширина слайду заповнює весь контейнер */
-  height: 100%; /* Висота слайду заповнює весь контейнер */
+  width: 100%;
+  height: 100%; 
   background-size: cover;
   background-position: center;
   position: relative;
   transition: transform 0.5s ease;
 }
 
-/* Накладка з градієнтом */
+/* Накладка з градієнтом для слайдера з фото */
 .slide-overlay {
-  background: linear-gradient(to top, rgba(0, 0, 0, 0.85), rgba(0, 0, 0, 0.22));
-  position: absolute; /* Для повного покриття слайду */
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.85), rgba(0, 0, 0, 0.24));
+  position: absolute;
   top: 0;
   left: 0;
   right: 0;
   bottom: 0;
   display: flex;
   flex-direction: column;
-  justify-content: center; /* Центруємо контент по вертикалі */
-  align-items: center; /* Центруємо контент по горизонталі */
-  color: var(--color-light, #fff); /* Текст буде білим */
+  justify-content: center;
+  align-items: center;
+  color: var(--color-light, #fff);
   padding: 20px;
 }
 
-/* Стилі для тексту на слайді */
+/* Стилі для кнопки обрати сеанс */
+.action-button {
+  position: absolute;
+  bottom: 40px; 
+  left: 48px;  
+  padding: 12px 24px;
+  background-color: rgba(249, 245, 245, 0.663);
+  color: rgb(0, 0, 0);
+  font-size: 16px;
+  font-weight: bold;
+  border: none;
+  border-radius: 29px;
+  cursor: pointer;
+  transition: background-color 0.65s ease;
+}
+
+.action-button:hover {
+  background-color: var(--color-orange);  
+}
+
 .slide-info h1 {
   font-size: 40px;
   margin-bottom: 10px;
-  z-index: 2; /* Щоб текст був поверх накладки */
-  text-align: center; /* Вирівнюємо текст по центру */
-  word-wrap: break-word; /* Щоб довгі слова не виходили за межі */
+  z-index: 2;
+  text-align: center;
+  word-wrap: break-word;
 }
 
+
 @media (max-width: 768px) {
-  /* Зменшення шрифта для мобільних */
-  .slide-info h1 {
-    font-size: 24px;
+  .promo-slider {
+    height: 60vh; 
   }
 
-  /* Зменшення висоти слайдера для мобільних */
-  .promo-slider {
-    height: 50vh; /* Слайдер буде займати 50% висоти екрану на мобільних */
+  .action-button {
+    bottom: 20px; 
+    left: 20px;  
+    padding: 10px 20px;  
+    font-size: 14px;  
+  }
+
+
+  .slide-info h1 {
+    font-size: 20px; 
   }
 }
 
 @media (max-width: 1024px) {
   .promo-slider {
-    height: 70vh; /* Зменшуємо висоту слайдера для планшетів */
+    height: 70vh; 
+  }
+
+  .action-button {
+    bottom: 30px;  
+    left: 30px;  
+    padding: 10px 22px;
+    font-size: 15px;  
   }
 
   .slide-info h1 {
-    font-size: 32px; /* Зменшення шрифта для планшетів */
-  }
+    font-size: 32px; 
+}
 }
 
-/* Стилі для кнопок навігації */
-.swiper-button-next,
-.swiper-button-prev {
-  position: absolute;
-  top: 50%; /* Центруємо по вертикалі */
-  transform: translateY(-50%); /* Вирівнюємо по вертикалі */
-  background-color: rgba(0, 0, 0, 0.5); /* Темний фон для кнопок */
-  color: var(--color-light, #fff);
-  padding: 10px;
-  border-radius: 50%;
-  display: inline-block;
-  margin-right: 10px;
-}
-
-/* Адаптивність для мобільних пристроїв */
-@media (max-width: 768px) {
-  /* Слайдер буде заповнювати 100% висоти на мобільних */
-  .promo-slider {
-    height: 60vh;
-  }
-
-  /* Зменшення шрифта для тексту на мобільних */
-  .slide-info h1 {
-    font-size: 20px; /* Менший шрифт для мобільних */
-  }
-}
 
 
 

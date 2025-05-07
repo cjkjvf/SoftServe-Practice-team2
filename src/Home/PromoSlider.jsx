@@ -1,45 +1,31 @@
 import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
 import 'swiper/css/navigation';
-import 'swiper/css/autoplay'
+import 'swiper/css/autoplay';
 import { Autoplay, Navigation } from 'swiper/modules';
 import './PromoSlider.css';
 
 const slides = [
-  {
-    image: 'src/assets/minecraft.png',
-  },
-  {
-    image: 'src/assets/mission-impossible.png',
-  },
-  {
-    image: 'src/assets/One-Punch-Man.png',
-  },
-  {
-    image: 'src/assets/Clown-Cornfield.png',
-  },
-  {
-    image: 'src/assets/Serfer.png',
-  },
-  {
-    image: 'src/assets/Shaleniy-copu.png',
-  },
-  {
-    image: 'src/assets/Pynct-priznachenya-rodove-proclyatya.png',
-  },
+  { image: 'src/assets/minecraft.png' },
+  { image: 'src/assets/mission-impossible.png' },
+  { image: 'src/assets/One-Punch-Man.png' },
+  { image: 'src/assets/Clown-Cornfield.png' },
+  { image: 'src/assets/Serfer.png' },
+  { image: 'src/assets/Shaleniy-copu.png' },
+  { image: 'src/assets/Pynct-priznachenya-rodove-proclyatya.png' },
 ];
 
 export default function PromoSlider() {
   return (
     <Swiper
-      modules={[Navigation,Autoplay]}
+      modules={[Navigation, Autoplay]}
       navigation
       autoplay={{
-        delay: 3000,  // Автоматичне перемикання кожні 3 секунди
-        disableOnInteraction: false,  // Автоматичне перемикання не зупиняється при взаємодії
+        delay: 4100,
+        disableOnInteraction: false,
       }}
-      direction="vertical" // Вертикальний слайдер
-      loop={true} // Безкінечний цикл слайдів
+      loop={true}
+      speed={1500}
       initialSlide={0}
       className="promo-slider"
     >
@@ -53,6 +39,8 @@ export default function PromoSlider() {
               <div className="slide-info">
                 <h1>Title of the Slide</h1>
               </div>
+              {/* Кнопка на кожному слайді */}
+              <button className="action-button">Обрати сеанс</button>
             </div>
           </div>
         </SwiperSlide>
@@ -60,4 +48,5 @@ export default function PromoSlider() {
     </Swiper>
   );
 }
+
 
