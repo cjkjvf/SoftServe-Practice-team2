@@ -1,3 +1,4 @@
+import { useState, useEffect } from 'react';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
 import 'swiper/css/navigation';
@@ -5,17 +6,18 @@ import 'swiper/css/autoplay';
 import { Autoplay, Navigation } from 'swiper/modules';
 import './PromoSlider.css';
 
-const slides = [
-  { image: 'src/assets/minecraft.png' },
-  { image: 'src/assets/mission-impossible.png' },
-  { image: 'src/assets/One-Punch-Man.png' },
-  { image: 'src/assets/Clown-Cornfield.png' },
-  { image: 'src/assets/Serfer.png' },
-  { image: 'src/assets/Shaleniy-copu.png' },
-  { image: 'src/assets/Pynct-priznachenya-rodove-proclyatya.png' },
-];
-
 export default function PromoSlider() {
+  // Стейт для збереження фільмів
+  const [movies, setMovies] = useState([]);
+
+  // Завантаження даних з JSON файлу
+  useEffect(() => {
+    fetch('src/date/movies.json')  // Шлях до JSON файлу
+      .then((response) => response.json())
+      .then((data) => setMovies(data))
+      .catch((error) => console.error('Error loading JSON data: ', error));
+  }, []);
+
   return (
     <Swiper
       modules={[Navigation, Autoplay]}
@@ -29,17 +31,22 @@ export default function PromoSlider() {
       initialSlide={0}
       className="promo-slider"
     >
-      {slides.map((slide, index) => (
-        <SwiperSlide key={index}>
-          <div 
-            className="slide" 
-            style={{ backgroundImage: `url(${slide.image})` }}
+      {movies.map((movie, index) => (
+        <SwiperSlide key={movie.id}>
+          <div
+            className="slide"
+            style={{ backgroundImage: `url(${movie.image})` }} // Встановлення фону слайду
           >
             <div className="slide-overlay">
               <div className="slide-info">
-                <h1>Title of the Slide</h1>
+                <h1>{movie.title}</h1>
+                <p>{movie.description}</p>
+                <div className="movie-details">
+                  <span>{movie.rating}</span>
+                  <span>{movie.year}</span>
+                  <span>{movie.genre}</span>
+                </div>
               </div>
-              {/* Кнопка на кожному слайді */}
               <button className="action-button">Обрати сеанс</button>
             </div>
           </div>
