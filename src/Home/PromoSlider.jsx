@@ -54,14 +54,12 @@ export default function PromoSlider() {
                 </div>
                 {/* Правий контейнер для details */}
                 <div className="right-container">
-                  <div className="movie-details">
                     <span>{movie.year}</span>
                     <span>{movie.rating}</span>
                     <span>{movie.genre}</span>
                     <span>{movie.duration}</span>
                     <span>{movie['Age-restrictions']}</span>
                     <span>{movie['display-technologies']}</span>
-                  </div>
                 </div>
               </div>
               <button className="action-button">Обрати сеанс</button>

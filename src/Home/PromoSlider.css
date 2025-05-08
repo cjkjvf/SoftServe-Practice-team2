@@ -32,7 +32,7 @@
   z-index: 2;
 }
 
-/* Контейнер для контенту слайду */
+/* Контейнер для контенту коробки */
 .slide-content {
   display: flex;
   justify-content: space-between;
@@ -40,9 +40,10 @@
   width: 100%;
   height: 45%;
   position: relative;
-  top: -10%; /* Піднімаємо контейнер */
+  top: -10%; 
   padding: 20px; /* Внутрішні відступи, щоб текст не прилипав до країв */
   box-sizing: border-box; /* Включає padding в розміри контейнера */
+  flex-wrap: wrap; /* Дозволяє елементам переноситися на новий рядок */
 }
 
 /* Лівий контейнер для title та description */
@@ -50,35 +51,28 @@
   width: 60%; /* Задаємо ширину лівого контейнера */
   margin-right: 10px;
   display: flex;
-  flex-direction: column;/* Дозволяє елементам в контейнері переноситися */
+  flex-direction: column; /* Дозволяє елементам в контейнері переноситися */
 }
 
 /* Правий контейнер для деталей фільму */
 .right-container {
   width: 35%;  /* Задаємо ширину правого контейнера */
   display: flex;
-  align-items: flex-start;
-  justify-content: space-between;
   position: relative;  /* Для можливості точного позиціонування */
   top: 40%; 
-  left: 20%; /* Піднімаємо контейнер */
+  right: 0; 
   padding: 20px; 
-}
-
-/* Деталі фільму */
-.movie-details {
-  display: flex;
-  flex-direction: column;  /* Горизонтальне вирівнювання */
+  flex-wrap: wrap;
   gap: 10px; /* Відстань між елементами */
 }
 
-/* Стиль для кожного елементу */
-.movie-details span {
+.right-container span {
   font-size: 16px;
+  color: #bbb;
+  margin-right: 10px; /* Відстань між елементами */
 }
 
-
-.movie-details span::before {
+.right-container span::before {
   content: '●';
   font-size: 14px;
   color: var(--color-orange);
@@ -119,17 +113,15 @@
   }
 
   .slide-info h1 {
-    font-size: 20px;
+    font-size: 40px;
   }
 
- 
-  .left-container, .right-container {
-    width: 100%;
-    margin-right: 0;
+  .right-container {
+    width: 100%;  /* Збільшуємо ширину правого контейнера */
   }
 
-  .left-container {
-    margin-bottom: 20px;
+  .right-container span {
+    font-size: 14px; /* Зменшуємо розмір шрифта на мобільних */
   }
 }
 
@@ -149,10 +141,11 @@
     font-size: 32px;
   }
 
-  .left-container, .right-container {
-    width: 100%;
+  .right-container {
+    width: 100%; /* Заповнює всю ширину правого контейнера */
   }
 }
+
 
 
 
