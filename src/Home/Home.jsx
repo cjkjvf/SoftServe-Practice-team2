@@ -7,7 +7,6 @@ const Home = () => {
     <div className='home'>
       <PromoSlider />
       
-      {/* Додатковий контент після слайдера */}
       <div className="additional-content">
         <h2>Заголовок контенту після слайдера</h2>
         <p>
@@ -17,7 +16,6 @@ const Home = () => {
         <button className="cta-button">Дізнатись більше</button>
       </div>
 
-      {/* Інший контент можна додати тут */}
       <div className="extra-section">
         <h3>Ще один розділ</h3>
         <p>
