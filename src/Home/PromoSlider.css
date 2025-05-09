@@ -1,11 +1,18 @@
-/* Контейнер слайду */
+ /* Контейнер слайду */
 .promo-slider {
   position: relative;
-  height: 93vh;
+  height: 100vh;
   width: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
+  overflow: hidden;
+  transition: all 0.3s ease-in-out;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  opacity: 0;
+  animation: fadeIn 1s ease-in-out forwards;
 }
 
 /* Стилі для слайду */
@@ -16,7 +23,10 @@
   background-size: cover;
   background-position: center;
   position: relative;
-  transition: transform 0.5s ease;
+  transition: transform 0.5s ease, background-size 0.5s ease;
+  overflow: hidden;
+  opacity: 0;
+  animation: fadeIn 1s ease-in-out forwards;
 }
 
 /* Накладка з градієнтом для слайдера з фото */
@@ -26,10 +36,12 @@
   inset: 0;
   display: flex;
   flex-direction: column;
-  justify-content: flex-end; 
+  justify-content: flex-end;
   color: var(--color-light, #fff);
   padding: 30px;
   z-index: 2;
+  opacity: 0;
+  animation: fadeIn 1s ease-in-out forwards;
 }
 
 /* Контейнер для контенту коробки */
@@ -40,36 +52,54 @@
   width: 100%;
   height: 45%;
   position: relative;
-  top: -10%; 
-  padding: 20px; /* Внутрішні відступи, щоб текст не прилипав до країв */
-  box-sizing: border-box; /* Включає padding в розміри контейнера */
-  flex-wrap: wrap; /* Дозволяє елементам переноситися на новий рядок */
+  top: -10%;
+  padding: 20px;
+  box-sizing: border-box;
+  flex-wrap: wrap;
+  opacity: 0;
+  animation: fadeIn 1s ease-in-out forwards;
 }
 
 /* Лівий контейнер для title та description */
 .left-container {
-  width: 60%; /* Задаємо ширину лівого контейнера */
+  width: 60%;
   margin-right: 10px;
   display: flex;
-  flex-direction: column; /* Дозволяє елементам в контейнері переноситися */
+  flex-direction: column;
+  opacity: 0;
+  animation: fadeIn 1s ease-in-out forwards;
+}
+
+.left-container h1 {
+  font-size: 50px;
+  font-weight: bold;
+  margin-bottom: 10px;
+  font-family: "Inter", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 100;
+  font-style: normal;
+  opacity: 0;
+  animation: fadeIn 1s ease-in-out forwards;
 }
 
 /* Правий контейнер для деталей фільму */
 .right-container {
-  width: 35%;  /* Задаємо ширину правого контейнера */
+  width: 35%;
   display: flex;
-  position: relative;  /* Для можливості точного позиціонування */
-  top: 40%; 
-  right: 0; 
-  padding: 20px; 
+  position: relative;
+  top: 40%;
+  right: 0;
+  padding: 20px;
   flex-wrap: wrap;
-  gap: 10px; /* Відстань між елементами */
+  gap: 10px;
+  opacity: 0;
+  animation: fadeIn 1s ease-in-out forwards;
 }
 
 .right-container span {
   font-size: 16px;
   color: #bbb;
-  margin-right: 10px; /* Відстань між елементами */
+  margin-right: 10px;
 }
 
 .right-container span::before {
@@ -93,41 +123,19 @@
   border-radius: 29px;
   cursor: pointer;
   transition: background-color 0.65s ease;
+  opacity: 0;
+  animation: fadeIn 1s ease-in-out forwards;
 }
 
 .action-button:hover {
   background-color: var(--color-orange);
 }
 
-/* Адаптивність для мобільних пристроїв */
-@media (max-width: 768px) {
-  .promo-slider {
-    height: 60vh;
-  }
-
-  .action-button {
-    bottom: 20px;
-    left: 20px;
-    padding: 10px 20px;
-    font-size: 14px;
-  }
-
-  .slide-info h1 {
-    font-size: 40px;
-  }
-
-  .right-container {
-    width: 100%;  /* Збільшуємо ширину правого контейнера */
-  }
-
-  .right-container span {
-    font-size: 14px; /* Зменшуємо розмір шрифта на мобільних */
-  }
-}
-
+/* Адаптивність для комп'ютерів до 1024px */
 @media (max-width: 1024px) {
   .promo-slider {
     height: 70vh;
+    box-sizing: border-box;
   }
 
   .action-button {
@@ -137,18 +145,73 @@
     font-size: 15px;
   }
 
-  .slide-info h1 {
+  .left-container h1 {
     font-size: 32px;
   }
 
   .right-container {
-    width: 100%; /* Заповнює всю ширину правого контейнера */
+    width: 100%;
   }
 }
 
+/* Адаптивність для планшетів до 768px */
+@media (max-width: 768px) {
+  .promo-slider {
+    height: 40vh;
+    margin: 0;
+    padding: 0;
+  }
 
+  .slide {
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: top center;
+    transform: scale(0.96);
+  }
 
+  .action-button {
+    bottom: 20px;
+    left: 20px;
+    padding: 10px 20px;
+    font-size: 14px;
+  }
 
+  .left-container h1 {
+    font-size: 28px;
+  }
+
+  .right-container span {
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 480px) {
+  .promo-slider {
+    height: 40vh;
+  }
+
+  .slide {
+    background-size: cover;
+    background-position: center;
+  }
+
+  .slide-content {
+    flex-direction: column;
+    padding: 10px;
+    gap: 6px;
+  }
+
+  .left-container,
+  .right-container {
+    width: 100%;
+  }
+}
+
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+  }
+}
 
 
 
