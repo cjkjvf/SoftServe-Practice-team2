@@ -143,6 +143,13 @@
   filter: drop-shadow(0 0 6px var(--color-orange));
 }
 
+/* кнопки слайдера */
+.swiper-button-prev,
+.swiper-button-next {
+  color: var( --color-neutral);
+  filter: drop-shadow(0 0 6px var(--color-orange));
+}
+
 /* Адаптивність для комп'ютерів до 1024px */
 @media (max-width: 1024px) and (min-width: 769px) {
   .promo-slider {
