@@ -1,19 +1,58 @@
-import "../styles/Header.css"
-import { Search, User, Menu } from "lucide-react"
+import "../styles/Header.css";
+import { Search, User, Menu } from "lucide-react";
+import { useState, useEffect } from "react"; 
+import FullscreenMenu from "../components/FullscreenMenu";
 
 export default function Header() {
-  return (
-    
-    <header className="hero section">
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [isClosing, setIsClosing] = useState(false);
 
-      <div className="hero-nav">
-        <div className="logo">MIRAGE</div> 
-        <nav className="nav-icons">
-          <span className="icon-circle"><Search size={20} /></span>
-          <span className="icon-circle"><User size={20} /></span>
-          <span className="icon-circle"><Menu size={20} /></span>
-        </nav>
-      </div>
-    </header>
+  // Заборонити скрол при відкритому меню
+  useEffect(() => {
+    document.body.style.overflow = isMenuOpen ? 'hidden' : 'auto';
+  }, [isMenuOpen]);
+
+  const handleClose = () => {
+    setIsClosing(true);
+    setTimeout(() => {
+      setIsMenuOpen(false);
+      setIsClosing(false);
+    }, 400); // затримка = тривалість анімації fadeOutMenu
+  };
+
+  useEffect(() => {
+  const handleKeyDown = (e) => {
+    if (e.key === "Escape" && isMenuOpen) {
+      setIsClosing(true);
+      setTimeout(() => {
+        setIsMenuOpen(false);
+        setIsClosing(false);
+      }, 400);
+    }
+  };
+  window.addEventListener("keydown", handleKeyDown);
+  return () => window.removeEventListener("keydown", handleKeyDown);
+}, [isMenuOpen]);
+
+  return (
+    <>
+      <header className="hero section">
+        <div className="hero-nav">
+          <div className="logo">MIRAGE</div>
+          <nav className="nav-icons">
+            <span className="icon-circle"><Search size={20} /></span>
+            <span className="icon-circle"><User size={20} /></span>
+            <span className="icon-circle" onClick={() => setIsMenuOpen(true)}>
+              <Menu size={20} />
+            </span>
+          </nav>
+        </div>
+      </header>
+
+      {isMenuOpen && (
+         <FullscreenMenu onClose={handleClose} isClosing={isClosing} />
+      )}
+    </>
   );
 }
+

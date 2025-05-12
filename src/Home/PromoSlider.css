@@ -140,6 +140,7 @@
 
 .action-button:hover {
   background-color: var(--color-orange);
+  filter: drop-shadow(0 0 6px var(--color-orange));
 }
 
 /* Адаптивність для комп'ютерів до 1024px */

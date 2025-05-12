@@ -1,3 +1,4 @@
+/* Сам контейнер Header */
 .hero {
   position: fixed; 
   width: 100%;
@@ -9,14 +10,13 @@
   z-index: 1000; 
 }
 
-
-
 .hero-nav {
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
 
+/* Лого сайту і анімації */
 .logo {
   font-size: 31px;
   font-weight: bold;
@@ -25,6 +25,13 @@
   cursor: pointer;
 }
 
+.logo:hover {
+  color: var(--color-orange);
+  transform: scale(1.20);
+  transition: color 0.3s ease;
+}
+
+/* Іконки і анімації з ними */
 .nav-icons {
   display: flex;
   gap: 21px;
@@ -47,8 +54,3 @@
   color: var(--color-orange);
 }
 
-.logo:hover {
-  color: var(--color-orange);
-  transform: scale(1.20);
-  transition: color 0.3s ease;
-}
