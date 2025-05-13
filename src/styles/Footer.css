@@ -1,3 +1,4 @@
+/* Контейнер футера */
 .footer {
     background-color: #000; 
     color:  var(--color-light, #fff);
@@ -15,6 +16,7 @@
     margin-bottom: 12px;
   }
   
+  /* Робота з текстом в футері */
   .footer-nav a {
     text-decoration: none;
     color: var(--color-light);
@@ -22,7 +24,13 @@
     font-size: 12px;
     letter-spacing: 0.05em;
   }
+
+  .footer-nav :hover {
+    color: var(--color-orange);
+    transition: color 0.1s ease;
+  }
   
+  /* Напис © 2025 MAXON COMPUTER GMBH. */
   .footer-copy {
     font-size: 11px;
     color: #bbb;
