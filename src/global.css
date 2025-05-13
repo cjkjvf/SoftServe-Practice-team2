@@ -1,24 +1,25 @@
 
 :root {
  
-  
+  /* кольори */
   --color-bg: #111826;
   --color-primary: #C2E0F2;
   --color-secondary: #A0BED9;
   --color-light: #e4eaf2;
   --color-neutral: #cfd7e7;
-  --full-tranparent: rgba(0, 0, 0, 0);
-
+  --color-orange:#E8590C;
+  --full-tranparent: rgba(0, 0, 0, 0.225);
+  
+/* шрифти */
   --font-main: sans-serif;
+  --font-secondary: Inter, sans-serif;
+
 
   --padding-mobile: 16px;
   --padding-tablet: 24px;
   --padding-desktop: 32px;
 
-  --margin-mobile: 24px;
-  --margin-tablet: 32px;
-  --margin-desktop: 48px;
-
+  
   --container-padding: 64px;
   --title-mobile: 28px;
   --title-desktop: 64px;
@@ -28,7 +29,6 @@
 .page-layout {
   display: flex;
   flex-direction: column;
-  min-height: 100vh;
 }
 
 .main-content {
@@ -49,8 +49,6 @@ body {
   margin-right: auto;
   padding-left: var(--container-padding);
   padding-right: var(--container-padding);
-  box-sizing: border-box;;
+  box-sizing: border-box;
 }
-
-
 

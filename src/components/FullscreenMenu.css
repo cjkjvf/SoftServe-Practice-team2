@@ -1,0 +1,233 @@
+/* Головний контейнер */
+.fullscreen-menu {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: var(--color-bg);
+  color: var(--color-light, #fff);
+  z-index: 9999;
+  padding: 40px 20px;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  animation: fadeInMenu 0.4s ease forwards;
+  opacity: 0;
+  backdrop-filter: blur(6px);
+  background-color: rgba(10, 10, 20, 0.96);
+}
+
+/* Анімація закриття меню */
+.fullscreen-menu.closing {
+  animation: fadeOutMenu 0.4s ease forwards;
+}
+
+@keyframes fadeOutMenu {
+  from {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  to {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+}
+
+/* Кнопка закриття */
+.close-btn {
+  position: absolute;
+  top: 28px;
+  right: 78px;
+  background: transparent;
+  border: none;
+  color: white;
+  font-size: 24px;
+  cursor: pointer;
+}
+
+/* Коло навколо кнопки */
+.btn-circle {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  width: 48px;
+  height: 48px;
+  cursor: pointer;
+  transition: transform 0.5s ease, background-color 0.5s ease;
+}
+
+.btn-circle:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+  transform: rotate(180deg) scale(1.25);
+  color: var(--color-orange);
+}
+
+/* Створення списків  */
+.menu-content {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 40px;
+  margin-top: 60px;
+}
+
+.menu-column {
+  flex: 1 1 200px;
+  min-width: 180px;
+}
+
+.menu-column h3 {
+  margin-bottom: 16px;
+  font-size: 20px;
+  color: var(--color-secondary);
+}
+
+.menu-column ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.menu-column li {
+  margin-bottom: 12px;
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+.menu-column li:hover {
+  color: var(--color-orange);
+}
+
+/* Активна сторінка */
+.menu-link {
+  color: inherit;
+  text-decoration: none;
+  position: relative;
+  padding-right: 20px;
+  display: inline-block;
+  transition: color 0.3s ease;
+}
+
+.menu-link:hover {
+  color: var(--color-orange);
+}
+
+.menu-link.active {
+  color:rgb(99, 203, 99);
+  font-weight: bold;
+}
+
+.menu-link.active::after {
+  content: "☜";
+  position: absolute;
+  right: 0;
+  top: 0;
+  color: limegreen;
+  font-size: 18px;
+}
+
+
+/* Соціалки */
+.socials-section {
+  margin-top: auto;
+  padding-bottom: 100px;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.socials-section h3 {
+  font-size: 20px;
+  margin-bottom: 16px;
+  color: var(--color-secondary, #fff);
+}
+
+.social-icons {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.social-icons a {
+  color: var(--color-light, #fff);
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.social-icons a:hover {
+  transform: scale(1.2);
+  color: var(--color-orange);
+  filter: drop-shadow(0 0 6px var(--color-orange));
+}
+
+
+/* АДАПТАЦІЯ */
+
+/* 320px — мобілки */
+@media (max-width: 480px) {
+  .menu-content {
+    flex-direction: column;
+    gap: 24px;
+  }
+
+  .menu-column h3 {
+    font-size: 18px;
+  }
+
+  .menu-column li {
+    font-size: 16px;
+  }
+
+  .close-btn {
+    top: 20px;
+    right: 50px;
+  }
+}
+
+/*  768px — планшети */
+@media (max-width: 768px) {
+  .menu-content {
+    flex-direction: column;
+    gap: 32px;
+  }
+
+  .menu-column h3 {
+    font-size: 19px;
+  }
+
+  .menu-column li {
+    font-size: 17px;
+  }
+
+  .close-btn {
+    top: 24px;
+    right: 54px;
+  }
+}
+
+/* 1024px — десктопи */
+@media (min-width: 1024px) {
+  .menu-content {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 64px;
+  }
+
+  .menu-column h3 {
+    font-size: 20px;
+  }
+
+  .menu-column li {
+    font-size: 18px;
+  }
+}
+
+@keyframes fadeInMenu {
+  from {
+    opacity: 0;
+    transform: translateY(16px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
