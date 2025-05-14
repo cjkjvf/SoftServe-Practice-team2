@@ -8,7 +8,7 @@
         "year": 2025,
         "genre": "Пригоди, Сімейний, Eкшн",
         "duration": "1:41",
-        "image": "src/assets/slider-photo/minecraft.png",
+        "image": "src/assets/minecraft.png",
         "Age-restrictions": "12+",
         "display-technologies": "2D",
         "trailer": "https://www.youtube.com/watch?v=5Rg86ZzmjZI"
@@ -23,7 +23,7 @@
         "year": 2025,
         "genre": "Пригоди, Eкшн",
         "duration": "2:49",
-        "image": "src/assets/slider-photo/Mission-Impossible-The-Final-Reckoning.png",
+        "image": "src/assets/Mission-Impossible-The-Final-Reckoning.png",
         "Age-restrictions": "12+",
         "display-technologies": "2D",
         "trailer": "https://www.youtube.com/watch?v=g68TDsOXdWg"
@@ -37,7 +37,7 @@
         "year": 2025,
         "genre": "Мелодрама, Біографічний",
         "duration": "1:43",
-        "image": "src/assets/slider-photo/Neprustoyna-propozicia.png",
+        "image": "src/assets/Neprustoyna-propozicia.png",
         "Age-restrictions": "16+",
         "display-technologies": "2D",
         "trailer": "https://www.youtube.com/watch?v=_mUNdaIwYyY"
@@ -51,7 +51,7 @@
         "year": 2025,
         "genre": "Комедія, Жахи",
         "duration": "1:37",
-        "image": "src/assets/slider-photo/Clown-Cornfield.png",
+        "image": "src/assets/Clown-Cornfield.png",
         "Age-restrictions": "18+",
         "display-technologies": "2D",
         "trailer": "https://www.youtube.com/watch?v=SD8vOHJxc7M"
@@ -66,7 +66,7 @@
         "year": 2025,
         "genre": "Трилер, Жахи",
         "duration": "2:00",
-        "image": "src/assets/slider-photo/28-years-later.png",
+        "image": "src/assets/28-years-later.png",
         "Age-restrictions": "16+",
         "display-technologies": "2D",
         "trailer": "https://www.youtube.com/watch?v=dnMqVA0Ew38"
@@ -80,7 +80,7 @@
         "year": 2025,
         "genre": "Комедія, Кримінал",
         "duration": "1:52",
-        "image": "src/assets/slider-photo/Shaleniy-copu.png",
+        "image": "src/assets/Shaleniy-copu.png",
         "Age-restrictions": "16+",
         "display-technologies": "2D",
         "trailer": "https://www.youtube.com/watch?v=ds6ISxWinXw"
@@ -94,7 +94,7 @@
         "year": 2025,
         "genre": "Жахи, Трилер",
         "duration": "1:50",
-        "image": "src/assets/slider-photo/Pynct-priznachenya-rodove-proclyatya.png",
+        "image": "src/assets/Pynct-priznachenya-rodove-proclyatya.png",
         "Age-restrictions": "16+",
         "display-technologies": "2D",
         "trailer": "https://www.youtube.com/watch?v=hdVKd5IKbsI"

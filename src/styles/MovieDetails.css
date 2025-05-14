@@ -1,0 +1,141 @@
+/* styles/MovieDetails.css */
+
+/* Використовуємо класи section з index.css */
+.movie-container {
+  color: var(--color-light);
+}
+
+.movie-content {
+  display: flex;
+  gap: 30px;
+  position: relative;
+}
+
+.movie-poster {
+  flex-shrink: 0;
+}
+
+.poster-image {
+  width: 300px;
+  height: auto;
+  border-radius: 8px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+}
+
+.movie-info {
+  flex: 1;
+}
+
+.movie-title {
+  color: var(--color-primary);
+  margin-bottom: 16px;
+  font-size: var(--title-mobile);
+}
+
+.movie-description {
+  margin-bottom: 24px;
+  line-height: 1.6;
+  font-size: var(--text-size);
+}
+
+.genres-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-bottom: 24px;
+}
+
+.genre-pill {
+  background-color: rgba(160, 190, 217, 0.2);
+  color: var(--color-primary);
+  padding: 8px 16px;
+  border-radius: 20px;
+  font-size: 14px;
+}
+
+.movie-details {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+
+.movie-details-second-row {
+  display: flex;
+  margin-top: 16px;
+  gap: 16px;
+}
+
+.detail-item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.detail-label {
+  color: var(--color-secondary);
+}
+
+.separator {
+  margin: 0 4px;
+}
+
+.save-button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  position: absolute;
+  top: 20px;
+  right: 20px;
+}
+
+.bookmark-icon {
+  width: 32px;
+  height: 32px;
+  stroke: var(--color-primary);
+  stroke-width: 2px;
+  transition: all 0.2s ease;
+}
+
+.save-button:hover .bookmark-icon {
+  transform: scale(1.1);
+}
+
+/* Адаптивний дизайн відповідно до index.css */
+@media (min-width: 320px) {
+  .movie-content {
+    flex-direction: column;
+  }
+  
+  .movie-poster {
+    margin: 0 auto;
+  }
+  
+  .save-button {
+    top: 10px;
+    right: 10px;
+  }
+  
+  .movie-title {
+    font-size: var(--title-mobile);
+  }
+}
+
+@media (min-width: 768px) {
+  .movie-content {
+    flex-direction: row;
+  }
+  
+  .movie-poster {
+    margin: 0;
+  }
+  
+  .movie-title {
+    font-size: calc(var(--title-mobile) * 1.2);
+  }
+}
+
+@media (min-width: 1024px) {
+  .movie-title {
+    font-size: var(--title-desktop);
+  }
+}
