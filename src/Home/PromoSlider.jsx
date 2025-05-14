@@ -13,7 +13,7 @@ export default function PromoSlider() {
 
   // Завантаження даних з JSON файлу
   useEffect(() => {
-    fetch('src/date/movies.json')  // Шлях до JSON файлу
+    fetch('/data/movies.json')  // Шлях до JSON файлу
       .then((response) => response.json())
       .then((data) => {
         setMovies(data);

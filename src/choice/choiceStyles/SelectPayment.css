@@ -1,0 +1,43 @@
+/* Загальний лейаут */
+.seatplan-wrapper {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-start;
+  width: 100%;
+  min-height: 130vh;
+}
+
+/* Ліва частина — 70% */
+.left-content {
+  width: 70%;
+  padding: 32px;
+}
+
+/* Права частина — 30% */
+.right-summary {
+  position: fixed;
+  top: 70px; /* висота хедера */
+  right: 0;
+  width: 30%;
+  height: 100vh ; 
+  overflow-y: auto;
+  background-color: #0e0e1b;
+  padding: 32px;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Адаптивність */
+@media (max-width: 768px) {
+  .seatplan-wrapper {
+    flex-direction: column;
+  }
+
+  .left-content,
+  .right-summary {
+    width: 100%;
+  }
+}

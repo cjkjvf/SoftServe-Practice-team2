@@ -16,6 +16,40 @@
   align-items: center;
 }
 
+/* Секція з Header для сторінки щ вибором місця  */
+.booking-header {
+  position: fixed;
+  left: 0;
+  width: 70%;
+  padding: 13px 54px;
+  background: var(--full-tranparent);
+  color: var(--color-light, #fff);
+  display: flex;
+  justify-content: flex-end;
+  z-index: 1000;
+  font-family: var(--font-main);
+  box-sizing: border-box;
+}
+
+/* 📱 Для мобільних */
+@media (max-width: 480px) {
+  .booking-header {
+    width: 100%;
+    padding: 13px 24px; /* можна зменшити padding для мобілок */
+  }
+}
+
+/* 📱 Для планшетів */
+@media (max-width: 768px) {
+  .booking-header {
+    width: 100%;
+    padding: 13px 32px;
+  }
+}
+
+/* кінець Секції з Header для сторінки щ вибором місця  */
+
+
 /* Лого сайту і анімації */
 .logo {
   font-size: 31px;

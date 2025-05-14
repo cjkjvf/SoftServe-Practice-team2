@@ -1,0 +1,109 @@
+.favorites-container {
+    min-height: 100vh;
+    background-color: var(--color-bg);
+    position: relative;
+    overflow: hidden;
+  }
+
+  /* Декоративні елементи */
+  .circle-yellow {
+    width: 60vw;
+    height: 60vw;
+    border-radius: 50%;
+    background: radial-gradient(circle, rgba(232, 89, 12, 0.2) 0%, rgba(232, 89, 12, 0) 70%);
+    filter: blur(50px);
+    z-index: 0;
+    position: absolute;
+    bottom: -32vh;
+    right: -22vw;
+  }
+
+  .circle-blue {
+    width: 50vw;
+    height: 50vw;
+    border-radius: 50%;
+    background: radial-gradient(circle, rgba(194, 224, 242, 0.1) 0%, rgba(194, 224, 242, 0) 70%);
+    filter: blur(50px);
+    z-index: 0;
+    position: absolute;
+    top: -20vh;
+    left: -15vw;
+  }
+
+
+
+  .icon-button {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: rgba(255, 255, 255, 0.1);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--color-primary);
+    border: none;
+    cursor: pointer;
+  }
+
+  .sidebar-nav {
+    position: absolute;
+    left: 32px;
+    top: 80px;
+  }
+
+  .nav-link {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 8px 16px;
+    border-radius: 9999px;
+    background-color: rgba(255, 255, 255, 0.1);
+    color: var(--color-primary);
+    text-decoration: none;
+  }
+
+  .main-content {
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: var(--container-padding);
+    padding-right: var(--container-padding);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 80vh;
+  }
+
+  .content-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 28rem;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+  }
+
+  .image-container {
+    position: relative;
+    width: 16rem;
+    height: 16rem;
+    margin-bottom: 2rem;
+  }
+
+  .empty-state-image {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+  }
+
+  .message {
+    color: var(--color-neutral);
+    margin-bottom: 0.5rem;
+  }
+
+  .catalog-link {
+    color: var(--color-primary);
+    text-decoration: underline;
+  }
