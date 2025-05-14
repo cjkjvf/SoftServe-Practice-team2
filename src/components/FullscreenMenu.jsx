@@ -20,6 +20,7 @@ export default function FullscreenMenu({ onClose, isClosing }) {
         { title: "Продаж відкрито", to: "/sale" },
         { title: "Скоро у кіно", to: "/soon" },
         { title: "Зараз онлайн", to: "/online" },
+        { title: "Обрані улюблені", to: "/favorites" },
       ],
     },
     {
