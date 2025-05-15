@@ -1,73 +1,14 @@
-.movie-info {
+/* .movie-poster-wrapper {
   display: flex;
-  flex-direction: column;
-  gap: 24px;
-  color: white;
+  justify-content: center;
+  padding: 20px;
 }
 
-.movie-info__top {
-  display: flex;
-  gap: 24px;
-  align-items: flex-start;
-}
-
-.movie-info__poster {
-  width: 149px;
-  height: 220px;
-  object-fit: cover;
+.movie-poster {
+  width: 180px;
+  height: auto;
   border-radius: 12px;
   box-shadow: 0 0 8px rgba(0, 0, 0, 0.6);
+  position: relative;
 }
-
-.movie-info__details {
-  display: flex;
-  flex-direction: column;
-  gap: 12px;
-}
-
-.movie-info__details h1 {
-  margin: 0;
-  font-size: 24px;
-  font-weight: bold;
-  line-height: 1.2;
-}
-
-.movie-info__tags {
-  display: flex;
-  gap: 8px;
-  flex-wrap: wrap;
-}
-
-.tag {
-  padding: 4px 10px;
-  border-radius: 8px;
-  background-color: #3264ff;
-  font-size: 13px;
-  color: white;
-  font-weight: 500;
-  text-transform: uppercase;
-}
-
-.movie-info__meta {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 12px;
-  font-size: 14px;
-  margin-top: 8px;
-}
-
-.meta-box {
-  background-color: #1d1d2f;
-  border: 1px solid #323244;
-  border-radius: 10px;
-  padding: 8px 12px;
-  display: flex;
-  align-items: center;
-  gap: 6px;
-  white-space: nowrap;
-}
-
-.meta-box img {
-  width: 16px;
-  height: 16px;
-}
+ */

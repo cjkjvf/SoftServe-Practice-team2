@@ -1,0 +1,48 @@
+.seat-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  width:70%;
+  height: 100%;
+  padding: 518px 0 124px 0;
+  
+}
+
+.seat-row {
+  display: flex;
+  gap: 6px;
+  justify-content: center;
+}
+
+.seat-row:last-child {
+  margin-top: 32px; /* відділення GOOD від VIP */
+}
+
+.seat {
+  width: 20px;
+  height: 28px;
+  border-radius: 4px;
+  border: 2px solid  #3981d3;
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+
+.seat.good {
+  border-color: #3981d3;
+}
+
+.seat.lux {
+  border-color: var(--color-orange);
+}
+
+.seat.selected.seat.good {
+  background-color: #2196f3;
+}
+
+.seat.selected.seat.lux {
+  background-color: var(--color-orange);
+}
+
+.seat.hidden {
+  visibility: hidden;
+}

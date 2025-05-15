@@ -29,7 +29,7 @@ export default function FullscreenMenu({ onClose, isClosing }) {
         { title: "Знижки", to: "/discounts" },
         { title: "Про нас", to: "/about" }, // Це просто для тесту, можеш потім видалити
         { title: "Обрані улюблені", to: "/favorites" },  // Обрані фільми
-        { title: "Сторінка вибору місця і оплати", to: "/seatplan" }, //вибору місця і сума оплати + кнопка
+        { title: "Сторінка вибору місця і оплати", to: "/seatplan-pay" }, //вибору місця і сума оплати + кнопка
           { title: "сторінка фільму", to: "/movies/:movieId" },
       ],
     },

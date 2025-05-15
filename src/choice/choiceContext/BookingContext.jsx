@@ -16,18 +16,20 @@ export default function BookingProvider({ children }) {
       (s) => s.row === seat.row && s.number === seat.number
     );
 
-  // 🎯 Додати або зняти місце
+  // 💵 Вартість місця
+  const seatPrice = (seat) => seat.type === 2 ? 400 : 200;
+  
   const toggleSeat = (seat) => {
-    if (isSelected(seat)) {
-      setSelectedSeats((prev) =>
-        prev.filter(
-          (s) => !(s.row === seat.row && s.number === seat.number)
-        )
-      );
-    } else {
-      setSelectedSeats((prev) => [...prev, seat]);
-    }
-  };
+  const seatWithPrice = { ...seat, price: seatPrice(seat) };
+
+  if (isSelected(seat)) {
+    setSelectedSeats((prev) =>
+      prev.filter((s) => !(s.row === seat.row && s.number === seat.number))
+    );
+  } else {
+    setSelectedSeats((prev) => [...prev, seatWithPrice]);
+  }
+};
 
   // 🔢 Підрахунок загальної кількості квитків
   const totalTickets = selectedSeats.length;

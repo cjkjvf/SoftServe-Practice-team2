@@ -16,7 +16,7 @@
   align-items: center;
 }
 
-/* Секція з Header для сторінки щ вибором місця  */
+/* Секція з Header для сторінки з вибором місця  */
 .booking-header {
   position: fixed;
   left: 0;
@@ -29,7 +29,10 @@
   z-index: 1000;
   font-family: var(--font-main);
   box-sizing: border-box;
+  justify-content: space-between; 
+  align-items: center;
 }
+
 
 /* 📱 Для мобільних */
 @media (max-width: 480px) {
@@ -57,12 +60,26 @@
   color: var(--color-light, #fff);
   white-space: nowrap;
   cursor: pointer;
+  text-decoration: none;
+  animation: pulse-glow 2s infinite;
 }
 
 .logo:hover {
   color: var(--color-orange);
   transform: scale(1.20);
   transition: color 0.3s ease;
+}
+
+@keyframes pulse-glow {
+  0% {
+    text-shadow: 0 0 5px #fff;
+  }
+  50% {
+    text-shadow: 0 0 15px var(--color-orange), 0 0 30px var(--color-orange);
+  }
+  100% {
+    text-shadow: 0 0 5px #fff;
+  }
 }
 
 /* Іконки і анімації з ними */

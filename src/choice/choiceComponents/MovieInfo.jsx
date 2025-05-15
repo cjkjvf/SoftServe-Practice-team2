@@ -1,47 +1,40 @@
-import { useEffect, useState } from "react";
-import { useLocation } from "react-router-dom";
-import movies from "./data/movies.json";
-import locationIcon from "/src/assets/location.svg";
-import "../choiceStyles/MovieInfo.css";
+// import { useEffect, useState } from "react";
+// import { useParams } from "react-router-dom";
+// import movies from "../../data/movie.json";
+// import "../choiceStyles/MovieInfo.css";
 
-export default function MovieInfo() {
-  const [movie, setMovie] = useState(null);
-  const location = useLocation();
+// export default function MovieInfo() {
+//   const { movieId } = useParams(); // бере id з URL, напр. movieId=103
+//   const [movie, setMovie] = useState(null);
+//   const [imageSrc, setImageSrc] = useState("");
 
-  useEffect(() => {
-    const params = new URLSearchParams(location.search);
-    const id = Number(params.get("movieId"));
-    const selected = movies.find((m) => m.id === id);
-    setMovie(selected);
-  }, [location]);
+//   useEffect(() => {
+//     const found = movies.find((m) => m.id === Number(movieId));
+//     setMovie(found);
 
-  if (!movie) return <div>Loading movie info...</div>;
+//     if (found && found.image) {
+//       // 🔥 це головне: правильно імпортуємо шлях до картинки з src
+//       const path = new URL(`/src/assets/${found.image.split("/").pop()}`, import.meta.url).href;
+//       setImageSrc(path);
+//     }
+//   }, [movieId]);
 
-  return (
-    <div className="movie-info">
-      <div className="movie-info__top">
-        <img
-          className="movie-info__poster"
-          src={`/${movie.image.replace("src/", "")}`}
-          alt={movie.title}
-        />
-        <div className="movie-info__details">
-          <h1>{movie.title}</h1>
-          <div className="movie-info__tags">
-            <span className="tag format">{movie["display-technologies"]}</span>
-            <span className="tag genre">{movie.genre.split(",")[0]}</span>
-          </div>
-          <div className="movie-info__meta">
-            <div className="meta-box">
-              <img src={locationIcon} alt="Локація" />
-              <span>Львів, ТРЦ "Victoria Gardens"</span>
-            </div>
-            <div className="meta-box">Зал №1</div>
-            <div className="meta-box">29.04.2025</div>
-            <div className="meta-box">11:20 – 13:01</div>
-          </div>
-        </div>
-      </div>
-    </div>
-  );
-}
+//   if (!movie || !imageSrc) return <div>Завантаження постера...</div>;
+
+//   return (
+//     <div className="movie-poster-wrapper">
+//       <img
+//         className="movie-poster"
+//         src={imageSrc}
+//         alt={movie.title}
+//       />
+//     </div>
+//   );
+// }
+
+
+
+
+
+
+
