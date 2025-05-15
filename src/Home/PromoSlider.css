@@ -111,6 +111,7 @@
   color: #bbb;
   margin-right: 10px;
   line-height: 1.5;
+  animation: fadeIn 1s ease-in-out forwards;
 }
 
 .right-container span::before {

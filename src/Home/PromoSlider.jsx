@@ -13,7 +13,7 @@ export default function PromoSlider() {
 
   // Завантаження даних з JSON файлу
   useEffect(() => {
-    fetch('src/data/movies.json')  // Шлях до JSON файлу
+    fetch('src/data/movie.json')  // Шлях до JSON файлу
       .then((response) => response.json())
       .then((data) => {
         setMovies(data);
@@ -50,16 +50,16 @@ export default function PromoSlider() {
                 {/* Лівий контейнер для title та description */}
                 <div className="left-container">
                   <h1>{movie.title}</h1>
-                  <p>{movie.description}</p>
+                  <p>{movie.brief_description}</p>
                 </div>
                 {/* Правий контейнер для details */}
                 <div className="right-container">
-                    <span>{movie.year}</span>
-                    <span>{movie.rating}</span>
-                    <span>{movie.genre}</span>
-                    <span>{movie.duration}</span>
-                    <span>{movie['Age-restrictions']}</span>
-                    <span>{movie['display-technologies']}</span>
+                    <span>{movie.details.year}</span>
+                    <span>{movie.details.rating}</span>
+                    <span>{movie.genres.join(' ⮕ ')}</span>
+                    <span>{movie.details.duration_minutes} хв</span>
+                    <span>{movie.details['age_restriction']}</span>
+                    <span>{movie.details['display-technologies'].join(' ⮕ ')}</span>
                 </div>
               </div>
               <button className="action-button">Обрати сеанс</button>

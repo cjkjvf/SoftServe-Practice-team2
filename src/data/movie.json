@@ -20,8 +20,8 @@
             "rating": "7.6 IMDB",
             "year": 2025,
             "duration_minutes": 163,
-            "display-technologies": "2D",
-            "age_restriction": "12+"
+            "display-technologies": ["2D", "3D", "IMAX"],
+            "age_restriction": "12 +"
         }
     },
     {
@@ -43,8 +43,8 @@
             "rating": "8.2 IMDB",
             "year": 2025,
             "duration_minutes": 110,
-            "display-technologies": "2D",
-            "age_restriction": "18+"
+            "display-technologies": ["2D"],
+            "age_restriction": "18 +"
         }
     },
     {
@@ -67,8 +67,8 @@
             "rating": "7.5 IMDB",
             "year": 2024,
             "duration_minutes": 101,
-            "display-technologies": "2D",
-            "age_restriction": "12+"
+            "display-technologies": ["2D", "3D", "IMAX"],
+            "age_restriction": "12 +"
         }
     },
     {
@@ -91,8 +91,8 @@
             "rating": "6.2 IMDB",
             "year": 2024,
             "duration_minutes": 112,
-            "display-technologies": "2D",
-            "age_restriction": "16+"
+            "display-technologies":["2D"],
+            "age_restriction": "16 +"
         }
     },
     {
@@ -114,8 +114,8 @@
             "rating": "7.6 IMDB",
             "year": 2023,
             "duration_minutes": 120,
-            "display-technologies": "2D",
-            "age_restriction": "16+"
+            "display-technologies": ["2D"],
+            "age_restriction": "16 +"
         }
     },
 
@@ -139,8 +139,8 @@
             "rating": "6.2 IMDB",
             "year": 2025,
             "duration_minutes": 96,
-            "display-technologies": "2D",
-            "age_restriction": "18+"
+            "display-technologies": ["2D"],
+            "age_restriction": "18 +"
         }
     },
 
@@ -163,8 +163,8 @@
             "rating": "7.6 IMDB",
             "year": 2025,
             "duration_minutes": 169,
-            "display-technologies": "2D",
-            "age_restriction": "12+"
+            "display-technologies": ["2D"],
+            "age_restriction": "12 +"
         }
     },
 
@@ -188,8 +188,8 @@
             "rating": "7.6 IMDB",
             "year": 2025,
             "duration_minutes": 103,
-            "display-technologies": "2D",
-            "age_restriction": "18+"
+            "display-technologies": ["2D"],
+            "age_restriction": "18 +"
         }
     }
 
