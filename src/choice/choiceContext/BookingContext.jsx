@@ -1,65 +1,64 @@
+// ✅ choiceContext/BookingContext.jsx
 import { createContext, useContext, useState } from "react";
 
-// Створюємо контекст
+// Створюємо контекст для бронювання місць
 const BookingContext = createContext();
 
-// Кастомний хук для доступу
+// Кастомний хук для зручного доступу до контексту
 export const useBooking = () => useContext(BookingContext);
 
-// Провайдер
+// Провайдер, який обгортає компоненти та надає функції та дані
 export default function BookingProvider({ children }) {
+  // Стан для збереження вибраних місць
   const [selectedSeats, setSelectedSeats] = useState([]);
 
-  //  Перевірка: чи це місце вже вибране
+  // Перевіряє, чи місце вже вибране користувачем
   const isSelected = (seat) =>
-    selectedSeats.some(
-      (s) => s.row === seat.row && s.number === seat.number
-    );
+    selectedSeats.some((s) => s.row === seat.row && s.number === seat.number);
 
-  // Вартість місця
-  const seatPrice = (seat) => seat.type === 2 ? 400 : 200;
-  
+  // Додає або видаляє місце зі списку вибраних
   const toggleSeat = (seat) => {
-  const seatWithPrice = { ...seat, price: seatPrice(seat) };
+    if (isSelected(seat)) {
+      // Якщо вже вибране — видаляємо
+      setSelectedSeats((prev) =>
+        prev.filter((s) => !(s.row === seat.row && s.number === seat.number))
+      );
+    } else {
+      // Якщо не вибране — додаємо
+      setSelectedSeats((prev) => [...prev, seat]);
+    }
+  };
 
-  if (isSelected(seat)) {
-    setSelectedSeats((prev) =>
-      prev.filter((s) => !(s.row === seat.row && s.number === seat.number))
-    );
-  } else {
-    setSelectedSeats((prev) => [...prev, seatWithPrice]);
-  }
-};
-
-  //  Підрахунок загальної кількості квитків
+  // Підрахунок загальної кількості вибраних квитків
   const totalTickets = selectedSeats.length;
 
-  // Підрахунок загальної вартості
+  // Підрахунок загальної суми за вибрані місця
   const totalPrice = selectedSeats.reduce(
     (sum, seat) => sum + (seat.price || 0),
     0
   );
 
-  //  Очистити всі місця (після таймера/оплати)
+  // Очищення всіх вибраних місць (наприклад, після оплати)
   const clearSeats = () => setSelectedSeats([]);
 
-  //  Якщо захочеш — легко додати ліміт:
+  // Обмеження кількості місць (до 10)
   const canAddSeat = selectedSeats.length < 10;
 
   return (
     <BookingContext.Provider
       value={{
-        selectedSeats,
-        toggleSeat,
-        isSelected,
-        totalTickets,
-        totalPrice,
-        clearSeats,
-        canAddSeat, 
+        selectedSeats,     // Масив вибраних місць
+        toggleSeat,        // Функція для додавання/видалення місця
+        isSelected,        // Функція перевірки вибраності
+        totalTickets,      // Кількість вибраних місць
+        totalPrice,        // Загальна сума
+        clearSeats,        // Очищення місць
+        canAddSeat         // Чи можна ще додати місце
       }}
     >
       {children}
     </BookingContext.Provider>
   );
 }
+
 

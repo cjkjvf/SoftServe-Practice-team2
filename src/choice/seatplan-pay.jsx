@@ -3,15 +3,23 @@ import SeatGrid from "./choiceComponents/SeatGrid";
 import { useBooking } from "./choiceContext/BookingContext";
 import qrImage from "/src/assets/empty-state-scan.png";
 import "./choiceStyles/TicketSummary.css";
+import ScreenIndicator from "./choiceComponents/ScreenIndicator";
+import pricingData from "../data/pricing.json";
 
 export default function SeatPlanPay() {
   const { selectedSeats, toggleSeat, totalTickets, totalPrice } = useBooking();
 
-  // Функція для правильної форми слова "квиток"
   const getTicketLabel = (count) => {
     if (count === 1) return "1 квиток";
     if (count >= 2 && count <= 4) return `${count} квитки`;
     return `${count} квитків`;
+  };
+
+  const getLabelByType = (type) => {
+    const found = pricingData.find((item) =>
+      type === 2 ? item.name === "SUPER_LUX" : item.name === "GOOD"
+    );
+    return found ? found.label.split(" - ")[0] : "";
   };
 
   return (
@@ -20,12 +28,12 @@ export default function SeatPlanPay() {
 
       <main className="seatplan-wrapper">
         <div className="left-content">
+          <ScreenIndicator />
           <SeatGrid />
         </div>
 
         <div className="right-summary">
           <div className="right-summary-content">
-            {/* Заголовок */}
             <div className="summary-top">
               <h3>Квитки</h3>
               <span>
@@ -33,7 +41,6 @@ export default function SeatPlanPay() {
               </span>
             </div>
 
-            {/* QR-блок */}
             <div className="qr-box">
               <img src={qrImage} alt="QR-квиток" />
               <p>
@@ -43,21 +50,19 @@ export default function SeatPlanPay() {
               </p>
             </div>
 
-            {/* Список квитків */}
             {selectedSeats.map((seat, index) => (
               <div key={index} className="ticket-item">
                 <div className="seat-info">
                   <span>{seat.row} ряд</span>
                   <span>
-                    {seat.number} місце{" "}
+                    {seat.number} місце {" "}
                     <span className={`seat-type ${seat.type === 2 ? "vip" : "good"}`}>
-                      {seat.type === 2 ? "VIP" : "GOOD"}
+                      {getLabelByType(seat.type)}
                     </span>
                   </span>
                 </div>
                 <div className="price">{seat.price} грн</div>
 
-                {/* Кнопка скасування */}
                 <button
                   className="remove-seat"
                   onClick={() => toggleSeat(seat)}
@@ -84,4 +89,3 @@ export default function SeatPlanPay() {
     </>
   );
 }
-

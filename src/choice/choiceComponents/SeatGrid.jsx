@@ -2,14 +2,22 @@ import React from "react";
 import { useBooking } from "../choiceContext/BookingContext";
 import "../choiceStyles/SeatGrid.css";
 import seatsData from "../../data/seats.json";
+import pricingData from "../../data/pricing.json";
 
 export default function SeatGrid() {
   const { toggleSeat, isSelected } = useBooking();
 
+  const getPriceByType = (type) => {
+    const found = pricingData.find((item) =>
+      type === 2 ? item.name === "SUPER_LUX" : item.name === "GOOD"
+    );
+    return found ? found.price : 0;
+  };
+
   return (
     <div className="seat-grid">
       {seatsData.map((row, rowIndex) => {
-        if (!row.some(seat => seat !== 0)) return null;
+        if (!row.some((seat) => seat !== 0)) return null;
 
         let visibleSeatCounter = 0;
 
@@ -25,7 +33,7 @@ export default function SeatGrid() {
               const seat = {
                 row: rowIndex + 1,
                 number: visibleSeatCounter,
-                price: seatType === 2 ? 400 : 200,
+                price: getPriceByType(seatType),
                 type: seatType,
               };
 

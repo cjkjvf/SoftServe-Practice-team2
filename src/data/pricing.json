@@ -1,0 +1,16 @@
+[
+  {
+    "id": 1,
+    "name": "GOOD",
+    "price": 150,
+    "color": "#2196f3",
+    "label": "GOOD - 150 грн"
+  },
+  {
+    "id": 2,
+    "name": "SUPER_LUX",
+    "price": 260,
+    "color": "#ff5722",
+    "label": "SUPER LUX - 260 грн"
+  }
+]

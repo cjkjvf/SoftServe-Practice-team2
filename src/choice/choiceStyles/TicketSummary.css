@@ -5,13 +5,14 @@
   justify-content: space-between;
   align-items: flex-start;
   width: 100%;
-  min-height: 130vh;
+  min-height: 100vh;
 }
 
 /* Ліва частина — 70% */
 .left-content {
   width: 70%;
   padding: 32px;
+  max-height: 100vh;
 }
 
 
