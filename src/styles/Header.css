@@ -32,25 +32,9 @@
   justify-content: space-between; 
   align-items: center;
 }
+/* кінець Секції з Header для сторінки з вибором місця  */
 
 
-/* 📱 Для мобільних */
-@media (max-width: 480px) {
-  .booking-header {
-    width: 100%;
-    padding: 13px 24px; /* можна зменшити padding для мобілок */
-  }
-}
-
-/* 📱 Для планшетів */
-@media (max-width: 768px) {
-  .booking-header {
-    width: 100%;
-    padding: 13px 32px;
-  }
-}
-
-/* кінець Секції з Header для сторінки щ вибором місця  */
 
 
 /* Лого сайту і анімації */
@@ -103,4 +87,28 @@
   background-color: rgba(255, 255, 255, 0.423);
   transform: scale(1.25);
   color: var(--color-orange);
+}
+
+/* 📱 Для мобільних */
+@media (max-width: 480px) {
+  .booking-header {
+    width: 100%;
+    padding: 13px 24px; 
+  }
+
+  .section {
+    padding: 0 8px; 
+  }
+}
+
+
+
+/* 📱 Для планшетів */
+@media (max-width: 768px) {
+  .booking-header {
+    width: 100%;
+    padding: 13px 32px; 
+  }
+
+
 }

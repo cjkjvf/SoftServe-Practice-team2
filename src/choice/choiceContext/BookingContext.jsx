@@ -10,13 +10,13 @@ export const useBooking = () => useContext(BookingContext);
 export default function BookingProvider({ children }) {
   const [selectedSeats, setSelectedSeats] = useState([]);
 
-  // 🔄 Перевірка: чи це місце вже вибране
+  //  Перевірка: чи це місце вже вибране
   const isSelected = (seat) =>
     selectedSeats.some(
       (s) => s.row === seat.row && s.number === seat.number
     );
 
-  // 💵 Вартість місця
+  // Вартість місця
   const seatPrice = (seat) => seat.type === 2 ? 400 : 200;
   
   const toggleSeat = (seat) => {
@@ -31,19 +31,19 @@ export default function BookingProvider({ children }) {
   }
 };
 
-  // 🔢 Підрахунок загальної кількості квитків
+  //  Підрахунок загальної кількості квитків
   const totalTickets = selectedSeats.length;
 
-  // 💰 Підрахунок загальної вартості
+  // Підрахунок загальної вартості
   const totalPrice = selectedSeats.reduce(
     (sum, seat) => sum + (seat.price || 0),
     0
   );
 
-  // 🔁 Очистити всі місця (після таймера/оплати)
+  //  Очистити всі місця (після таймера/оплати)
   const clearSeats = () => setSelectedSeats([]);
 
-  // ✨ Якщо захочеш — легко додати ліміт:
+  //  Якщо захочеш — легко додати ліміт:
   const canAddSeat = selectedSeats.length < 10;
 
   return (
@@ -55,7 +55,7 @@ export default function BookingProvider({ children }) {
         totalTickets,
         totalPrice,
         clearSeats,
-        canAddSeat, // поки не використовуємо, але можна
+        canAddSeat, 
       }}
     >
       {children}

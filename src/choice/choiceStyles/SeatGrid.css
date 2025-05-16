@@ -15,7 +15,7 @@
 }
 
 .seat-row:last-child {
-  margin-top: 32px; /* відділення GOOD від VIP */
+  margin-top: 32px; /* відступ між Good і VIP */
 }
 
 .seat {
