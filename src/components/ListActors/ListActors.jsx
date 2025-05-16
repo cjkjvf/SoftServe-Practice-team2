@@ -1,40 +1,6 @@
 import React, { useRef, useState, useEffect } from 'react'
 import './ListActors.scss'
-
-const listActors = [
-  { id: 1, src: '/images/actors/1.jpg', name: "Флоренс П'ю", role: 'Акторка' },
-  { id: 2, src: '/images/actors/2.jpg', name: 'Себастіан Стен', role: 'Актор' },
-  { id: 3, src: '/images/actors/3.jpg', name: 'Девід Гарбор', role: 'Актор' },
-  { id: 4, src: '/images/actors/4.jpg', name: 'Ваятт Расселл', role: 'Актор' },
-  {
-    id: 5,
-    src: '/images/actors/5.jpg',
-    name: 'Ольга Куриленко',
-    role: 'Акторка',
-  },
-  {
-    id: 6,
-    src: '/images/actors/6.jpg',
-    name: 'Ганна Джон-Кеймен',
-    role: 'Акторка',
-  },
-  { id: 7, src: '/images/actors/1.jpg', name: "Флоренс П'ю", role: 'Акторка' },
-  { id: 8, src: '/images/actors/2.jpg', name: 'Себастіан Стен', role: 'Актор' },
-  { id: 9, src: '/images/actors/3.jpg', name: 'Девід Гарбор', role: 'Актор' },
-  { id: 10, src: '/images/actors/4.jpg', name: 'Ваятт Расселл', role: 'Актор' },
-  {
-    id: 11,
-    src: '/images/actors/5.jpg',
-    name: 'Ольга Куриленко',
-    role: 'Акторка',
-  },
-  {
-    id: 12,
-    src: '/images/actors/6.jpg',
-    name: 'Ганна Джон-Кеймен',
-    role: 'Акторка',
-  },
-]
+import listActors from './listActors.json'
 
 const ListActors = () => {
   const scrollRef = useRef(null)

@@ -1,33 +1,11 @@
 import React, { useEffect, useState } from 'react'
 import './Filter.scss'
 import BottomSVG from '../../assets/bottom.svg'
+import dateData from './months_weekdays.json'
 
-// Масив назв місяців та днів тижня українською
-const months = [
-  'Січня',
-  'Лютого',
-  'Березня',
-  'Квітня',
-  'Травня',
-  'Червня',
-  'Липня',
-  'Серпня',
-  'Вересня',
-  'Жовтня',
-  'Листопада',
-  'Грудня',
-]
-const weekdays = [
-  'НЕДІЛЯ',
-  'ПОНЕДІЛОК',
-  'ВІВТОРОК',
-  'СЕРЕДА',
-  'ЧЕТВЕР',
-  'П’ЯТНИЦЯ',
-  'СУБОТА',
-]
-
-const weekdaysAbbreviated = ['ПН', 'ВТ', 'СР', 'ЧТ', 'ПТ', 'СБ', 'НД']
+const months = dateData.months
+const weekdays = dateData.weekdays
+const weekdaysAbbreviated = dateData.weekdaysAbbreviated
 
 const Filter = () => {
   const [days, setDays] = useState([])
@@ -236,7 +214,9 @@ const Filter = () => {
                       return newSelectFilter // Повертаємо оновлений масив
                     })
                   }
-                  className={`option-text ${option.isMobile ? 'filter-mobile' : 'filter-pc'} ${selectFilter[index] == indexOption ? 'select' : ''}`}
+                  className={`option-text ${
+                    option.isMobile ? 'filter-mobile' : 'filter-pc'
+                  } ${selectFilter[index] == indexOption ? 'select' : ''}`}
                 >
                   {option.name}
                 </p>
