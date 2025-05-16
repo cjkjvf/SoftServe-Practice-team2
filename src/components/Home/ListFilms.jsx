@@ -1,23 +1,6 @@
 import React, { useState } from 'react'
 import './ListFilms.scss'
-
-const film = {
-  img: '/images/839e2e589778246c63945ae625643b64905fab12.jpg',
-  name: 'Аудитор 2',
-  listOption: [
-    { time: '10:30', option: '2D' },
-    { time: '13:20', option: '2D' },
-    { time: '14:40', option: '3D' },
-    { time: '16:10', option: '4DX' },
-    { time: '17:30', option: '2D' },
-    { time: '19:00', option: '3D' },
-  ],
-}
-
-const arrayFilm = Array.from({ length: 51 }, () => ({
-  ...film,
-  listOption: [...film.listOption],
-}))
+import arrayFilm from './ListFilms.json'
 
 const ListFilms = () => {
   const [currentPage, setCurrentPage] = useState(1)
