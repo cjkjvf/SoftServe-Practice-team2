@@ -5,6 +5,8 @@
   width:70%;
   height: 100%;
   padding: 64px 0px 124px 98px;
+  overflow-x: auto;
+  min-width: fit-content;    
   
 }
 
