@@ -1,3 +1,4 @@
+
 .screen-wrapper {
   display: flex;
   flex-direction: column;
@@ -7,6 +8,8 @@
   width: 100%;
   max-width: 1000px;
   margin-top: 200px;
+  padding: 0 24px;
+  box-sizing: border-box;
 }
 
 .seat-types {
@@ -57,4 +60,52 @@
   font-size: 18px;
   margin-bottom: 24px;
   text-align: center;
+}
+
+
+
+/* Планшети (768px – 1023px) */
+@media (min-width: 768px) and (max-width: 1023px) {
+  .screen-wrapper {
+    margin-top: 160px;
+    padding: 0 20px;
+  }
+
+  .seat-type {
+    font-size: 13px;
+  }
+
+  .seat-box {
+    width: 18px;
+    height: 26px;
+  }
+
+  .screen-label {
+    font-size: 16px;
+  }
+}
+
+/* Мобілки (до 767px) */
+@media (max-width: 767px) {
+  .screen-wrapper {
+    margin-top: 128px;
+    padding: 0 16px;
+  }
+
+  .seat-type {
+    font-size: 12px;
+  }
+
+  .seat-box {
+    width: 16px;
+    height: 24px;
+  }
+
+  .screen-label {
+    font-size: 15px;
+  }
+
+  .screen-curve {
+    width: 90%;
+  }
 }

@@ -1,4 +1,3 @@
-/* ====== Загальний лейаут ====== */
 .seatplan-wrapper {
   display: flex;
   flex-direction: row;
@@ -8,20 +7,11 @@
   min-height: 100vh;
 }
 
-/* Ліва частина — 70% */
 .left-content {
   width: 70%;
-  padding: 32px;
   max-height: 100vh;
 }
 
-
-
-
-
-
-
-/* Права частина — 30% */
 .right-summary {
   position: fixed;
   right: 0;
@@ -36,10 +26,10 @@
   align-items: center;
   padding: 24px;
   color: #fff;
+  transition: all 0.3s ease;
+  z-index: 999;
 }
 
-
-/* Верхній заголовок */
 .right-summary .summary-top {
   display: flex;
   justify-content: space-between;
@@ -50,7 +40,6 @@
   width: 100%;
 }
 
-/* QR-блок */
 .right-summary .qr-box {
   background-color: #166f14;
   border-radius: 10px;
@@ -72,7 +61,6 @@
   line-height: 1.4;
 }
 
-/* Інфо про квиток */
 .right-summary .ticket-item {
   border: 1px solid #2e2e42;
   border-radius: 6px;
@@ -92,7 +80,7 @@
 }
 
 .seat-type.good {
-  color: #2196f3; 
+  color: #2196f3;
   font-weight: 600;
 }
 
@@ -105,7 +93,6 @@
   font-weight: 600;
 }
 
-/* Розділювач */
 .right-summary .divider {
   border: none;
   border-top: 1px solid #2e2e42;
@@ -113,7 +100,6 @@
   width: 100%;
 }
 
-/* Сума до сплати */
 .right-summary .total {
   display: flex;
   justify-content: space-between;
@@ -126,7 +112,6 @@
   font-weight: bold;
 }
 
-/* Кнопка оплати */
 .right-summary .pay-btn {
   width: 100%;
   background-color: #f26522;
@@ -165,16 +150,76 @@
 }
 
 /* ====== Адаптивність ====== */
-@media (max-width: 768px) {
+
+/* === Планшети: від 768px до 1023px === */
+@media (min-width: 768px) and (max-width: 1024px) {
+  .left-content {
+    width: 65%;
+  }
+
+  .right-summary {
+    position: fixed;
+    right: 0;
+    width: 35%;
+    height: 100vh;
+    padding: 20px;
+    border-left: 2px solid var(--color-light, #fff);
+    border-top: none;
+  }
+}
+
+/* === Мобілки: до 767px включно === */
+@media (max-width: 767px) {
   .seatplan-wrapper {
     flex-direction: column;
+    align-items: center;
   }
 
   .left-content,
   .right-summary {
     width: 100%;
-    position: static;
+  }
+
+  .right-summary {
+    
+    position: relative;
+    top: auto;
+    bottom: 0;
     height: auto;
+    padding: 16px;
+    margin-top: 32px;
+    border-left: none;
+    border-top: 2px solid var(--color-light, #fff);
+    background-color: #0e0e1b;
+  }
+
+  .right-summary .summary-top,
+  .right-summary .total {
+    font-size: 15px;
+  }
+
+  .right-summary .pay-btn {
+    font-size: 15px;
+    padding: 10px;
+  }
+
+  .right-summary .ticket-item {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 6px;
+  }
+
+  .remove-seat {
+    top: 6px;
+    right: 6px;
+  }
+
+  .right-summary .qr-box p {
+    font-size: 13px;
+  }
+
+  .right-summary .pay-btn {
+    font-size: 14px;
+    padding: 10px;
   }
 }
-

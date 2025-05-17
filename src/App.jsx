@@ -1,9 +1,10 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Home from './Home/Home';
 import Layout from './components/Layout';
-import About from './pages/About'; // Це просто для тесту, можеш потім видалити
-import Favorites from "./pages/Favorites"; // Обрані фільми
-import SeatPlanPay  from "./choice/seatplan-pay"; // Обрані фільми
+import About from './pages/About'; 
+import Favorites from "./pages/Favorites"; 
+import SeatPlanPay  from "./choice/seatplan-pay"; 
+import MovieDetails from './pages/MovieDetails';
 import './global.css';
 import './styles/index.css';
 
@@ -15,6 +16,7 @@ function App() {
           <Route index element={<Home />} />
           <Route path="about" element={<About />} /> 
           <Route path="favorites" element={<Favorites />} />
+          <Route path="movies/:movieId" element={<MovieDetails />} /> {}
         </Route>
             {/* Окремий Route без Layout */}
         <Route path="seatplan-pay" element={<SeatPlanPay />} />

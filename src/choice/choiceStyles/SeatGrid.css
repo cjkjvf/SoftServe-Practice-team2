@@ -2,12 +2,11 @@
   display: flex;
   flex-direction: column;
   gap: 6px;
-  width:70%;
+  width: 70%;
   height: 100%;
-  padding: 64px 0px 124px 98px;
+  padding: 64px 0 124px 98px;
   overflow-x: auto;
-  min-width: fit-content;    
-  
+  min-width: fit-content;
 }
 
 .seat-row {
@@ -24,7 +23,7 @@
   width: 20px;
   height: 28px;
   border-radius: 4px;
-  border: 2px solid  #3981d3;
+  border: 2px solid #3981d3;
   cursor: pointer;
   transition: background 0.2s ease;
 }
@@ -47,4 +46,48 @@
 
 .seat.hidden {
   visibility: hidden;
+}
+
+/* ====== Адаптивність для seat-grid ====== */
+
+@media (min-width: 768px) and (max-width: 1023px) {
+  .seat-grid {
+    width: 100%;
+    padding: 64px 32px 124px 32px;
+  }
+}
+
+@media (max-width: 767px) {
+  .seat-grid {
+    width: 100%;
+    padding: 32px 16px 64px 16px;
+    min-width: unset;
+  }
+
+  .seat-row {
+    justify-content: center;
+    gap: 5px;
+  }
+
+  .seat {
+    width: 18px;
+    height: 24px;
+  }
+}
+
+@media (max-width: 420px) {
+  .seat {
+    width: 16px;
+    height: 22px;
+  }
+
+  .seat-row {
+    gap: 4px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .seat-grid {
+    padding: 64px 0 124px 98px;
+  }
 }
