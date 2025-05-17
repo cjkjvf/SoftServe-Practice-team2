@@ -1,30 +1,26 @@
 import React from 'react';
-import './Home.css';
+import './Home.scss'; // Використовуємо один стильовий файл, бажано SCSS
 import PromoSlider from './PromoSlider';
+import MainImg from './MainImg';
+import Filter from './Filter';
+import Info from './Info';
+import ListFilms from './ListFilms';
 
 const Home = () => {
   return (
-    <div className='home'>
+    <div className="home">
       <PromoSlider />
-      
-      <div className="additional-content">
-        <h2>Заголовок контенту після слайдера</h2>
-        <p>
-          Це додатковий текст або інформація, яку можна додати під слайдером. 
-          Тут ви можете помістити будь-який контент, наприклад, текст, зображення чи інші компоненти.
-        </p>
-        <button className="cta-button">Дізнатись більше</button>
-      </div>
 
-      <div className="extra-section">
-        <h3>Ще один розділ</h3>
-        <p>
-          Цей розділ можна використати для ще більшого контенту або для якихось конкретних 
-          пропозицій або новин.
-        </p>
-      </div>
+      <MainImg />
+      <Filter />
+
+      <Info>
+        <div>Натисніть на час сеансу, щоб обрати місця</div>
+      </Info>
+
+      <ListFilms />
     </div>
   );
-}
+};
 
 export default Home;
