@@ -16,17 +16,13 @@ export default function FullscreenMenu({ onClose, isClosing }) {
     {
       title: "Дивись кіно",
       links: [
-        { title: "Зараз у кіно", to: "/now" },
-        { title: "Продаж відкрито", to: "/sale" },
-        { title: "Скоро у кіно", to: "/soon" },
-        { title: "Зараз онлайн", to: "/online" },
+        { title: "Каталог фільмів", to: "/catalog" },
+
       ],
     },
     {
       title: "Інформація",
       links: [
-        { title: "Кінотеатри", to: "/cinemas" },
-        { title: "Знижки", to: "/discounts" },
         { title: "Про нас", to: "/about" }, // Це просто для тесту, можеш потім видалити
         { title: "Обрані улюблені", to: "/favorites" },  // Обрані фільми
         { title: "Сторінка вибору місця і оплати", to: "/seatplan-pay" }, //вибору місця і сума оплати + кнопка

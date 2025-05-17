@@ -11,7 +11,6 @@ const Home = () => {
     <div className="home">
       <PromoSlider />
 
-      <MainImg />
       <Filter />
 
       <Info>
