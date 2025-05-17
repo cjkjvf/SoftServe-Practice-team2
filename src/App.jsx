@@ -7,7 +7,7 @@ import SeatPlanPay  from "./choice/seatplan-pay";
 import MovieDetails from './pages/MovieDetails';
 import Login from './Autorize/Login'; 
 import Register from './Autorize/Register';
-import Catalog from './Catalog/Catalog';
+import ListFilms from './Home/ListFilms';
 import './global.css';
 import './styles/index.css';
 
@@ -20,7 +20,7 @@ function App() {
           <Route path="about" element={<About />} /> 
           <Route path="favorites" element={<Favorites />} />
           <Route path="movies/:movieId" element={<MovieDetails />} /> 
-          <Route path="/catalog" element={<Catalog />} />
+          <Route path="/listfilms" element={<ListFilms />} />
         </Route>
             {/* Окремий Route без Layout */}
         <Route path="seatplan-pay" element={<SeatPlanPay />} />

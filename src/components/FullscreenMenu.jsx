@@ -16,7 +16,7 @@ export default function FullscreenMenu({ onClose, isClosing }) {
     {
       title: "Дивись кіно",
       links: [
-        { title: "Каталог фільмів", to: "/catalog" },
+        { title: "Сторінка сеансів", to: "/listfilms" },
 
       ],
     },

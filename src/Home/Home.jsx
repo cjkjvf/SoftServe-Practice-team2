@@ -2,22 +2,16 @@ import React from 'react';
 import './Home.scss'; // Використовуємо один стильовий файл, бажано SCSS
 import PromoSlider from './PromoSlider';
 import MainImg from './MainImg';
+import Catalog from '../Catalog/Catalog';
 import Filter from './Filter';
-import Info from './Info';
-import ListFilms from './ListFilms';
+import ListActors from '../ListActors/ListActors';
 
 const Home = () => {
   return (
     <div className="home">
       <PromoSlider />
-
-      <Filter />
-
-      <Info>
-        <div>Натисніть на час сеансу, щоб обрати місця</div>
-      </Info>
-
-      <ListFilms />
+      <Catalog />
+      <ListActors />
     </div>
   );
 };

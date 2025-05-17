@@ -10,7 +10,7 @@ const Catalog = () => {
     <div className="catalog">
       <Filter />
       <Info>
-        Перейти до каталогу <Link to="/catalog"> каталогу фільмів</Link>
+        Перейти до каталогу <Link to="/listfilms"> каталогу фільмів</Link>
       </Info>
       <ListFilms />
     </div>
