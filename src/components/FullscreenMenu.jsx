@@ -16,8 +16,11 @@ export default function FullscreenMenu({ onClose, isClosing }) {
     {
       title: "Дивись кіно",
       links: [
-        { title: "Сторінка сеансів", to: "/listfilms" },
-
+        { title: "Зараз у кіно", to: "/now" },
+        { title: "Продаж відкрито", to: "/sale" },
+        { title: "Скоро у кіно", to: "/soon" },
+        { title: "Зараз онлайн", to: "/online" },
+        { title: "Обрані улюблені", to: "/favorites" },
       ],
     },
     {
