@@ -1,7 +1,6 @@
 import HeaderSeatplan from "./choiceComponents/HeaderSeatplan";
 import SeatGrid from "./choiceComponents/SeatGrid";
 import { useBooking } from "./choiceContext/BookingContext";
-import qrImage from "/src/assets/empty-state-scan.png";
 import "./choiceStyles/TicketSummary.css";
 import ScreenIndicator from "./choiceComponents/ScreenIndicator";
 import pricingData from "../data/pricing.json";
@@ -26,7 +25,7 @@ export default function SeatPlanPay() {
   return (
     <>
       <HeaderSeatplan />
-       <MovieInfo /> 
+      <MovieInfo />
 
       <main className="seatplan-wrapper">
         <div className="left-content">
@@ -44,7 +43,7 @@ export default function SeatPlanPay() {
             </div>
 
             <div className="qr-box">
-              <img src={qrImage} alt="QR-квиток" />
+              <img src="/images/empty-state-scan.png" alt="QR-квиток" />
               <p>
                 З онлайн квитком відразу в зал!
                 <br />
@@ -57,7 +56,7 @@ export default function SeatPlanPay() {
                 <div className="seat-info">
                   <span>{seat.row} ряд</span>
                   <span>
-                    {seat.number} місце {" "}
+                    {seat.number} місце{" "}
                     <span className={`seat-type ${seat.type === 2 ? "vip" : "good"}`}>
                       {getLabelByType(seat.type)}
                     </span>

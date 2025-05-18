@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { useParams, useNavigate } from "react-router-dom";  // імпорт useNavigate
-import moviesData from "../../date/movie.json";
+import moviesData from "../../data/movie.json";
 import "../../styles/MovieHeroSection.css";
 
 const MovieHeroSection = () => {
