@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import MovieCard from "../components/MovieCard";
-import moviesData from "../date/movie.json";
+import moviesData from "../data/movie.json";
 import "../styles/favorites.css";
 
 export default function Favorites() {

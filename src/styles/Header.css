@@ -16,6 +16,27 @@
   align-items: center;
 }
 
+/* Секція з Header для сторінки з вибором місця  */
+.booking-header {
+  position: fixed;
+  left: 0;
+  width: 70%;
+  padding: 13px 54px;
+  background: var(--full-tranparent);
+  color: var(--color-light, #fff);
+  display: flex;
+  justify-content: flex-end;
+  z-index: 1000;
+  font-family: var(--font-main);
+  box-sizing: border-box;
+  justify-content: space-between; 
+  align-items: center;
+}
+/* кінець Секції з Header для сторінки з вибором місця  */
+
+
+
+
 /* Лого сайту і анімації */
 .logo {
   font-size: 31px;
@@ -23,12 +44,26 @@
   color: var(--color-light, #fff);
   white-space: nowrap;
   cursor: pointer;
+  text-decoration: none;
+  animation: pulse-glow 2s infinite;
 }
 
 .logo:hover {
   color: var(--color-orange);
   transform: scale(1.20);
   transition: color 0.3s ease;
+}
+
+@keyframes pulse-glow {
+  0% {
+    text-shadow: 0 0 5px #fff;
+  }
+  50% {
+    text-shadow: 0 0 15px var(--color-orange), 0 0 30px var(--color-orange);
+  }
+  100% {
+    text-shadow: 0 0 5px #fff;
+  }
 }
 
 /* Іконки і анімації з ними */
@@ -52,4 +87,28 @@
   background-color: rgba(255, 255, 255, 0.423);
   transform: scale(1.25);
   color: var(--color-orange);
+}
+
+/* 📱 Для мобільних */
+@media (max-width: 480px) {
+  .booking-header {
+    width: 100%;
+    padding: 13px 24px; 
+  }
+
+  .section {
+    padding: 0 8px; 
+  }
+}
+
+
+
+/* 📱 Для планшетів */
+@media (max-width: 768px) {
+  .booking-header {
+    width: 100%;
+    padding: 13px 32px; 
+  }
+
+
 }

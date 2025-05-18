@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
 import { Bookmark } from 'lucide-react';
-import moviesData from "../../date/movie.json";
+import moviesData from "../../data/movie.json";
 import '../../styles/MovieInfoSection.css';
 
 const MovieInfoSection = () => {

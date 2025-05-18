@@ -1,0 +1,86 @@
+@import '../mixin.scss';
+
+.list-actors-wrapper {
+  position: relative;
+  @include responsive-width;
+  margin: 30px auto;
+
+  .pagination {
+    top: 50%;
+    left: 0;
+    right: 0;
+    display: flex;
+    justify-content: right;
+    transform: translateY(-50%);
+    pointer-events: none;
+    gap: 15px;
+
+    .left,
+    .right {
+      background: rgba(0, 0, 0, 0.4);
+      border-radius: 50%;
+      width: 40px;
+      height: 40px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      pointer-events: all;
+      transition: background 0.3s;
+      background: #ffffff33;
+
+      &.active {
+        opacity: 1;
+        &:hover {
+          background-color: #6caadf;
+        }
+      }
+      &.no-active {
+        opacity: 0.75;
+      }
+    }
+  }
+
+  .list-actors {
+    display: flex;
+    overflow-x: auto;
+    scroll-behavior: smooth;
+    scrollbar-width: none; /* Firefox */
+    -ms-overflow-style: none; /* IE 10+ */
+  }
+
+  .list-actors::-webkit-scrollbar {
+    display: none; /* Chrome/Safari */
+  }
+
+  .actor {
+    flex: 0 0 auto;
+    img {
+      aspect-ratio: 0.6666666;
+    }
+    p {
+      font-family: PT Sans;
+      font-weight: 400;
+      font-size: 21px;
+      line-height: 26px;
+      letter-spacing: 0%;
+      color: #ffffff;
+      @media (max-width: 768px) {
+        font-size: 15px;
+        line-height: 17px;
+      }
+    }
+    span {
+      font-family: PT Sans;
+      font-weight: 400;
+      font-size: 16px;
+      line-height: 24px;
+      letter-spacing: 0%;
+      color: #ffffffb2;
+      @media (max-width: 768px) {
+        font-size: 14px;
+        line-height: 16px;
+      }
+    }
+  }
+}

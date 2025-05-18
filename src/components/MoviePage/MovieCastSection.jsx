@@ -3,7 +3,7 @@ import Slider from "react-slick";
 import "../../styles/MovieCastSection.css";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-import castData from "../../date/cast.json";
+import castData from "../../data/cast.json";
 
 // стрілка — вперед
 const NextArrow = (props) => {
