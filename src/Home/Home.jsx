@@ -1,16 +1,19 @@
 import React from 'react';
 import './Home.scss';
 import PromoSlider from './PromoSlider';
-import MainImg from './MainImg';
-import Catalog from '../Catalog/Catalog';
-import Filter from './Filter';
+import Info from '../Home/Info';
 import ListActors from '../ListActors/ListActors';
+import ListFilms from './ListFilms';
+import { Link } from 'react-router-dom'
 
 const Home = () => {
   return (
     <div className="home">
       <PromoSlider />
-      <Catalog />
+      <Info>
+        Перейти до каталогу <Link to="/catalog"> каталогу фільмів</Link>
+      </Info>
+      <ListFilms />
       <ListActors />
     </div>
   );

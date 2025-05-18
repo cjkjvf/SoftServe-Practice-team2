@@ -3,11 +3,14 @@ import SeatGrid from "./choiceComponents/SeatGrid";
 import { useBooking } from "./choiceContext/BookingContext";
 import "./choiceStyles/TicketSummary.css";
 import ScreenIndicator from "./choiceComponents/ScreenIndicator";
-import pricingData from "../data/pricing.json";
 import MovieInfo from "./choiceComponents/MovieInfo";
 
 export default function SeatPlanPay() {
   const { selectedSeats, toggleSeat, totalTickets, totalPrice } = useBooking();
+
+
+  const selectedMovie = JSON.parse(localStorage.getItem("selectedMovie"));
+  const seatPrices = selectedMovie?.seatPrices || [];
 
   const getTicketLabel = (count) => {
     if (count === 1) return "1 квиток";
@@ -16,10 +19,10 @@ export default function SeatPlanPay() {
   };
 
   const getLabelByType = (type) => {
-    const found = pricingData.find((item) =>
-      type === 2 ? item.name === "SUPER_LUX" : item.name === "GOOD"
+    const priceObj = seatPrices.find((p) =>
+      type === 2 ? p.type === "SUPER LUX" : p.type === "GOOD"
     );
-    return found ? found.label.split(" - ")[0] : "";
+    return priceObj ? priceObj.type : "Невідомий тип";
   };
 
   return (

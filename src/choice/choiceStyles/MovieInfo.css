@@ -5,7 +5,48 @@
   border-radius: 12px;
   width: 100%;
   box-sizing: border-box;
-  overflow: hidden;
+  overflow: visible;
+  position: relative; /* 🟢 ДОДАНО */
+  z-index: 0;
+}
+
+.movieInfo-details {
+  overflow: visible; /* 🟢 ЗМІНЕНО */
+}
+
+.movieInfo-row {
+  margin-top: 20px;
+  white-space: nowrap;
+  position: relative; /* 🟢 ДОДАНО */
+  z-index: 10;
+}
+
+.movieInfo-card {
+  display: inline-block;
+  vertical-align: top;
+  background-color: #141421;
+  border-radius: 10px;
+  border: 1px solid #2a2a3d;
+  padding: 10px 16px;
+  margin-right: 16px;
+  min-width: 160px;
+  text-align: center;
+  position: relative; 
+  z-index: 20; 
+  overflow: visible; 
+}
+
+.movieInfo-select {
+  margin-top: 4px;
+  width: 100%;
+  background-color: #1a1a2e;
+  color: white;
+  border-radius: 6px;
+  padding: 6px 10px;
+  border: 1px solid #2a2a3d;
+  font-size: 14px;
+  position: relative;
+  z-index: 999; 
 }
 
 .movieInfo-poster {
@@ -16,14 +57,10 @@
   margin-right: 20px;
 }
 
-.movieInfo-details {
-  overflow: hidden; 
-}
-
 .movieInfo-title {
   font-size: 22px;
   font-weight: 700;
-  color:var(  --color-light);
+  color: var(--color-light);
   margin-top: 0;
 }
 
@@ -49,23 +86,6 @@
 .movieInfo-tag.light {
   background-color: #c7d7f5;
   color: #000;
-}
-
-.movieInfo-row {
-  margin-top: 20px;
-  white-space: nowrap;
-}
-
-.movieInfo-card {
-  display: inline-block;
-  vertical-align: top;
-  background-color: #141421;
-  border-radius: 10px;
-  border: 1px solid #2a2a3d;
-  padding: 10px 16px;
-  margin-right: 16px;
-  min-width: 160px;
-  text-align: center;
 }
 
 .movieInfo-card img {
