@@ -9,6 +9,10 @@
       display: flex;
       flex-direction: row;
       gap: 10px;
+      img {
+        width: 50%;
+        object-fit: cover;
+      }
       .text {
         h3 {
           font-family: Inter;
