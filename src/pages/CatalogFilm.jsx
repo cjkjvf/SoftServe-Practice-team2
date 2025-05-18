@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import "../styles/CatalogFilm.css";
-import data from '../date/movie.json'; 
+import data from '../data/movie.json'; 
 
 const genres = [
   "ВСІ", "Жахи", "Романтика", "Комедія", "Драма", "Бойовик",
