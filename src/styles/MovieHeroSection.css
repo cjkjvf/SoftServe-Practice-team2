@@ -3,7 +3,7 @@
     background-size: cover;
     background-position: center;
     min-height: 100vh;
-    color: white;
+    color: var(--color-primary);
     display: flex;
     align-items: flex-end;
     justify-content: center;
@@ -60,8 +60,8 @@
 }
 
 .hero-button {
-    background-color: #fff;
-    color: #000;
+    background-color: var(--color-neutral);
+    color: var(--color-bg);
     padding: 12px 24px; /* 0.75rem 1.5rem */
     border: none;
     border-radius: 999px;
@@ -77,7 +77,7 @@
 }
 
 .hero-button:hover {
-    background-color: #ddd;
+    background-color: var(--color-light);
 }
 
 .details {

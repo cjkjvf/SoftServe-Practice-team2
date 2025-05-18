@@ -1,6 +1,6 @@
 .cast-section {
   background-color: #0e0e1a;
-  color: white;
+  color: var(--color-neutral);
   padding: 64px;
   font-family: "Inter";
 }
@@ -34,7 +34,7 @@
 }
 
 .cast-role {
-  color: #ccc;
+  color: var(--color-light);
   font-size: 14px;
 }
 
@@ -52,7 +52,7 @@
   height: 36px;
   background-color: rgba(255, 255, 255, 0.08);
   border-radius: 50%;
-  color: white;
+  color: var(--color-primary);
   font-size: 18px;
   display: flex;
   align-items: center;
