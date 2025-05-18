@@ -1,48 +1,105 @@
 .cast-section {
   background-color: #0e0e1a;
   color: white;
-  padding: 2rem;
+  padding: 64px;
+  font-family: "Inter";
 }
 
 .cast-title {
-  font-size: 1.8rem;
-  margin-bottom: 1.5rem;
+  font-size: 28px;
+  margin-bottom: 32px;
   text-align: center;
 }
 
 /* Кожна карточка */
 .cast-card {
-  padding: 0 15px;
+  padding: 15px;
   box-sizing: border-box;
   text-align: center;
   max-width: 250px;
   margin: 0 auto;
 }
 
-/* Фото актора — адаптивне, з фіксованим співвідношенням сторін */
 .cast-image {
   width: 100%;
-  aspect-ratio: 2 / 3; /* або 3 / 4 — залежить від бажаного вигляду */
+  aspect-ratio: 2 / 3;
   border-radius: 10px;
   object-fit: cover;
   display: block;
 }
 
-/* Ім’я актора */
 .cast-name {
-  margin-top: 0.7rem;
-  font-weight: bold;
-  font-size: 1.1rem;
+  margin-top: 10px;            
+  font-size: 18px;
 }
 
-/* Роль актора */
 .cast-role {
   color: #ccc;
-  font-size: 0.9rem;
+  font-size: 14px;
 }
 
-/* Вирівнювання елементів слайду по центру */
 .slick-slide {
   display: flex !important;
   justify-content: center;
+}
+
+/* Кастомні стрілки */
+.custom-arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 36px;
+  height: 36px;
+  background-color: rgba(255, 255, 255, 0.08);
+  border-radius: 50%;
+  color: white;
+  font-size: 18px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  z-index: 5;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+}
+
+.custom-arrow:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
+.custom-arrow.prev {
+  left: -18px;
+}
+
+.custom-arrow.next {
+  right: -18px;
+}
+
+/* 📱 Адаптація під мобільні */
+@media (max-width: 768px) {
+  .cast-title {
+    font-size: 22px;
+  }
+
+  .cast-name {
+    font-size: 16px;
+  }
+
+  .cast-role {
+    font-size: 13px;
+  }
+}
+
+@media (max-width: 480px) {
+  .cast-title {
+    font-size: 20px;
+  }
+
+  .cast-name {
+    font-size: 14px;
+  }
+
+  .cast-role {
+    font-size: 12px;
+  }
 }

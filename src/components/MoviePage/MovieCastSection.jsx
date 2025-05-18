@@ -5,6 +5,26 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import castData from "../../date/cast.json";
 
+// стрілка — вперед
+const NextArrow = (props) => {
+    const { onClick } = props;
+    return (
+        <div className="custom-arrow next" onClick={onClick}>
+            ❯
+        </div>
+    );
+};
+
+//стрілка — назад
+const PrevArrow = (props) => {
+    const { onClick } = props;
+    return (
+        <div className="custom-arrow prev" onClick={onClick}>
+            ❮
+        </div>
+    );
+};
+  
 const MovieCastSection = () => {
     const [cast, setCast] = useState([]);
 
@@ -17,7 +37,7 @@ const MovieCastSection = () => {
         infinite: true,
         speed: 500,
         slidesToShow: 5,
-        slidesToScroll: 2,
+        slidesToScroll: 1,
         responsive: [
             {
                 breakpoint: 1024,
