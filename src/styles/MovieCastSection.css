@@ -1,0 +1,48 @@
+.cast-section {
+  background-color: #0e0e1a;
+  color: white;
+  padding: 2rem;
+}
+
+.cast-title {
+  font-size: 1.8rem;
+  margin-bottom: 1.5rem;
+  text-align: center;
+}
+
+/* Кожна карточка */
+.cast-card {
+  padding: 0 15px;
+  box-sizing: border-box;
+  text-align: center;
+  max-width: 250px;
+  margin: 0 auto;
+}
+
+/* Фото актора — адаптивне, з фіксованим співвідношенням сторін */
+.cast-image {
+  width: 100%;
+  aspect-ratio: 2 / 3; /* або 3 / 4 — залежить від бажаного вигляду */
+  border-radius: 10px;
+  object-fit: cover;
+  display: block;
+}
+
+/* Ім’я актора */
+.cast-name {
+  margin-top: 0.7rem;
+  font-weight: bold;
+  font-size: 1.1rem;
+}
+
+/* Роль актора */
+.cast-role {
+  color: #ccc;
+  font-size: 0.9rem;
+}
+
+/* Вирівнювання елементів слайду по центру */
+.slick-slide {
+  display: flex !important;
+  justify-content: center;
+}

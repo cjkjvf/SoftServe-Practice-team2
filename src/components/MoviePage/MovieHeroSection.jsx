@@ -72,7 +72,7 @@ const MovieHeroSection = () => {
                         </button>
                     </div>
                     <div className="right-container">
-                        <span>{movie.details.rating} IMDB</span>
+                        <span>{movie.details.rating}</span>
                         <span>{movie.details.year}</span>
                         <span>{movie.genres.join(", ")}</span>
                         <span>{movie.details.duration_minutes} хв.</span>

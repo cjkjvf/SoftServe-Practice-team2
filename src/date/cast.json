@@ -1,0 +1,32 @@
+[
+    {
+        "name": "Флоренс П'ю",
+        "role": "Акторка",
+        "image": "/images/actors/Florence.jpg"
+    },
+    {
+        "name": "Себастіан Стен",
+        "role": "Актор",
+        "image": "/images/actors/Sebastian.jpg"
+    },
+    {
+        "name": "Девід Гарбор",
+        "role": "Актор",
+        "image": "/images/actors/David.jpg"
+    },
+    {
+        "name": "Ваятт Расселл",
+        "role": "Актор",
+        "image": "/images/actors/Wyatt.jpg"
+    },
+    {
+        "name": "Ольга Куриленко",
+        "role": "Акторка",
+        "image": "/images/actors/Olha.jpg"
+    },
+    {
+        "name": "Ганна Джон-Кеймен",
+        "role": "Акторка",
+        "image": "/images/actors/Anna.jpg"
+    }
+]
