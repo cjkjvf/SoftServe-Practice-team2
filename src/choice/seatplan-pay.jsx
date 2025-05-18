@@ -5,6 +5,7 @@ import qrImage from "/src/assets/empty-state-scan.png";
 import "./choiceStyles/TicketSummary.css";
 import ScreenIndicator from "./choiceComponents/ScreenIndicator";
 import pricingData from "../data/pricing.json";
+import MovieInfo from "./choiceComponents/MovieInfo";
 
 export default function SeatPlanPay() {
   const { selectedSeats, toggleSeat, totalTickets, totalPrice } = useBooking();
@@ -25,6 +26,7 @@ export default function SeatPlanPay() {
   return (
     <>
       <HeaderSeatplan />
+       <MovieInfo /> 
 
       <main className="seatplan-wrapper">
         <div className="left-content">

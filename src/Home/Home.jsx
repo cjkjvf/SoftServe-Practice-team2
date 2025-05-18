@@ -1,5 +1,5 @@
 import React from 'react';
-import './Home.scss'; // Використовуємо один стильовий файл, бажано SCSS
+import './Home.scss';
 import PromoSlider from './PromoSlider';
 import MainImg from './MainImg';
 import Catalog from '../Catalog/Catalog';
