@@ -1,11 +1,15 @@
-import React from 'react'
+import Header from './Header'
+import Footer from './Footer'
+import { Outlet } from 'react-router-dom'
 
-function Layout({ children }) {
+export default function Layout() {
   return (
     <div>
-      <main>{children}</main>
+      <Header />
+      <main>
+        <Outlet />
+      </main>
+      <Footer />
     </div>
   )
 }
-
-export default Layout

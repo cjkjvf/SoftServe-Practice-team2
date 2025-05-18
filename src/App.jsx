@@ -1,35 +1,40 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import Home from './Home/Home';
+import Layout from './components/Layout';
+import About from './pages/About'; 
+import Favorites from "./pages/Favorites"; 
+import SeatPlanPay from "./choice/seatplan-pay"; 
+import MovieDetails from './pages/MovieDetails';
+import Login from './Autorize/Login'; 
+import Register from './Autorize/Register';
+import ListFilms from './Home/ListFilms';
+import Catalog from './Catalog/Catalog';
+import './global.css';
+import './styles/index.css';
+import ListFilmContainer from "./ListFilmContainer/ListFilmContainer";
 
 function App() {
-  const [count, setCount] = useState(0)
-
   return (
-    <>
-      <div>
-        <a href="https://vite.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
-  )
+    <BrowserRouter>
+      <Routes>
+        {/* Головна обгортка з Layout */}
+        <Route path="/" element={<Layout />}>
+          <Route index element={<Home />} />
+          <Route path="about" element={<About />} />
+          <Route path="favorites" element={<Favorites />} />
+          <Route path="movies/:movieId" element={<MovieDetails />} />
+          <Route path="listfilms" element={<ListFilmContainer />} />
+          <Route path="catalog" element={<Catalog />} /> 
+        </Route>
+
+        {/* Маршрути поза Layout (без header/footer) */}
+        <Route path="seatplan-pay" element={<SeatPlanPay />} />
+        <Route path="seatplan" element={<SeatPlanPay />} />
+        <Route path="login" element={<Login />} />
+        <Route path="register" element={<Register />} />
+      </Routes>
+    </BrowserRouter>
+  );
 }
 
-export default App
+export default App;

@@ -1,0 +1,18 @@
+@use '../mixin.scss' as *;
+
+.catalog {
+  @include responsive-width;
+  padding-top: 60px;
+  .info-container {
+    a {
+      font-family: Inter;
+      font-weight: 400;
+      font-size: 14px;
+      line-height: 14px;
+      letter-spacing: 0%;
+      text-align: center;
+      vertical-align: middle;
+      color: #e8590c;
+    }
+  }
+}

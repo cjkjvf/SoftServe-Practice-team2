@@ -1,0 +1,97 @@
+@use '../mixin.scss' as *;
+
+.list-films-container {
+  .list-films {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+    gap: 50px;
+    .film-card {
+      display: flex;
+      flex-direction: row;
+      gap: 10px;
+      .text {
+        h3 {
+          font-family: Inter;
+          font-weight: 700;
+          font-size: 18px;
+          line-height: 22px;
+          letter-spacing: 0%;
+          color: #ffffff;
+        }
+        .options {
+          display: flex;
+          flex-direction: row;
+          flex-wrap: wrap;
+          gap: 10px;
+          .option-item {
+            display: flex;
+            flex-direction: column;
+            gap: 3px;
+            justify-content: center;
+            cursor: pointer;
+            p {
+              margin: 0;
+              font-family: Inter;
+              font-weight: 700;
+              font-size: 16px;
+              line-height: 16px;
+              letter-spacing: 0%;
+              text-align: center;
+              text-transform: uppercase;
+              color: #e8590c;
+            }
+            span {
+              font-family: Inter;
+              font-weight: 500;
+              font-size: 9px;
+              line-height: 12px;
+              letter-spacing: 0%;
+              text-align: center;
+              text-transform: uppercase;
+              color: #ffffff80;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .pagination {
+    grid-column: 1 / -1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+
+    button {
+      color: #ffffff;
+      border: none;
+      margin: 0 5px;
+      border-radius: 5px;
+      cursor: pointer;
+      font-size: 16px;
+      background-color: transparent; // прозорий фон
+      align-items: center;
+      display: flex;
+      flex-direction: row;
+      gap: 7.5px;
+      padding: 5px;
+
+      &:hover {
+        color: #4d8ac7;
+        svg {
+          path {
+            stroke: #4d8ac7;
+          }
+        }
+      }
+    }
+
+    .underline {
+      margin: 0 10px;
+      margin-bottom: 10px;
+      font-size: 20px;
+      color: #ffffff;
+    }
+  }
+}
