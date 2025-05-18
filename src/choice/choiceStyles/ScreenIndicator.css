@@ -1,0 +1,111 @@
+
+.screen-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 32px;
+  color: white;
+  width: 100%;
+  max-width: 1000px;
+  margin-top: 200px;
+  padding: 0 24px;
+  box-sizing: border-box;
+}
+
+.seat-types {
+  display: flex;
+  gap: 32px;
+  justify-content: center;
+  margin-bottom: 24px;
+  flex-wrap: wrap;
+}
+
+.seat-type {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.seat-box {
+  width: 20px;
+  height: 28px;
+  border-radius: 4px;
+  border: 2px solid white;
+}
+
+.seat-label {
+  white-space: nowrap;
+}
+
+.screen-label-block {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+}
+
+.screen-curve {
+  width: 80%;
+  height: 30px;
+  border-top: 2px solid white;
+  border-radius: 50% / 100%;
+  transform: scaleY(0.5);
+  margin-bottom: 4px;
+}
+
+.screen-label {
+  font-weight: bold;
+  font-size: 18px;
+  margin-bottom: 24px;
+  text-align: center;
+}
+
+
+
+/* Планшети (768px – 1023px) */
+@media (min-width: 768px) and (max-width: 1023px) {
+  .screen-wrapper {
+    margin-top: 160px;
+    padding: 0 20px;
+  }
+
+  .seat-type {
+    font-size: 13px;
+  }
+
+  .seat-box {
+    width: 18px;
+    height: 26px;
+  }
+
+  .screen-label {
+    font-size: 16px;
+  }
+}
+
+/* Мобілки (до 767px) */
+@media (max-width: 767px) {
+  .screen-wrapper {
+    margin-top: 128px;
+    padding: 0 16px;
+  }
+
+  .seat-type {
+    font-size: 12px;
+  }
+
+  .seat-box {
+    width: 16px;
+    height: 24px;
+  }
+
+  .screen-label {
+    font-size: 15px;
+  }
+
+  .screen-curve {
+    width: 90%;
+  }
+}

@@ -1,0 +1,286 @@
+[
+  {
+    "img": "/images/839e2e589778246c63945ae625643b64905fab12.jpg",
+    "name": "Аудитор 2",
+    "listOption": [
+      { "time": "10:30", "option": "2D" },
+      { "time": "13:20", "option": "2D" },
+      { "time": "14:40", "option": "3D" },
+      { "time": "16:10", "option": "4DX" },
+      { "time": "17:30", "option": "2D" },
+      { "time": "19:00", "option": "3D" }
+    ]
+  },
+  {
+    "img": "/images/839e2e589778246c63945ae625643b64905fab12.jpg",
+    "name": "Вогні великого міста",
+    "listOption": [
+      { "time": "11:00", "option": "2D" },
+      { "time": "12:45", "option": "3D" },
+      { "time": "15:00", "option": "2D" },
+      { "time": "17:15", "option": "IMAX" },
+      { "time": "19:30", "option": "4DX" }
+    ]
+  },
+  {
+    "img": "/images/839e2e589778246c63945ae625643b64905fab12.jpg",
+    "name": "Небезпечна гра",
+    "listOption": [
+      { "time": "09:50", "option": "2D" },
+      { "time": "13:30", "option": "2D" },
+      { "time": "16:00", "option": "3D" },
+      { "time": "18:20", "option": "4DX" }
+    ]
+  },
+  {
+    "img": "/images/839e2e589778246c63945ae625643b64905fab12.jpg",
+    "name": "Аудитор 2",
+    "listOption": [
+      { "time": "10:30", "option": "2D" },
+      { "time": "13:20", "option": "2D" },
+      { "time": "14:40", "option": "3D" },
+      { "time": "16:10", "option": "4DX" },
+      { "time": "17:30", "option": "2D" },
+      { "time": "19:00", "option": "3D" }
+    ]
+  },
+  {
+    "img": "/images/839e2e589778246c63945ae625643b64905fab12.jpg",
+    "name": "Вогні великого міста",
+    "listOption": [
+      { "time": "11:00", "option": "2D" },
+      { "time": "12:45", "option": "3D" },
+      { "time": "15:00", "option": "2D" },
+      { "time": "17:15", "option": "IMAX" },
+      { "time": "19:30", "option": "4DX" }
+    ]
+  },
+  {
+    "img": "/images/839e2e589778246c63945ae625643b64905fab12.jpg",
+    "name": "Небезпечна гра",
+    "listOption": [
+      { "time": "09:50", "option": "2D" },
+      { "time": "13:30", "option": "2D" },
+      { "time": "16:00", "option": "3D" },
+      { "time": "18:20", "option": "4DX" }
+    ]
+  },
+  {
+    "img": "/images/839e2e589778246c63945ae625643b64905fab12.jpg",
+    "name": "Зоряна Одисея",
+    "listOption": [
+      { "time": "10:00", "option": "3D" },
+      { "time": "12:30", "option": "IMAX" },
+      { "time": "15:45", "option": "2D" },
+      { "time": "18:00", "option": "4DX" }
+    ]
+  },
+  {
+    "img": "/images/839e2e589778246c63945ae625643b64905fab12.jpg",
+    "name": "Таємниці океану",
+    "listOption": [
+      { "time": "11:15", "option": "2D" },
+      { "time": "13:45", "option": "3D" },
+      { "time": "16:10", "option": "IMAX" }
+    ]
+  },
+  {
+    "img": "/images/839e2e589778246c63945ae625643b64905fab12.jpg",
+    "name": "Місто у вогні",
+    "listOption": [
+      { "time": "10:20", "option": "2D" },
+      { "time": "14:00", "option": "3D" },
+      { "time": "17:30", "option": "4DX" },
+      { "time": "20:00", "option": "IMAX" }
+    ]
+  },
+
+  {
+    "img": "/images/839e2e589778246c63945ae625643b64905fab12.jpg",
+    "name": "Таємний агент",
+    "listOption": [
+      { "time": "09:40", "option": "2D" },
+      { "time": "12:10", "option": "3D" },
+      { "time": "15:00", "option": "IMAX" },
+      { "time": "18:25", "option": "4DX" }
+    ]
+  },
+  {
+    "img": "/images/839e2e589778246c63945ae625643b64905fab12.jpg",
+    "name": "Виживання",
+    "listOption": [
+      { "time": "10:15", "option": "2D" },
+      { "time": "13:40", "option": "2D" },
+      { "time": "16:50", "option": "3D" }
+    ]
+  },
+  {
+    "img": "/images/839e2e589778246c63945ae625643b64905fab12.jpg",
+    "name": "Останній рубіж",
+    "listOption": [
+      { "time": "11:00", "option": "IMAX" },
+      { "time": "14:30", "option": "4DX" },
+      { "time": "19:10", "option": "2D" }
+    ]
+  },
+  {
+    "img": "/images/839e2e589778246c63945ae625643b64905fab12.jpg",
+    "name": "Загублений світ",
+    "listOption": [
+      { "time": "09:55", "option": "2D" },
+      { "time": "13:15", "option": "3D" },
+      { "time": "16:40", "option": "IMAX" }
+    ]
+  },
+  {
+    "img": "/images/839e2e589778246c63945ae625643b64905fab12.jpg",
+    "name": "Нічні вогні",
+    "listOption": [
+      { "time": "10:05", "option": "2D" },
+      { "time": "13:50", "option": "2D" },
+      { "time": "17:00", "option": "4DX" }
+    ]
+  },
+  {
+    "img": "/images/839e2e589778246c63945ae625643b64905fab12.jpg",
+    "name": "Аудитор 2",
+    "listOption": [
+      { "time": "10:30", "option": "2D" },
+      { "time": "13:20", "option": "2D" },
+      { "time": "14:40", "option": "3D" },
+      { "time": "16:10", "option": "4DX" },
+      { "time": "17:30", "option": "2D" },
+      { "time": "19:00", "option": "3D" }
+    ]
+  },
+  {
+    "img": "/images/839e2e589778246c63945ae625643b64905fab12.jpg",
+    "name": "Вогні великого міста",
+    "listOption": [
+      { "time": "11:00", "option": "2D" },
+      { "time": "12:45", "option": "3D" },
+      { "time": "15:00", "option": "2D" },
+      { "time": "17:15", "option": "IMAX" },
+      { "time": "19:30", "option": "4DX" }
+    ]
+  },
+  {
+    "img": "/images/839e2e589778246c63945ae625643b64905fab12.jpg",
+    "name": "Небезпечна гра",
+    "listOption": [
+      { "time": "09:50", "option": "2D" },
+      { "time": "13:30", "option": "2D" },
+      { "time": "16:00", "option": "3D" },
+      { "time": "18:20", "option": "4DX" }
+    ]
+  },
+  {
+    "img": "/images/839e2e589778246c63945ae625643b64905fab12.jpg",
+    "name": "Аудитор 2",
+    "listOption": [
+      { "time": "10:30", "option": "2D" },
+      { "time": "13:20", "option": "2D" },
+      { "time": "14:40", "option": "3D" },
+      { "time": "16:10", "option": "4DX" },
+      { "time": "17:30", "option": "2D" },
+      { "time": "19:00", "option": "3D" }
+    ]
+  },
+  {
+    "img": "/images/839e2e589778246c63945ae625643b64905fab12.jpg",
+    "name": "Вогні великого міста",
+    "listOption": [
+      { "time": "11:00", "option": "2D" },
+      { "time": "12:45", "option": "3D" },
+      { "time": "15:00", "option": "2D" },
+      { "time": "17:15", "option": "IMAX" },
+      { "time": "19:30", "option": "4DX" }
+    ]
+  },
+  {
+    "img": "/images/839e2e589778246c63945ae625643b64905fab12.jpg",
+    "name": "Небезпечна гра",
+    "listOption": [
+      { "time": "09:50", "option": "2D" },
+      { "time": "13:30", "option": "2D" },
+      { "time": "16:00", "option": "3D" },
+      { "time": "18:20", "option": "4DX" }
+    ]
+  },
+  {
+    "img": "/images/839e2e589778246c63945ae625643b64905fab12.jpg",
+    "name": "Зоряна Одисея",
+    "listOption": [
+      { "time": "10:00", "option": "3D" },
+      { "time": "12:30", "option": "IMAX" },
+      { "time": "15:45", "option": "2D" },
+      { "time": "18:00", "option": "4DX" }
+    ]
+  },
+  {
+    "img": "/images/839e2e589778246c63945ae625643b64905fab12.jpg",
+    "name": "Таємниці океану",
+    "listOption": [
+      { "time": "11:15", "option": "2D" },
+      { "time": "13:45", "option": "3D" },
+      { "time": "16:10", "option": "IMAX" }
+    ]
+  },
+  {
+    "img": "/images/839e2e589778246c63945ae625643b64905fab12.jpg",
+    "name": "Місто у вогні",
+    "listOption": [
+      { "time": "10:20", "option": "2D" },
+      { "time": "14:00", "option": "3D" },
+      { "time": "17:30", "option": "4DX" },
+      { "time": "20:00", "option": "IMAX" }
+    ]
+  },
+
+  {
+    "img": "/images/839e2e589778246c63945ae625643b64905fab12.jpg",
+    "name": "Таємний агент",
+    "listOption": [
+      { "time": "09:40", "option": "2D" },
+      { "time": "12:10", "option": "3D" },
+      { "time": "15:00", "option": "IMAX" },
+      { "time": "18:25", "option": "4DX" }
+    ]
+  },
+  {
+    "img": "/images/839e2e589778246c63945ae625643b64905fab12.jpg",
+    "name": "Виживання",
+    "listOption": [
+      { "time": "10:15", "option": "2D" },
+      { "time": "13:40", "option": "2D" },
+      { "time": "16:50", "option": "3D" }
+    ]
+  },
+  {
+    "img": "/images/839e2e589778246c63945ae625643b64905fab12.jpg",
+    "name": "Останній рубіж",
+    "listOption": [
+      { "time": "11:00", "option": "IMAX" },
+      { "time": "14:30", "option": "4DX" },
+      { "time": "19:10", "option": "2D" }
+    ]
+  },
+  {
+    "img": "/images/839e2e589778246c63945ae625643b64905fab12.jpg",
+    "name": "Загублений світ",
+    "listOption": [
+      { "time": "09:55", "option": "2D" },
+      { "time": "13:15", "option": "3D" },
+      { "time": "16:40", "option": "IMAX" }
+    ]
+  },
+  {
+    "img": "/images/839e2e589778246c63945ae625643b64905fab12.jpg",
+    "name": "Нічні вогні",
+    "listOption": [
+      { "time": "10:05", "option": "2D" },
+      { "time": "13:50", "option": "2D" },
+      { "time": "17:00", "option": "4DX" }
+    ]
+  }
+]

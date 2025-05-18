@@ -1,0 +1,6 @@
+@use '../mixin.scss' as *;
+
+.list-film-container{
+    @include responsive-width;
+    padding-top: 100px;
+}

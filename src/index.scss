@@ -1,0 +1,21 @@
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #0e0e1b;
+  color: #ffffff;
+}
+
+@mixin responsive-width {
+  margin: 0 auto;
+  @media (min-width: 1400px) {
+    width: 80%;
+  }
+
+  @media (max-width: 1400px) and (min-width: 768px) {
+    width: 90%;
+  }
+
+  @media (max-width: 767px) {
+    width: 94%;
+  }
+}

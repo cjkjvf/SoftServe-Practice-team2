@@ -1,0 +1,228 @@
+.list-date-container {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  margin: 20px auto;
+  position: relative;
+  .mobile {
+    display: none;
+    color:#ffffff30;
+  }
+  .pc {
+    display: flex;
+    color:#ffffff;
+  }
+  img{
+    position: absolute;
+    right: 15px;
+  }
+  #select-day {
+    display: flex;
+    position: relative;
+    .list-additional {
+      position: absolute;
+      display: flex;
+      flex-direction: column;
+      top: 70px;
+      background-color: #ffffff;
+      color: black;
+      left: 0;
+    }
+    .day {
+      display: flex;
+      flex-direction: row;
+      white-space: nowrap;
+      gap: 3px;
+      padding: 5px;
+      border-bottom: 1px solid black;
+      cursor: pointer;
+      p {
+        margin: 0;
+        text-align: left;
+        font-size: 14px;
+      }
+      span {
+        color: grey;
+      }
+    }
+  }
+  @media (max-width: 1024px) {
+    .mobile {
+      display: flex;
+    }
+    .pc {
+      display: none;
+    }
+    #select-day {
+      display: none;
+    }
+  }
+  .list-date {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 15px;
+    @media (max-width: 768px) {
+      overflow-x: auto;
+      gap: 5px;
+    }
+    .list-date-item {
+      border: 1px solid #ffffff1a;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      padding: 15px;
+      width: 100%;
+      gap: 5px;
+      border-radius: 4px;
+      @media (max-width: 768px) {
+        min-width: 39px;
+        padding: 0;
+      }
+      &.select {
+        background-color: #e8590c;
+        border: none;
+        .pc {
+          &.down{
+            font-weight: 800;   
+          }
+        }
+      }
+      .up {
+        font-family: Inter;
+        font-weight: 700;
+        font-size: 14px;
+        line-height: 16px;
+        letter-spacing: 0%;
+        text-align: center;
+        text-transform: uppercase;
+        white-space: nowrap;
+        color:#ffffff;
+      }
+      .down {
+        font-family: Inter;
+        font-weight: 600;
+        font-size: 10px;
+        line-height: 16px;
+        letter-spacing: 0%;
+        text-align: center;
+        text-transform: uppercase;
+        color: #ffffff80;
+      }
+      &.select-day {
+        display: flex;
+        flex-direction: row;
+        justify-content: left;
+        .text {
+          display: flex;
+          flex-direction: column;
+          justify-content: left;
+          align-items: flex-start;
+          gap: 5px;
+        }
+      }
+    }
+  }
+  .list-filter {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    gap: 5%;
+    @media (max-width: 768px) {
+      gap: 0;
+    }
+    .filter {
+      display: flex;
+      flex-direction: row;
+      gap: 15px;
+      @media (max-width: 768px) {
+        gap: 0;
+      }
+      span {
+        font-family: Inter;
+        font-weight: 700;
+        font-size: 14px;
+        line-height: 18px;
+        letter-spacing: 0%;
+        text-transform: uppercase;
+        color: #ffffff80;
+        @media (max-width: 768px) {
+          display: none;
+        }
+      }
+      .option {
+        display: flex;
+        flex-direction: row;
+        gap: 10px;
+        position: relative;
+        @media (max-width: 768px) {
+          gap: 0;
+        }
+        p {
+          margin: 0;
+          font-family: Inter;
+          font-weight: 700;
+          font-size: 14px;
+          line-height: 18px;
+          letter-spacing: 0%;
+          text-transform: uppercase;
+          color: #ffffff;
+          cursor: pointer;
+          &:hover {
+            @media (min-width: 768px) {
+              color: #6caadf;
+            }
+          }
+          &.select {
+            color: #6caadf;
+            @media (max-width: 768px) {
+              background-color: #6caadf;
+              color: #ffffff;
+            }
+          }
+          &.filter-pc {
+            @media (max-width: 768px) {
+              display: none;
+            }
+          }
+          @media (max-width: 768px) {
+            padding: 5px;
+            border: 1px solid #ffffff50;
+            border-radius: 3px;
+            align-items: center;
+            display: flex;
+            justify-content: center;
+            margin: 0 5px;
+          }
+        }
+
+        .description {
+          position: absolute;
+          top: 120%; /* Виводить на відстань висоти елемента */
+          left: 0;
+          background-color: #ffffff;
+          border-radius: 7.5px;
+          color: black;
+          padding: 5px;
+          font-size: 11px;
+          width: 150px;
+          left: -60px;
+          display: none;
+          z-index: 10; /* Для запобігання перекриттю іншими елементами */
+          opacity: 0; /* Спочатку непомітно */
+          transition: opacity 0.3s ease-in-out; /* Плавне з'явлення */
+        }
+
+        &:hover {
+          .description {
+            @media (min-width: 768px) {
+              display: block;
+              opacity: 1; /* Показує елемент при ховері */
+            }
+          }
+        }
+      }
+    }
+  }
+}

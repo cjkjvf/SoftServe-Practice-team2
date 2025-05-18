@@ -1,0 +1,6 @@
+@import '../../mixin.scss';
+
+.home {
+  @include responsive-width;
+  margin: 40px auto;
+}
