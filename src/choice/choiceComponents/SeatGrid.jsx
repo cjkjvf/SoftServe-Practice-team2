@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { useBooking } from "../choiceContext/BookingContext";
 import "../choiceStyles/SeatGrid.css";
 import seatsData from "../../data/seats.json";
@@ -15,6 +15,12 @@ export default function SeatGrid() {
     );
     return priceObj ? priceObj.price : 0;
   };
+
+  useEffect(() => {
+    return () => {
+      localStorage.removeItem("selectedSeats");
+    };
+  }, []);
 
   return (
     <div className="seat-grid">
