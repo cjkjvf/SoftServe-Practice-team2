@@ -1,0 +1,193 @@
+.catalog-container {
+  background-color: var(--color-bg);
+  color: var(--color-light);
+  font-family: var(--font-secondary);
+  padding: 20px;
+}
+
+/* Жанрові кнопки */
+.genre-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+  margin: 90px auto 20px auto;
+  max-width: 900px;
+  padding: 0 10px;
+}
+
+.genre-button {
+  background-color: var(--color-bg);
+  color: var(--color-light);
+  border: none;
+  padding: 5px 10px;
+  font-size: var(--text-size);
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.2s;
+  box-sizing: border-box;
+}
+
+.genre-button:hover {
+  background-color: var(--color-bg);
+}
+
+.genre-button.active {
+  background-color: var(--color-orange);
+}
+
+/* Заголовок */
+.catalog-movie-title {
+  text-align: center;
+  margin-bottom: 20px;
+  color: var(--color-light);
+  border-top: 2px solid #2d2a38;
+  border-bottom: 2px solid #2d2a38;
+  padding: 8px;
+  font-size: var(--text-size);
+  width: 300px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Сітка фільмів */
+.movies-grid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  justify-items: center;
+  row-gap: 32px;
+  margin: 0 auto 10px auto;
+  margin-bottom: 64px;
+  max-width: 900px;
+  padding: 0 10px;
+}
+
+.movie-card {
+  text-align: center;
+  width: 100%;
+  max-width: 160px;
+}
+
+.catalog-movie-poster {
+  width: 100%;
+  height: auto;
+  border-radius: 4px;
+}
+
+.catalog-movie-title-film {
+  margin-top: 8px;
+  font-size: 14px;
+  text-decoration: none;
+  
+}
+a {
+  text-decoration: none;
+  color: var(--color-light);
+}
+
+a:hover {
+  text-decoration: none;
+  color: var(--color-light);
+}
+
+/* Пагінація */
+.pagination {
+  text-align: center;
+  color: var( --color-primary);
+}
+
+.pagination button {
+  margin: 0 10px;
+  background: transparent;
+  border: none;
+  color: var(--color-light);
+  cursor: pointer;
+  font-size: 16px;
+  margin-bottom: 32px;
+}
+
+.pagination button:disabled {
+  opacity: 0.5;
+  cursor: default;
+}
+
+/* 📱 Адаптивність */
+@media (max-width: 1280px) {
+  .movies-grid {
+    grid-template-columns: repeat(auto-fit(5, 1fr));
+  }
+}
+@media (max-width: 1024px) {
+  .movies-grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+  .genre-button {
+    font-size: 12px;
+    padding: 5px 8px;
+  }
+}
+@media (max-width: 900px) {
+  .movies-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .genre-button {
+    font-size: 12px;
+    padding: 5px 8px;
+  }
+}
+@media (max-width: 768px) {
+  .movies-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .genre-button {
+    font-size: 12px;
+    padding: 5px 8px;
+  }
+}
+
+@media (max-width: 480px) {
+  .movies-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .catalog-movie-title {
+    width: 90%;
+    font-size: 16px;
+  }
+
+  .pagination {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+  }
+
+  .pagination button {
+    color: var(--color-light);
+    border: none;
+    margin: 0 5px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    background-color: transparent;
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    gap: 7.5px;
+    padding: 5px;
+  }
+
+  .pagination button:hover {
+    color: var(--color-secondary);
+  }
+
+  .pagination .underline {
+    margin: 0 10px;
+    margin-bottom: 10px;
+    font-size: 20px;
+    color: var(--color-light);
+  }
+}
