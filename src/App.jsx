@@ -4,7 +4,7 @@ import Layout from './components/Layout';
 import About from './pages/About'; // Це просто для тесту, можеш потім видалити
 import Favorites from "./pages/Favorites";
 import MovieDetails from './pages/MovieDetails';
-import Catalogfilms from "./pages/Catalogfilms";
+import CatalogFilm from './pages/CatalogFilm';
 import './global.css';
 import './styles/index.css';
 
@@ -17,7 +17,7 @@ function App() {
           <Route path="about" element={<About />} />
           <Route path="favorites" element={<Favorites />} />
           <Route path="movies/:movieId" element={<MovieDetails />} />
-          <Route path="catalog" element={<Catalog />} />
+          <Route path="/catalogfilm" element={<CatalogFilm/>}/>
         </Route>
       </Routes>
     </BrowserRouter>
