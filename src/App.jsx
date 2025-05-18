@@ -8,9 +8,10 @@ import MovieDetails from './pages/MovieDetails';
 import Login from './Autorize/Login'; 
 import Register from './Autorize/Register';
 import ListFilms from './Home/ListFilms';
-// import Catalog from './Catalog/Catalog';
+import Catalog from './Catalog/Catalog';
 import './global.css';
 import './styles/index.css';
+import ListFilmContainer from "./ListFilmContainer/ListFilmContainer";
 
 function App() {
   return (
@@ -22,8 +23,8 @@ function App() {
           <Route path="about" element={<About />} />
           <Route path="favorites" element={<Favorites />} />
           <Route path="movies/:movieId" element={<MovieDetails />} />
-          <Route path="listfilms" element={<ListFilms />} />
-          {/* <Route path="catalog" element={<Catalog />} /> */}
+          <Route path="listfilms" element={<ListFilmContainer />} />
+          <Route path="catalog" element={<Catalog />} /> 
         </Route>
 
         {/* Маршрути поза Layout (без header/footer) */}

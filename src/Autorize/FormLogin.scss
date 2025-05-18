@@ -1,4 +1,4 @@
-@import '../mixin.scss';
+@use '../mixin.scss' as *;
 
 .form-login-cont {
   @include responsive-width;
@@ -131,10 +131,6 @@
         flex-direction: row;
         justify-content: space-between;
         width: 100%;
-        @media (max-width: 768px) {
-          svg {
-          }
-        }
       }
       .beck-to-site {
         margin-top: 30px;

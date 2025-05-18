@@ -1,8 +1,7 @@
-@use '../mixin.scss' as *;
+@import '../../mixin.scss';
 
 .catalog {
   @include responsive-width;
-  padding-top: 60px;
   .info-container {
     a {
       font-family: Inter;

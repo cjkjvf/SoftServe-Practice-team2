@@ -2,12 +2,10 @@ import React, { useEffect, useState } from 'react'
 import './Filter.scss'
 import BottomSVG from '../../assets/bottom.svg'
 import dateData from './months_weekdays.json'
-import listFilter from './listFilter.json'
 
 const months = dateData.months
 const weekdays = dateData.weekdays
 const weekdaysAbbreviated = dateData.weekdaysAbbreviated
-
 
 const Filter = () => {
   const [days, setDays] = useState([])
@@ -49,6 +47,67 @@ const Filter = () => {
   useEffect(() => {
     getDays()
   }, [])
+
+  const listFilter = [
+    {
+      name: 'Формати:',
+      listOption: [
+        {
+          name: 'Всі',
+          isMobile: false,
+        },
+        {
+          name: '2D',
+          isMobile: true,
+          description: 'Класичний сеанс для консервативних глядачів',
+        },
+        {
+          name: '3D',
+          description:
+            'Cеанс з залученням технологій об’ємного зображення для прихильників видовищних спец ефектів',
+          isMobile: true,
+        },
+      ],
+    },
+    {
+      name: 'Зали:',
+      listOption: [
+        {
+          name: 'Всі',
+          isMobile: false,
+        },
+        {
+          name: 'Звичайний',
+          isMobile: false,
+        },
+        {
+          name: 'LUX',
+          description:
+            'LUXСеанс на кріслах-реклайнерах, що забезпечують підвищений комфорт перегляду, для гурманів кіноСеанс на кріслах-реклайнерах, що забезпечують підвищений комфорт перегляду, для гурманів кіно',
+          isMobile: true,
+        },
+      ],
+    },
+    {
+      name: 'Субтитри:',
+      listOption: [
+        {
+          name: 'Всі',
+          isMobile: false,
+        },
+        {
+          name: 'БЕЗ',
+          isMobile: false,
+        },
+        {
+          name: 'SDH',
+          description:
+            'Субтитри для осіб з порушеннями слуху та тифлокоментарі для осіб з порушеннями зору',
+          isMobile: true,
+        },
+      ],
+    },
+  ]
 
   const [selectFilter, setSelectFilter] = useState([0, 0, 0])
 
@@ -109,7 +168,6 @@ const Filter = () => {
             onClick={() => setIsOpen(!isOpen)}
             src={BottomSVG}
             alt="Location icon"
-            style={{cursor:'pointer'}}
           />
           {isOpen && (
             <div className="list-additional">

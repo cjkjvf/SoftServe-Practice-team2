@@ -64,47 +64,41 @@ const ListActors = () => {
   }, [])
 
   return (
-    <div className="list-actors-wrapper-container">
-      <div className="list-actors-wrapper">
-        <div className="pagination">
-          <div
-            className={`left ${isStart ? 'no-active' : 'active'}`}
-            onClick={() => scroll('left')}
-          >
-            <svg width="6" height="11" viewBox="0 0 6 11" fill="none">
-              <path
-                d="M5.56047 0.3C5.04291 0.8176 2.57979 3.2808 1.00544 4.8551C0.69302 5.1675 0.69374 5.6733 1.00616 5.9857L5.56047 10.54"
-                stroke="white"
-                strokeWidth="0.8"
-              />
-            </svg>
-          </div>
-          <div
-            className={`right ${isFinish ? 'no-active' : 'active'}`}
-            onClick={() => scroll('right')}
-          >
-            <svg width="6" height="11" viewBox="0 0 6 11" fill="none">
-              <path
-                d="M0.439532 10.7C0.9571 10.1824 3.42021 7.7192 4.99456 6.1449C5.30698 5.8325 5.30626 5.3267 4.99384 5.0143L0.439532 0.46"
-                stroke="white"
-                strokeWidth="0.8"
-              />
-            </svg>
-          </div>
+    <div className="list-actors-wrapper">
+      <div className="pagination">
+        <div
+          className={`left ${isStart ? 'no-active' : 'active'}`}
+          onClick={() => scroll('left')}
+        >
+          <svg width="6" height="11" viewBox="0 0 6 11" fill="none">
+            <path
+              d="M5.56047 0.3C5.04291 0.8176 2.57979 3.2808 1.00544 4.8551C0.69302 5.1675 0.69374 5.6733 1.00616 5.9857L5.56047 10.54"
+              stroke="white"
+              strokeWidth="0.8"
+            />
+          </svg>
         </div>
         <div
-          className="list-actors"
-          style={{ gap: gap + 'px' }}
-          ref={scrollRef}
+          className={`right ${isFinish ? 'no-active' : 'active'}`}
+          onClick={() => scroll('right')}
         >
-          {listActors.map(x => (
-            <div className="actor" key={x.id}>
-              <img src={x.src} width={widthImg + 'px'} />
-              <p style={{ width: widthImg }}>{x.name}</p>
-              <span>{x.role}</span>
-            </div>
-          ))}
+          <svg width="6" height="11" viewBox="0 0 6 11" fill="none">
+            <path
+              d="M0.439532 10.7C0.9571 10.1824 3.42021 7.7192 4.99456 6.1449C5.30698 5.8325 5.30626 5.3267 4.99384 5.0143L0.439532 0.46"
+              stroke="white"
+              strokeWidth="0.8"
+            />
+          </svg>
         </div>
+      </div>
+      <div className="list-actors" style={{ gap: gap + 'px' }} ref={scrollRef}>
+        {listActors.map(x => (
+          <div className="actor" key={x.id}>
+            <img src={x.src} width={widthImg + 'px'} />
+            <p style={{ width: widthImg }}>{x.name}</p>
+            <span>{x.role}</span>
+          </div>
+        ))}
       </div>
     </div>
   )

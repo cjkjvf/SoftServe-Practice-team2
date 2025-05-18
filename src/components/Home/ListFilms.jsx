@@ -1,16 +1,15 @@
 import React, { useState } from 'react'
 import './ListFilms.scss'
 import arrayFilm from './ListFilms.json'
-import { useNavigate } from 'react-router-dom'
 
 const ListFilms = () => {
   const [currentPage, setCurrentPage] = useState(1)
   const itemsPerPage = 10
-  const navigate = useNavigate()
 
   const indexOfLastItem = currentPage * itemsPerPage
   const indexOfFirstItem = indexOfLastItem - itemsPerPage
   const currentItems = arrayFilm.slice(indexOfFirstItem, indexOfLastItem)
+
   const totalPages = Math.ceil(arrayFilm.length / itemsPerPage)
 
   const handlePageChange = page => {
@@ -19,41 +18,17 @@ const ListFilms = () => {
     }
   }
 
-  const handleTimeClick = (film, option) => {
-    const dataToStore = {
-      movieId: film.movieId,
-      imageURL: film.imageURL,
-      name: film.name,
-      seatPrices: film.seatPrices,
-      genres: film.genres,
-      selectedTime: option.time,
-      selectedFormat: option.option,
-      endTime: option.endTime,
-      listOption: film.listOption,
-      Listlocation: film.Listlocation,
-      Listdate: film.Listdate,
-      hall: film.hall,
-    }
-    localStorage.setItem('selectedMovie', JSON.stringify(dataToStore))
-    navigate('/seatplan')
-  }
-
   return (
     <div className="list-films-container">
       <div className="list-films">
         {currentItems.map((film, index) => (
           <div className="film-card" key={index}>
-            <img src={film.imageURL} alt={film.name} className="film-img" />
+            <img src={film.img} alt={film.name} className="film-img" />
             <div className="text">
               <h3>{film.name}</h3>
               <div className="options">
                 {film.listOption.map((option, idx) => (
-                  <div
-                    key={idx}
-                    className="option-item"
-                    onClick={() => handleTimeClick(film, option)}
-                    style={{ cursor: 'pointer' }}
-                  >
+                  <div key={idx} className="option-item">
                     <p>{option.time}</p> <span>({option.option})</span>
                   </div>
                 ))}
@@ -62,7 +37,6 @@ const ListFilms = () => {
           </div>
         ))}
       </div>
-
       <div className="pagination">
         {currentPage > 1 ? (
           <button
