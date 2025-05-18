@@ -1,5 +1,10 @@
 @use '../mixin.scss' as *;
 
-.block {
-  @include responsive-width;
+.home {
+  .block{
+    @include responsive-width;
+  }
+  .list-films-container{
+    @include responsive-width;
+  }
 }

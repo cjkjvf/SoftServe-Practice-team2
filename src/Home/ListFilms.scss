@@ -1,3 +1,5 @@
+@use '../mixin.scss' as *;
+
 .list-films-container {
   .list-films {
     display: grid;
