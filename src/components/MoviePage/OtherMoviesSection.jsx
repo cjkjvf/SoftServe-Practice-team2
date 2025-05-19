@@ -26,31 +26,30 @@ export default function OtherMoviesSection() {
 
     return (
         <section className="other-movies-section">
-            <h2 className="section-title">Інші фільми</h2>
+            <h2 className="other-movies-title">Інші фільми</h2>
 
-            <div className="carousel-container">
+            <div className="other-movies-carousel">
                 <button
-                    className="carousel-btn left"
+                    className="other-carousel-btn left"
                     onClick={handlePrevious}
                     aria-label="Previous movies"
                 >
                     <ChevronLeft size={24} strokeWidth={2} />
                 </button>
 
-                <div className="movie-grid">
+                <div className="other-movies-grid">
                     {movies.slice(currentIndex, currentIndex + 4).map((movie) => (
-                        <div className="movie-card" key={movie.id}>
+                        <div className="other-movie-card" key={movie.id}>
                             <img
-                                className="movie-card-image"
+                                className="other-movie-card-image"
                                 src={movie.imageURL || "/placeholder.svg"}
                                 alt={movie.title}
                             />
-                            <div className="movie-card-title">{movie.title}</div>
+                            <div className="other-movie-card-title">{movie.title}</div>
 
-                            {/* Movie info */}
-                            <div className="movie-card-info">
+                            <div className="other-movie-card-info">
                                 <h3>{movie.title}</h3>
-                                <div className="movie-details">
+                                <div className="other-movie-details">
                                     <span>{movie.details.rating}</span>
                                     <span>•</span>
                                     <span>{movie.details.year}</span>
@@ -66,7 +65,7 @@ export default function OtherMoviesSection() {
                 </div>
 
                 <button
-                    className="carousel-btn right"
+                    className="other-carousel-btn right"
                     onClick={handleNext}
                     aria-label="Next movies"
                 >

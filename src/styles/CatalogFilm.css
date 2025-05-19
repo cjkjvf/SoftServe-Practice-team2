@@ -6,7 +6,7 @@
 }
 
 /* Жанрові кнопки */
-.genre-buttons {
+.catalog-genre-buttons {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
@@ -16,7 +16,7 @@
   padding: 0 10px;
 }
 
-.genre-button {
+.catalog-genre-button {
   background-color: var(--color-bg);
   color: var(--color-light);
   border: none;
@@ -28,11 +28,11 @@
   box-sizing: border-box;
 }
 
-.genre-button:hover {
+.catalog-genre-button:hover {
   background-color: var(--color-bg);
 }
 
-.genre-button.active {
+.catalog-genre-button.active {
   background-color: var(--color-orange);
 }
 
@@ -51,7 +51,7 @@
 }
 
 /* Сітка фільмів */
-.movies-grid {
+.catalog-movies-grid {
   display: grid;
   grid-template-columns: repeat(5, 1fr);
   justify-items: center;
@@ -62,7 +62,7 @@
   padding: 0 10px;
 }
 
-.movie-card {
+.catalog-movie-card {
   text-align: center;
   width: 100%;
   max-width: 160px;
@@ -91,12 +91,12 @@ a:hover {
 }
 
 /* Пагінація */
-.pagination {
+.catalog-pagination {
   text-align: center;
   color: var( --color-primary);
 }
 
-.pagination button {
+.catalog-pagination button {
   margin: 0 10px;
   background: transparent;
   border: none;
@@ -106,50 +106,50 @@ a:hover {
   margin-bottom: 32px;
 }
 
-.pagination button:disabled {
+.catalog-pagination button:disabled {
   opacity: 0.5;
   cursor: default;
 }
 
 /* 📱 Адаптивність */
 @media (max-width: 1280px) {
-  .movies-grid {
+  .catalog-movies-grid {
     grid-template-columns: repeat(auto-fit(5, 1fr));
   }
 }
 @media (max-width: 1024px) {
-  .movies-grid {
+  .catalog-movies-grid {
     grid-template-columns: repeat(4, 1fr);
   }
 
-  .genre-button {
+  .catalog-genre-button {
     font-size: 12px;
     padding: 5px 8px;
   }
 }
 @media (max-width: 900px) {
-  .movies-grid {
+  .catalog-movies-grid {
     grid-template-columns: repeat(3, 1fr);
   }
 
-  .genre-button {
+  .catalog-genre-button {
     font-size: 12px;
     padding: 5px 8px;
   }
 }
 @media (max-width: 768px) {
-  .movies-grid {
+  .catalog-movies-grid {
     grid-template-columns: repeat(2, 1fr);
   }
 
-  .genre-button {
+  .catalog-genre-button {
     font-size: 12px;
     padding: 5px 8px;
   }
 }
 
 @media (max-width: 480px) {
-  .movies-grid {
+  .catalog-movies-grid {
     grid-template-columns: 1fr;
   }
 
@@ -158,14 +158,14 @@ a:hover {
     font-size: 16px;
   }
 
-  .pagination {
+  .catalog-pagination {
     display: flex;
     justify-content: center;
     align-items: center;
     margin-top: 20px;
   }
 
-  .pagination button {
+  .catalog-pagination button {
     color: var(--color-light);
     border: none;
     margin: 0 5px;
@@ -180,11 +180,11 @@ a:hover {
     padding: 5px;
   }
 
-  .pagination button:hover {
+  .catalog-pagination button:hover {
     color: var(--color-secondary);
   }
 
-  .pagination .underline {
+  .catalog-pagination .underline {
     margin: 0 10px;
     margin-bottom: 10px;
     font-size: 20px;

@@ -1,11 +1,11 @@
-.carousel-container {
+.other-movies-carousel {
     position: relative;
     display: flex;
     align-items: center;
     justify-content: center;
   }
   
-  .movie-grid {
+  .other-movies-grid {
     display: flex;
     gap: 20px;
     overflow: hidden;
@@ -14,17 +14,17 @@
     justify-content: center;
   }
   
-  .movie-card {
+  .other-movie-card {
     flex: 0 0 240px;
     border-radius: 8px;
     background-color: #fff;
     cursor: pointer;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
     overflow: hidden;
     position: relative;
   }
   
-  .movie-card-image {
+  .other-movie-card-image {
     width: 100%;
     height: 360px;
     object-fit: contain;
@@ -32,9 +32,37 @@
     margin: 0 auto;
   }
   
+  .other-movie-card-title {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    padding: 10px;
+    font-size: 18px;
+    font-weight: bold;
+    background: rgba(0, 0, 0, 0.5);
+    color: white;
+    text-align: center;
+  }
+  
+  .other-movie-card-info {
+    padding: 12px;
+    font-size: 14px;
+    color: #333;
+  }
+  
+  .other-movie-details {
+    margin-top: 6px;
+    color: #666;
+    font-size: 13px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 4px;
+  }
+  
   /* Кнопки каруселі */
-  .carousel-btn {
-    background-color: #1f2937; /* темно-сірий */
+  .other-carousel-btn {
+    background-color: #1f2937;
     border: none;
     color: white;
     font-size: 24px;
@@ -42,23 +70,32 @@
     cursor: pointer;
     border-radius: 50%;
     user-select: none;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
     transition: background-color 0.3s, box-shadow 0.3s;
     display: flex;
     align-items: center;
     justify-content: center;
   }
   
-  .carousel-btn:hover {
-    background-color: #374151; /* трохи світліший сірий */
-    box-shadow: 0 6px 14px rgba(0,0,0,0.4);
+  .other-carousel-btn:hover {
+    background-color: #374151;
+    box-shadow: 0 6px 14px rgba(0, 0, 0, 0.4);
   }
   
-  .carousel-btn.left {
+  .other-carousel-btn.left {
     margin-right: 15px;
   }
   
-  .carousel-btn.right {
+  .other-carousel-btn.right {
     margin-left: 15px;
+  }
+  
+  /* Заголовок секції */
+  .other-movies-title {
+    text-align: center;
+    color: var(--color-light, #fff);
+    font-size: 24px;
+    margin: 60px;
+    font-family: var(--text-secondary);
   }
   

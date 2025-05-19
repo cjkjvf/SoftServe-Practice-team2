@@ -63,11 +63,11 @@ const CatalogFilm = () => {
 
   return (
     <div className="catalog-container">
-      <div className="genre-buttons">
+      <div className="catalog-genre-buttons">
         {genres.map((genre, index) => (
           <button
             key={index}
-            className={`genre-button ${selectedGenre === genre ? "active" : ""}`}
+            className={`catalog-genre-button ${selectedGenre === genre ? "active" : ""}`}
             onClick={() => handleGenreClick(genre)}
           >
             {genre}
@@ -77,9 +77,9 @@ const CatalogFilm = () => {
 
       <h2 className="catalog-movie-title">Ваші фільми</h2>
 
-      <div className="movies-grid">
+      <div className="catalog-movies-grid">
         {currentMovies.map((movie, index) => (
-          <Link key={index} to={`/movies/${movie.id}`} className="movie-card">
+          <Link key={index} to={`/movies/${movie.id}`} className="catalog-movie-card">
             <img
               src={movie.imageURL || "./thunderbolts.jpeg"}
               alt={movie.title}
@@ -91,7 +91,7 @@ const CatalogFilm = () => {
         ))}
       </div>
 
-      <div className="pagination">
+      <div className="catalog-pagination">
         <button
           onClick={() => handlePageChange(currentPage - 1)}
           disabled={currentPage === 1}
@@ -99,7 +99,7 @@ const CatalogFilm = () => {
           {"<"}
         </button>
 
-        <span className="current-page">{`Сторінка ${currentPage} з ${totalPages}`}</span>
+        <span className="catalog-current-page">{`Сторінка ${currentPage} з ${totalPages}`}</span>
 
         <button
           onClick={() => handlePageChange(currentPage + 1)}
