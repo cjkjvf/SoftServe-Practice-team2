@@ -28,6 +28,7 @@
       gap: 10px;
       h1 {
         font-family: Inter;
+        color: var( --color-light); 
         font-weight: 500;
         font-size: 22px;
         line-height: 22px;
@@ -80,6 +81,7 @@
     }
     p {
       margin: 0;
+      color: var( --color-light);
       font-family: Inter;
       font-weight: 500;
       font-size: 24px;

@@ -32,6 +32,12 @@
   justify-content: space-between; 
   align-items: center;
 }
+
+@media (min-width: 768px) and (max-width: 1024px) {
+  .booking-header {
+    width: 65%;
+  }
+}
 /* кінець Секції з Header для сторінки з вибором місця  */
 
 

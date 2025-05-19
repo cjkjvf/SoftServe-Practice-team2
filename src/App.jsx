@@ -9,31 +9,33 @@ import CatalogFilm from './pages/CatalogFilm';
 import Login from './Autorize/Login'; 
 import Register from './Autorize/Register';
 import ListFilms from './Home/ListFilms';
-// import Catalog from './Catalog/Catalog';
+import Catalog from './Catalog/Catalog';
+import ScrollToTop from './ScrollToTop';
 import './global.css';
 import './styles/index.css';
 
 function App() {
   return (
     <BrowserRouter>
-      <Routes>
-        {/* Головна обгортка з Layout */}
-        <Route path="/" element={<Layout />}>
-          <Route index element={<Home />} />
-          <Route path="about" element={<About />} />
-          <Route path="favorites" element={<Favorites />} />
-          <Route path="movies/:movieId" element={<MovieDetails />} />
-          <Route path="/catalogfilm" element={<CatalogFilm/>}/>
-          <Route path="listfilms" element={<ListFilms />} />
-          {/* <Route path="catalog" element={<Catalog />} /> */}
-        </Route>
+      <ScrollToTop />
+        <Routes>
+          {/* Головна обгортка з Layout */}
+          <Route path="/" element={<Layout />}>
+            <Route index element={<Home />} />
+            <Route path="about" element={<About />} />
+            <Route path="favorites" element={<Favorites />} />
+            <Route path="movies/:movieId" element={<MovieDetails />} />
+            <Route path="/catalogfilm" element={<CatalogFilm/>}/>
+            <Route path="listfilms" element={<ListFilms />} />
+            <Route path="catalog" element={<Catalog />} />
+          </Route>
 
-        {/* Маршрути поза Layout (без header/footer) */}
-        <Route path="seatplan-pay" element={<SeatPlanPay />} />
-        <Route path="seatplan" element={<SeatPlanPay />} />
-        <Route path="login" element={<Login />} />
-        <Route path="register" element={<Register />} />
-      </Routes>
+          {/* Маршрути поза Layout (без header/footer) */}
+          <Route path="seatplan-pay" element={<SeatPlanPay />} />
+          <Route path="seatplan" element={<SeatPlanPay />} />
+          <Route path="login" element={<Login />} />
+          <Route path="register" element={<Register />} />
+        </Routes>
     </BrowserRouter>
   );
 }

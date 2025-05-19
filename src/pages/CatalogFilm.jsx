@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { Link } from "react-router-dom";
+import { Link, useSearchParams, useNavigate } from "react-router-dom";
 import "../styles/CatalogFilm.css";
 import data from '../data/movie.json'; 
 
@@ -17,6 +17,8 @@ const CatalogFilm = () => {
   const [currentPage, setCurrentPage] = useState(1);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
+  const [searchParams] = useSearchParams();
+  const navigate = useNavigate();
 
   const moviesPerPage = 15;
 
@@ -26,7 +28,15 @@ const CatalogFilm = () => {
         if (!Array.isArray(data)) {
           throw new Error("Невірний формат даних фільмів");
         }
+
         setMoviesData(data);
+
+        // ✅ Читаємо жанр з URL (наприклад ?genre=Комедія)
+        const genreFromUrl = searchParams.get("genre");
+        if (genreFromUrl && genres.includes(genreFromUrl)) {
+          setSelectedGenre(genreFromUrl);
+        }
+
       } catch (err) {
         console.error("Помилка при завантаженні даних:", err);
         setError(err.message);
@@ -36,11 +46,18 @@ const CatalogFilm = () => {
     };
 
     fetchData();
-  }, []);
+  }, [searchParams]);
 
   const handleGenreClick = (genre) => {
     setSelectedGenre(genre);
     setCurrentPage(1);
+
+    // 🧭 Оновлюємо URL при натисканні
+    if (genre === "ВСІ") {
+      navigate("/catalogfilm");
+    } else {
+      navigate(`/catalogfilm?genre=${encodeURIComponent(genre)}`);
+    }
   };
 
   const handlePageChange = (page) => {
@@ -87,7 +104,6 @@ const CatalogFilm = () => {
             />
             <div className="catalog-movie-title-film">{movie.title}</div>
           </Link>
-          
         ))}
       </div>
 
@@ -113,3 +129,4 @@ const CatalogFilm = () => {
 };
 
 export default CatalogFilm;
+

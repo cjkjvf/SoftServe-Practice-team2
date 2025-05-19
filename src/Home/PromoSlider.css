@@ -160,6 +160,7 @@
   font-optical-sizing: auto;
   font-weight: 100;
   font-style: normal;
+  margin-left: 32px;
   opacity: 0;
   animation: fadeIn 1s ease-in-out forwards;
 }
@@ -204,9 +205,8 @@
 
 /* Стилі для кнопки "Обрати сеанс" */
 .action-button {
-  position: absolute;
-  bottom: 40px;
-  left: 48px;
+  align-self: flex-start;
+  margin-right: auto;
   padding: 12px 24px;
   background-color: rgba(249, 245, 245, 0.663);
   color: rgb(0, 0, 0);
@@ -216,9 +216,8 @@
   border-radius: 29px;
   cursor: pointer;
   transition: background-color 0.65s ease;
-  opacity: 0;
   animation: fadeIn 1s ease-in-out forwards;
-  opacity: 1; 
+  opacity: 1;
   z-index: 9999;
 }
 
@@ -362,7 +361,8 @@
   }
 
   .left-container h1 {
-    font-size: 18px;
+    padding-top: 64px;
+    font-size: 14px;
     line-height: 1.2;
   }
 
@@ -372,16 +372,19 @@
 
   .right-container {
     width: 100%;
-    top: 0;
+    padding-top: 40px;
+    max-height: 120px;
+    padding-bottom: 0;
+    row-gap: 5px;
   }
 
   .right-container span {
-    font-size: 13px;
-    margin-bottom: 30px;
+    font-size: 10px;
   }
 
 
 }
+
 
 @keyframes fadeIn {
   to {

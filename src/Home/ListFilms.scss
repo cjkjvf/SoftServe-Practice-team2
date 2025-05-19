@@ -1,12 +1,20 @@
+@use '../mixin.scss' as *;
+
 .list-films-container {
+   padding-bottom: 64px; 
   .list-films {
     display: grid;
+    padding: 30px 32px 0 32px;
     grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
     gap: 50px;
     .film-card {
       display: flex;
       flex-direction: row;
       gap: 10px;
+      img {
+        width: 50%;
+        object-fit: cover;
+      }
       .text {
         h3 {
           font-family: Inter;
@@ -59,7 +67,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-top: 20px;
+    margin-top: 32px;
 
     button {
       color: #ffffff;
@@ -90,6 +98,50 @@
       margin-bottom: 10px;
       font-size: 20px;
       color: #ffffff;
+    }
+  }
+}
+
+
+
+@media (max-width: 480px) {
+  .list-films-container {
+    padding: 32px 16px;
+
+    .list-films {
+      grid-template-columns: 1fr;
+      // gap: 22px;
+      padding: 0;
+      .film-card {
+        gap: 22px;
+        img {
+          width: 100px;
+          max-height: 240px;
+        }
+        .text {
+          h3 {
+            font-size: 15px;
+          }
+
+          .options {
+            gap: 6px;
+            .option-item {
+              p {
+                font-size: 13px;
+              }
+              span {
+                font-size: 7.5px;
+              }
+            }
+          }
+        }
+      }
+    }
+
+    .pagination {
+      .underline {
+        font-size: 16px;
+      }
     }
   }
 }

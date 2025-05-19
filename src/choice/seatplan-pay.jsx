@@ -1,3 +1,4 @@
+import React, { useEffect } from "react";
 import HeaderSeatplan from "./choiceComponents/HeaderSeatplan";
 import SeatGrid from "./choiceComponents/SeatGrid";
 import { useBooking } from "./choiceContext/BookingContext";
@@ -6,8 +7,19 @@ import ScreenIndicator from "./choiceComponents/ScreenIndicator";
 import MovieInfo from "./choiceComponents/MovieInfo";
 
 export default function SeatPlanPay() {
-  const { selectedSeats, toggleSeat, totalTickets, totalPrice } = useBooking();
+  const {
+    selectedSeats,
+    toggleSeat,
+    totalTickets,
+    totalPrice,
+    clearSeats, 
+  } = useBooking();
 
+  useEffect(() => {
+    return () => {
+      clearSeats();
+    };
+  }, []);
 
   const selectedMovie = JSON.parse(localStorage.getItem("selectedMovie"));
   const seatPrices = selectedMovie?.seatPrices || [];
@@ -76,6 +88,7 @@ export default function SeatPlanPay() {
                 </button>
               </div>
             ))}
+
 
             <hr className="divider" />
 
