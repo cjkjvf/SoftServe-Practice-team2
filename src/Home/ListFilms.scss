@@ -1,8 +1,10 @@
 @use '../mixin.scss' as *;
 
 .list-films-container {
+   padding-bottom: 64px; 
   .list-films {
     display: grid;
+    padding: 30px 32px 0 32px;
     grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
     gap: 50px;
     .film-card {

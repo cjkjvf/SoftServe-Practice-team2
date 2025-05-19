@@ -4,6 +4,7 @@
   position: relative;
   @include responsive-width;
   margin: 30px auto;
+  padding-bottom: 64px; 
 
   .pagination {
     top: 50%;
