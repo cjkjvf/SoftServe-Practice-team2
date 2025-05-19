@@ -5,6 +5,7 @@ import About from './pages/About';
 import Favorites from "./pages/Favorites"; 
 import SeatPlanPay from "./choice/seatplan-pay"; 
 import MovieDetails from './pages/MovieDetails';
+import CatalogFilm from './pages/CatalogFilm';
 import Login from './Autorize/Login'; 
 import Register from './Autorize/Register';
 import ListFilms from './Home/ListFilms';
@@ -22,6 +23,7 @@ function App() {
           <Route path="about" element={<About />} />
           <Route path="favorites" element={<Favorites />} />
           <Route path="movies/:movieId" element={<MovieDetails />} />
+          <Route path="/catalogfilm" element={<CatalogFilm/>}/>
           <Route path="listfilms" element={<ListFilms />} />
           <Route path="catalog" element={<Catalog />} />
         </Route>
