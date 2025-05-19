@@ -3,6 +3,8 @@ import './ListFilms.scss'
 import arrayFilm from './ListFilms.json'
 import { useNavigate } from 'react-router-dom'
 
+
+
 const ListFilms = () => {
   const [currentPage, setCurrentPage] = useState(1)
   const itemsPerPage = 10
@@ -12,6 +14,12 @@ const ListFilms = () => {
   const indexOfFirstItem = indexOfLastItem - itemsPerPage
   const currentItems = arrayFilm.slice(indexOfFirstItem, indexOfLastItem)
   const totalPages = Math.ceil(arrayFilm.length / itemsPerPage)
+
+
+  const goToDetails = (film) => {
+  localStorage.setItem('selectedMovie', JSON.stringify(film));
+  navigate(`/movies/${film.movieId}`);
+};
 
   const handlePageChange = page => {
     if (page >= 1 && page <= totalPages) {
@@ -43,9 +51,20 @@ const ListFilms = () => {
       <div className="list-films">
         {currentItems.map((film, index) => (
           <div className="film-card" key={index}>
-            <img src={film.imageURL} alt={film.name} className="film-img" />
+            <img
+              src={film.imageURL}
+              alt={film.name}
+              className="film-img"
+              style={{ cursor: 'pointer' }}
+              onClick={() => goToDetails(film)}
+            />
             <div className="text">
-              <h3>{film.name}</h3>
+              <h3
+                style={{ cursor: 'pointer' }}
+                onClick={() => goToDetails(film)}
+              >
+                {film.name}
+              </h3>
               <div className="options">
                 {film.listOption.map((option, idx) => (
                   <div
