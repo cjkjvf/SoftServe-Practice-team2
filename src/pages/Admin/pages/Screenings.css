@@ -1,0 +1,140 @@
+.screenings-container {
+  padding-top: var(--padding-desktop);
+}
+
+.screenings-container h2 {
+  font-size: var(--title-mobile);
+  margin-bottom: var(--padding-mobile);
+  font-family: var(--font-secondary);
+}
+
+.screenings-form {
+  background: var(--color-neutral);
+  padding: var(--padding-mobile);
+  border-radius: 8px;
+  box-shadow: 0 2px 4px var(--full-transparent);
+  margin-bottom: var(--padding-mobile);
+}
+
+.screenings-form label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+  font-family: var(--font-main);
+  color: var(--color-bg);
+}
+
+.screenings-form input,
+.screenings-form select {
+  width: 100%;
+  padding: var(--padding-mobile);
+  margin-bottom: var(--padding-mobile);
+  border: 1px solid var(--color-secondary);
+  border-radius: 4px;
+  font-size: var(--text-size);
+  font-family: var(--font-main);
+  background: var(--color-light);
+  color: var(--color-bg);
+}
+
+.screenings-form .time-input {
+  display: flex;
+  gap: 10px;
+  margin-bottom: var(--padding-mobile);
+}
+
+.screenings-form .time-input input {
+  width: 50%;
+}
+
+.screenings-form button {
+  background-color: var(--color-primary);
+  color: var(--color-bg);
+  padding: var(--padding-mobile);
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: var(--text-size);
+  font-family: var(--font-main);
+  margin-right: 10px;
+}
+
+.screenings-form button:hover {
+  background-color: var(--color-secondary);
+}
+
+.screenings-table {
+  width: 100%;
+  border-collapse: collapse;
+  background: var(--color-neutral);
+  border-radius: 8px;
+  box-shadow: 0 2px 4px var(--full-transparent);
+}
+
+.screenings-table th,
+.screenings-table td {
+  padding: var(--padding-mobile);
+  text-align: left;
+  border-bottom: 1px solid var(--color-secondary);
+}
+
+.screenings-table th {
+  background-color: var(--color-light);
+  font-weight: bold;
+  font-family: var(--font-secondary);
+}
+
+.screenings-table tr:hover {
+  background-color: var(--color-secondary);
+}
+
+.screenings-table button {
+  background: none;
+  border: none;
+  color: var(--color-primary);
+  cursor: pointer;
+  margin-right: 10px;
+  font-family: var(--font-main);
+}
+
+.screenings-table button.delete {
+  color: var(--color-orange);
+}
+
+.screenings-table button:hover {
+  text-decoration: underline;
+}
+
+.pagination {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: var(--padding-mobile);
+}
+
+.pagination button {
+  background-color: var(--color-primary);
+  color: var(--color-bg);
+  padding: var(--padding-mobile);
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: var(--text-size);
+  font-family: var(--font-main);
+}
+
+.pagination button:disabled {
+  background-color: var(--color-secondary);
+  cursor: not-allowed;
+}
+
+.pagination span {
+  font-size: var(--text-size);
+  font-family: var(--font-main);
+}
+
+@media (min-width: 768px) {
+  .screenings-container h2 {
+    font-size: var(--title-desktop);
+  }
+}
