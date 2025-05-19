@@ -89,6 +89,7 @@ export default function SeatPlanPay() {
               </div>
             ))}
 
+
             <hr className="divider" />
 
             <div className="total">

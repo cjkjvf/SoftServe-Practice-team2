@@ -87,7 +87,14 @@ const MovieInfo = () => {
         <div className="movieInfo-tags">
           <span className="movieInfo-tag blue">{movie.selectedFormat}</span>
           {movie.genres?.map((genre, i) => (
-            <span key={i} className="movieInfo-tag light">{genre}</span>
+            <span
+              key={i}
+              className="movieInfo-tag light"
+              onClick={() => navigate(`/catalogfilm?genre=${encodeURIComponent(genre)}`)}
+              style={{ cursor: "pointer" }}
+              >
+              {genre}
+            </span>
           ))}
         </div>
 

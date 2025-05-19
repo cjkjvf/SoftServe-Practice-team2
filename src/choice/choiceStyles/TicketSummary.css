@@ -10,6 +10,8 @@
 .left-content {
   width: 70%;
   max-height: 100vh;
+  box-sizing: border-box;   
+  position: relative;
 }
 
 .right-summary {
@@ -17,18 +19,20 @@
   top: 0;                    
   right: 0;                  
   width: 30vw;                
-  height: 100vh;              
+  height: 100dvh;            
   background-color: #0e0e1b;
   border-left: 2px solid var(--color-light, #fff);
   box-sizing: border-box;
   padding: 24px;
   display: flex;
+  overflow-y: auto;
   flex-direction: column;
   align-items: center;
   color:var(--color-light, #fff);           
   transition: all 0.3s ease;
   box-shadow: -10px 0 30px rgba(0, 0, 0, 0.7);
 }
+
 
 .right-summary .summary-top {
   display: flex;
@@ -131,6 +135,7 @@
 
 .ticket-item {
   position: relative;
+  overflow-y: auto;
 }
 
 .remove-seat {
@@ -149,9 +154,8 @@
   color: #0b7330;
 }
 
-/* ====== Адаптивність ====== */
-
-/* === Планшети: від 768px до 1023px === */
+ 
+/* === Планшети: від 768px до 1024px === */
 @media (min-width: 768px) and (max-width: 1024px) {
   .left-content {
     width: 65%;
@@ -161,7 +165,7 @@
     position: fixed;
     right: 0;
     width: 35%;
-    height: 100vh;
+    height: 100dvh;
     padding: 20px;
     border-left: 2px solid var(--color-light, #fff);
     border-top: none;
@@ -222,4 +226,10 @@
     font-size: 14px;
     padding: 10px;
   }
+}
+
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
 }

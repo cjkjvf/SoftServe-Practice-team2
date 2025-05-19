@@ -1,67 +1,48 @@
 .movieInfo-container {
   background-color: #0e0e1b;
   color: white;
-  padding: 100px;
+  padding: 64px;
   border-radius: 12px;
-  width: 100%;
+  width: 70%;
   box-sizing: border-box;
-  overflow: visible;
-  position: relative; /* 🟢 ДОДАНО */
+  overflow: hidden;
+  position: relative;
   z-index: 0;
 }
 
-.movieInfo-details {
-  overflow: visible; /* 🟢 ЗМІНЕНО */
-}
-
-.movieInfo-row {
-  margin-top: 20px;
-  white-space: nowrap;
-  position: relative; /* 🟢 ДОДАНО */
-  z-index: 10;
-}
-
-.movieInfo-card {
-  display: inline-block;
-  vertical-align: top;
-  background-color: #141421;
-  border-radius: 10px;
-  border: 1px solid #2a2a3d;
-  padding: 10px 16px;
-  margin-right: 16px;
-  min-width: 160px;
-  text-align: center;
-  position: relative; 
-  z-index: 20; 
-  overflow: visible; 
-}
-
-.movieInfo-select {
-  margin-top: 4px;
-  width: 100%;
-  background-color: #1a1a2e;
-  color: white;
-  border-radius: 6px;
-  padding: 6px 10px;
-  border: 1px solid #2a2a3d;
-  font-size: 14px;
-  position: relative;
-  z-index: 999; 
+.movieInfo-flex {
+  display: flex;
+  flex-direction: row;
+  gap: 24px;
+  align-items: flex-start;
+  flex-wrap: wrap; 
 }
 
 .movieInfo-poster {
   width: 180px;
-  height: 258px;
-  border-radius: 10px;
-  float: left;
-  margin-right: 20px;
+  height: 268px;
+  border-radius: 18px;
+  flex: 0 0 auto; 
+  object-fit: cover;
+  padding-top: 32px;
+  transition: transform 0.3s ease;
+}
+
+.movieInfo-poster:hover {
+  transform: scale(1.12);
+}
+
+.movieInfo-details {
+  flex: 1 1 0; 
+  min-width: 280px;
 }
 
 .movieInfo-title {
   font-size: 22px;
   font-weight: 700;
   color: var(--color-light);
-  margin-top: 0;
+  margin-top: 32px;
+  margin-bottom: 32px;
 }
 
 .movieInfo-tags {
@@ -76,6 +57,18 @@
   font-weight: 500;
   margin-right: 10px;
   margin-bottom: 6px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.25);
+  transition: all 0.3s ease;
+  transform: translateY(0);
+  opacity: 0.92;
+  cursor: pointer;
+}
+
+.movieInfo-tag:hover {
+  transform: translateY(-2px) scale(1.05);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.35);
+  opacity: 1;
+  filter: brightness(1.1);
 }
 
 .movieInfo-tag.blue {
@@ -88,46 +81,53 @@
   color: #000;
 }
 
-.movieInfo-card img {
-  width: 20px;
-  height: 20px;
-  margin-bottom: 6px;
+.movieInfo-row {
+  margin-top: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
 }
 
-.movieInfo-card-label {
-  font-size: 13px;
-  color: #d1d1e0;
-  margin-bottom: 4px;
+.movieInfo-card {
+  background-color: #141421;
+  border-radius: 10px;
+  border: 1px solid #2a2a3d;
+  padding: 10px 16px;
+  min-width: 160px;
+  text-align: center;
 }
 
-.movieInfo-card-value {
-  font-size: 14px;
-  font-weight: 600;
-  color: #ffffff;
-}
-
-/* 🔄 Адаптивність */
 @media (max-width: 768px) {
-  .movieInfo-poster {
-    float: none;
-    display: block;
-    margin: 0 auto 16px auto;
+
+  .movieInfo-container {
+    padding: 64px 32px;
+    width: 100%;
+    min-width: unset;
+  }
+  .movieInfo-flex {
+    flex-direction: column;
+    align-items: center;
   }
 
   .movieInfo-details {
+    width: 100%;
     text-align: center;
+  }
+
+  .movieInfo-title {
+    text-align: center;
+  }
+
+  .movieInfo-poster {
+    margin: 0 auto 16px auto;
   }
 
   .movieInfo-row {
-    white-space: normal;
-    text-align: center;
+    justify-content: center;
   }
 
   .movieInfo-card {
-    display: block;
-    width: 80%;
-    margin: 8px auto;
+    width: 90%;
+    max-width: 320px;
   }
 }
-
-

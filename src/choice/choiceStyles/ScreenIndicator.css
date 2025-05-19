@@ -7,7 +7,7 @@
   color: white;
   width: 100%;
   max-width: 1000px;
-  padding: 0 24px;
+  padding: 0 0 0 96px;
   box-sizing: border-box;
 }
 
@@ -61,7 +61,7 @@
   text-align: center;
 }
 
-/* 🟡 Додано для плавного скролу, якщо використовуватимеш */
+
 .screen-wrapper:focus-within {
   scroll-margin-top: 120px;
 }
@@ -70,7 +70,7 @@
 @media (min-width: 768px) and (max-width: 1023px) {
   .screen-wrapper {
     margin-top: 160px;
-    padding: 0 20px;
+    padding: 0 0 0 64px;
   }
 
   .seat-type {
@@ -90,7 +90,7 @@
 /* 📱 Мобілки (до 767px) */
 @media (max-width: 767px) {
   .screen-wrapper {
-    margin-top: 128px;
+    margin-top: 64px;
     padding: 0 16px;
   }
 
