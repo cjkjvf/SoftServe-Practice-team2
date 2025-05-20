@@ -1,15 +1,36 @@
 import React, { useState, useEffect } from 'react';
-import { useParams } from 'react-router-dom';
+import { useParams, useNavigate } from 'react-router-dom';
 import { Bookmark } from 'lucide-react';
 import axios from 'axios';
 import '../../styles/MovieInfoSection.css';
 
 const MovieInfoSection = () => {
   const { movieId } = useParams();
+  const navigate = useNavigate();
   const [movie, setMovie] = useState(null);
   const [isSaved, setIsSaved] = useState(false);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
+  const [selectedFormat, setSelectedFormat] = useState('');
+
+  const months = [
+    'січня', 'лютого', 'березня', 'квітня', 'травня', 'червня',
+    'липня', 'серпня', 'вересня', 'жовтня', 'листопада', 'грудня'
+  ];
+
+  const formatReleaseDate = (dateString) => {
+    try {
+      const date = new Date(dateString);
+      if (isNaN(date.getTime())) {
+        return 'Невідома дата';
+      }
+      const day = date.getDate();
+      const month = months[date.getMonth()];
+      return `${day} ${month}`;
+    } catch {
+      return 'Невідома дата';
+    }
+  };
 
   useEffect(() => {
     const fetchMovie = async () => {
@@ -36,6 +57,9 @@ const MovieInfoSection = () => {
       const savedMovies = JSON.parse(localStorage.getItem('savedMovies')) || [];
       const isMovieSaved = savedMovies.includes(Number(movieId));
       setIsSaved(isMovieSaved);
+
+      const selectedMovie = JSON.parse(localStorage.getItem('selectedMovie')) || {};
+      setSelectedFormat(selectedMovie.selectedFormat || '');
     }
   }, [movieId]);
 
@@ -82,9 +106,19 @@ const MovieInfoSection = () => {
           <div className="movie-info">
             <h1 className="movie-title">{movie.title}</h1>
             <p className="movie-description">{movie.description}</p>
-            <div className="genres-container">
-              {movie.genres.map((genre, index) => (
-                <span key={index} className="genre-pill">{genre}</span>
+            <div className="movieInfo-tags">
+              {selectedFormat && (
+                <span className="movieInfo-tag blue">{selectedFormat}</span>
+              )}
+              {movie.genres?.map((genre, i) => (
+                <span
+                  key={i}
+                  className="movieInfo-tag light"
+                  onClick={() => navigate(`/catalogfilm?genre=${encodeURIComponent(genre)}`)}
+                  style={{ cursor: 'pointer' }}
+                >
+                  {genre}
+                </span>
               ))}
             </div>
             <div className="movie-details">
@@ -95,7 +129,7 @@ const MovieInfoSection = () => {
               <div className="separator">|</div>
               <div className="detail-item">
                 <span className="detail-label">Прем'єра:</span>
-                <span className="detail-value">{movie.details.release_date}</span>
+                <span className="detail-value">{formatReleaseDate(movie.details.release_date)}</span>
               </div>
               <div className="separator">|</div>
               <div className="detail-item">

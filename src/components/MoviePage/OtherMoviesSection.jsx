@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { ChevronLeft, ChevronRight } from "lucide-react";
+import { useNavigate } from "react-router-dom";
 import axios from "axios";
 import "../../styles/OtherMoviesSection.css";
 
@@ -8,6 +9,7 @@ export default function OtherMoviesSection() {
   const [currentIndex, setCurrentIndex] = useState(0);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
+  const navigate = useNavigate();
 
   useEffect(() => {
     const fetchMovies = async () => {
@@ -25,17 +27,16 @@ export default function OtherMoviesSection() {
     fetchMovies();
   }, []);
 
-  const handleDelete = (id) => {
-    setMovies((prev) => prev.filter((movie) => movie._id !== id));
-    setCurrentIndex((prev) => Math.min(prev, movies.length - 5));
-  };
-
   const handleNext = () => {
     setCurrentIndex((prev) => (prev + 4 >= movies.length ? 0 : prev + 4));
   };
 
   const handlePrevious = () => {
     setCurrentIndex((prev) => (prev - 4 < 0 ? Math.max(0, movies.length - 4) : prev - 4));
+  };
+
+  const handleMovieClick = (movieId) => {
+    navigate(`/movies/${movieId}`);
   };
 
   if (loading) return <div className="container">Завантаження...</div>;
@@ -54,7 +55,12 @@ export default function OtherMoviesSection() {
         </button>
         <div className="other-movies-grid">
           {movies.slice(currentIndex, currentIndex + 4).map((movie) => (
-            <div className="other-movie-card" key={movie._id}>
+            <div
+              className="other-movie-card"
+              key={movie._id}
+              onClick={() => handleMovieClick(movie._id)}
+              style={{ cursor: "pointer" }}
+            >
               <img
                 className="other-movie-card-image"
                 src={movie.imageURL || "/placeholder.svg"}
@@ -68,11 +74,11 @@ export default function OtherMoviesSection() {
                   <span>•</span>
                   <span>{movie.details.year}</span>
                   <span>•</span>
-                  <span>{movie.genres[0]}</span>
+                  <span>{movie.genres[0] || "Невідомий жанр"}</span>
                   <span>•</span>
                   <span>{movie.details.duration_minutes} хв.</span>
                 </div>
-                <div>Від {movie.details.age_restriction}</div>
+                <div>Від {movie.details.age_restriction || "0+"}</div>
               </div>
             </div>
           ))}
