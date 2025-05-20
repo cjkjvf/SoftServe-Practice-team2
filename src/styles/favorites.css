@@ -1,4 +1,7 @@
-
+.main-content {
+  margin: 64px;
+  padding: 90px;
+}
 
 .favorites-container {
     min-height: 100vh;
@@ -110,9 +113,3 @@
     color: var(--color-primary);
     text-decoration: underline;
   }
-  @media(min-width: 600px) {
-    .main-content {
-      padding: 64px 0 64px 0;
-    }
-  }
-  

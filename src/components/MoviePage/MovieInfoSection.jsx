@@ -1,5 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
+import { Link } from 'react-router-dom'; 
+
 import { Bookmark } from 'lucide-react';
 import moviesData from "../../data/movie.json";
 import '../../styles/MovieInfoSection.css';
@@ -93,8 +95,16 @@ const MovieInfoSection = () => {
 
                         <div className="genres-container">
                             {movie.genres.map((genre, index) => (
-                                <span key={index} className="genre-pill">{genre}</span>
+                                <Link
+                                    key={index}
+                                    to={`/catalogfilm?genre=${encodeURIComponent(genre)}`}
+                                    className="genre-link"
+                                >
+                                    {genre}
+                                    {index < movie.genres.length - 1}
+                                </Link>
                             ))}
+
                         </div>
 
                         <div className="movie-details">

@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { ChevronLeft, ChevronRight } from "lucide-react";
+import { Link } from "react-router-dom";
 import "../../styles/OtherMoviesSection.css";
 import moviesData from "../../data/movie.json";
 
@@ -40,12 +41,14 @@ export default function OtherMoviesSection() {
                 <div className="other-movies-grid">
                     {movies.slice(currentIndex, currentIndex + 4).map((movie) => (
                         <div className="other-movie-card" key={movie.id}>
-                            <img
-                                className="other-movie-card-image"
-                                src={movie.imageURL || "/placeholder.svg"}
-                                alt={movie.title}
-                            />
-                            <div className="other-movie-card-title">{movie.title}</div>
+                            <Link to={`/movies/${movie.id}`}>
+                                <img
+                                    className="other-movie-card-image"
+                                    src={movie.imageURL || "/placeholder.svg"}
+                                    alt={movie.title}
+                                />
+                                <div className="other-movie-card-title">{movie.title}</div>
+                            </Link>
 
                             <div className="other-movie-card-info">
                                 <h3>{movie.title}</h3>
@@ -61,6 +64,7 @@ export default function OtherMoviesSection() {
                                 <div>Від {movie.details.age_restriction}</div>
                             </div>
                         </div>
+                    
                     ))}
                 </div>
 

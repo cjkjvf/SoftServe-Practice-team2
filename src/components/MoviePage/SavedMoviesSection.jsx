@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import moviesData from '../../date/movie.json';
+import moviesData from '../../data/movie.json';
 import MovieCard from './components/MovieCard';
 
 const SavedMoviesPage = () => {

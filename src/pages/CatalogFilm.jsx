@@ -4,8 +4,8 @@ import "../styles/CatalogFilm.css";
 import data from '../data/movie.json'; 
 
 const genres = [
-  "ВСІ", "Жахи", "Романтика", "Комедія", "Драма", "Бойовик",
-  "Пригодницький", "Фантастика", "Фентезі", "Трилер",
+  "ВСІ", "Екшн", "Жахи", "Романтика", "Комедія", "Драма", "Бойовик",
+  "Пригоди", "Фантастика", "Фентезі", "Трилер",
   "Мелодрама", "Детектив", "Кримінал", "Документальний",
   "Історичний", "Біографія", "Мюзикл", "Сімейний",
   "Спортивний", "Військовий", "Анімація", "Трагедія"
@@ -28,15 +28,7 @@ const CatalogFilm = () => {
         if (!Array.isArray(data)) {
           throw new Error("Невірний формат даних фільмів");
         }
-
         setMoviesData(data);
-
-        // ✅ Читаємо жанр з URL (наприклад ?genre=Комедія)
-        const genreFromUrl = searchParams.get("genre");
-        if (genreFromUrl && genres.includes(genreFromUrl)) {
-          setSelectedGenre(genreFromUrl);
-        }
-
       } catch (err) {
         console.error("Помилка при завантаженні даних:", err);
         setError(err.message);
@@ -46,7 +38,18 @@ const CatalogFilm = () => {
     };
 
     fetchData();
-  }, [searchParams]);
+  }, []);
+  useEffect(() => {
+    const genreFromUrl = searchParams.get("genre");
+
+    if (genreFromUrl && genres.includes(genreFromUrl)) {
+      setSelectedGenre(genreFromUrl);
+    } else {
+      setSelectedGenre("ВСІ");
+    }
+
+    setCurrentPage(1);
+  }, [searchParams]);  
 
   const handleGenreClick = (genre) => {
     setSelectedGenre(genre);
