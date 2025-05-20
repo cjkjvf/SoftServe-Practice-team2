@@ -10,7 +10,7 @@ const Catalog = () => {
   return (
     <div className="catalog">
       <MainImg/>
-      <Filter />
+      {/* <Filter /> */}
 
       <ListFilms />
     </div>

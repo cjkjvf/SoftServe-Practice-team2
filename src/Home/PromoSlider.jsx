@@ -1,20 +1,55 @@
-import { useState, useRef } from 'react';
+import { useState, useRef, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
 import 'swiper/css/navigation';
 import 'swiper/css/autoplay';
 import { Autoplay, Navigation } from 'swiper/modules';
+import axios from 'axios';
 import './PromoSlider.css';
-import moviesData from '../data/movie.json';
 
 export default function PromoSlider() {
+  const [movies, setMovies] = useState([]);
   const [hoveredSlide, setHoveredSlide] = useState(null);
   const [isTrailerVisible, setIsTrailerVisible] = useState(false);
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState(null);
   const swiperRef = useRef(null);
   const timeoutRef = useRef(null);
   const hoverCounts = useRef({});
   const navigate = useNavigate();
+
+  // Отримуємо дані з API
+  useEffect(() => {
+    const fetchMovies = async () => {
+      try {
+        const response = await axios.get('http://localhost:5000/api/movies');
+        const fetchedMovies = response.data.movies.map(movie => ({
+          id: movie._id,
+          title: movie.title,
+          image: movie.imageURL || '/placeholder.svg',
+          brief_description: movie.brief_description,
+          genres: movie.genres || [],
+          details: {
+            year: movie.details?.year || 0,
+            rating: movie.details?.rating || 'N/A',
+            duration_minutes: movie.details?.duration_minutes || 0,
+            age_restriction: movie.details?.age_restriction || 'N/A',
+            'display-technologies': movie.details?.display_technologies || [],
+          },
+          trailer: movie.trailer || '',
+        }));
+        setMovies(fetchedMovies);
+      } catch (err) {
+        console.error('Помилка завантаження фільмів:', err);
+        setError(err.message);
+      } finally {
+        setLoading(false);
+      }
+    };
+
+    fetchMovies();
+  }, []);
 
   const getEmbedURL = (url) => {
     try {
@@ -31,15 +66,12 @@ export default function PromoSlider() {
     swiperRef.current?.autoplay?.stop();
     setHoveredSlide(index);
 
-
     hoverCounts.current[index] = (hoverCounts.current[index] || 0) + 1;
-
 
     const slideElements = document.querySelectorAll('.slide');
     slideElements.forEach((el) => {
       el.classList.remove('hovered', 'delayed-darken');
     });
-
 
     const currentSlide = slideElements[index];
     currentSlide.classList.add('hovered');
@@ -72,6 +104,9 @@ export default function PromoSlider() {
     navigate(`/movies/${movieId}`);
   };
 
+  if (loading) return <div className="container">Завантаження...</div>;
+  if (error) return <div className="container">Помилка: {error}</div>;
+
   return (
     <Swiper
       modules={[Navigation, Autoplay]}
@@ -82,7 +117,7 @@ export default function PromoSlider() {
       onSwiper={(swiper) => (swiperRef.current = swiper)}
       className="promo-slider"
     >
-      {moviesData.map((movie, index) => (
+      {movies.map((movie, index) => (
         <SwiperSlide key={movie.id}>
           <div
             className="slide"
@@ -109,7 +144,7 @@ export default function PromoSlider() {
               <button className="action-button">Обрати сеанс</button>
             </div>
 
-            {hoveredSlide === index && isTrailerVisible && (
+            {hoveredSlide === index && isTrailerVisible && movie.trailer && (
               <div className="trailer-portal">
                 <iframe
                   src={getEmbedURL(movie.trailer)}

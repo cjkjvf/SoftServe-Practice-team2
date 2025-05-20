@@ -11,7 +11,7 @@ const Home = () => {
   return (
     <div className="home">
       <PromoSlider />
-      <Filter />
+      {/* <Filter /> */}
       <Info>
         Перейти до каталогу <Link to="/catalog"> каталогу фільмів</Link>
       </Info>

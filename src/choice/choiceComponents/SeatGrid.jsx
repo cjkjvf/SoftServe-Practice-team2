@@ -4,10 +4,12 @@ import "../choiceStyles/SeatGrid.css";
 import seatsData from "../../data/seats.json";
 
 export default function SeatGrid() {
-  const { toggleSeat, isSelected } = useBooking();
+  const { toggleSeat, isSelected, isOccupied, seatPrices, occupiedSeats } = useBooking();
 
-  const selectedMovie = JSON.parse(localStorage.getItem("selectedMovie"));
-  const seatPrices = selectedMovie?.seatPrices || [];
+  // Дебагування: Логування зайнятих місць
+  useEffect(() => {
+    console.log('Зайняті місця в SeatGrid:', occupiedSeats);
+  }, [occupiedSeats]);
 
   const getPriceByType = (type) => {
     const priceObj = seatPrices.find((p) =>
@@ -15,12 +17,6 @@ export default function SeatGrid() {
     );
     return priceObj ? priceObj.price : 0;
   };
-
-  useEffect(() => {
-    return () => {
-      localStorage.removeItem("selectedSeats");
-    };
-  }, []);
 
   return (
     <div className="seat-grid">
@@ -45,16 +41,26 @@ export default function SeatGrid() {
                 type: seatType,
               };
 
+              const isSeatOccupied = isOccupied(seat);
               const seatClass = `${seat.type === 2 ? "lux" : "good"} ${
                 isSelected(seat) ? "selected" : ""
-              }`;
+              } ${isSeatOccupied ? "occupied" : ""}`;
 
               return (
                 <div
                   key={`r${rowIndex}-s${seatIndex}`}
                   className={`seat ${seatClass}`}
-                  onClick={() => toggleSeat(seat)}
-                />
+                  onClick={() => !isSeatOccupied && toggleSeat(seat)}
+                  title={
+                    isSeatOccupied
+                      ? `Місце ${seat.row} ряд ${seat.number} зайнято`
+                      : `Місце ${seat.row} ряд ${seat.number} (${
+                          seat.type === 2 ? "SUPER LUX" : "GOOD"
+                        }) - ${seat.price} грн`
+                  }
+                >
+                  {isSeatOccupied && <span className="occupied-indicator">✕</span>}
+                </div>
               );
             })}
           </div>

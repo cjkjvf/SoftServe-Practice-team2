@@ -5,6 +5,7 @@ import { useBooking } from "./choiceContext/BookingContext";
 import "./choiceStyles/TicketSummary.css";
 import ScreenIndicator from "./choiceComponents/ScreenIndicator";
 import MovieInfo from "./choiceComponents/MovieInfo";
+import { useNavigate } from 'react-router-dom';
 
 export default function SeatPlanPay() {
   const {
@@ -12,17 +13,17 @@ export default function SeatPlanPay() {
     toggleSeat,
     totalTickets,
     totalPrice,
-    clearSeats, 
+    clearSeats,
+    confirmBooking,
+    seatPrices
   } = useBooking();
+  const navigate = useNavigate();
 
   useEffect(() => {
     return () => {
       clearSeats();
     };
-  }, []);
-
-  const selectedMovie = JSON.parse(localStorage.getItem("selectedMovie"));
-  const seatPrices = selectedMovie?.seatPrices || [];
+  }, [clearSeats]);
 
   const getTicketLabel = (count) => {
     if (count === 1) return "1 квиток";
@@ -35,6 +36,20 @@ export default function SeatPlanPay() {
       type === 2 ? p.type === "SUPER LUX" : p.type === "GOOD"
     );
     return priceObj ? priceObj.type : "Невідомий тип";
+  };
+
+  const handlePayment = async () => {
+    const success = await confirmBooking();
+    if (success) {
+      const seatsSummary = selectedSeats
+        .map((seat) => `${seat.row} ряд ${seat.number} місце (${getLabelByType(seat.type)})`)
+        .join(", ");
+      const message = `Ви оплатили ${totalPrice} грн за місця: ${seatsSummary}`;
+      alert(message);
+      // navigate('/confirmation');
+    } else {
+      alert('Помилка бронювання. Спробуйте ще раз.');
+    }
   };
 
   return (
@@ -89,7 +104,6 @@ export default function SeatPlanPay() {
               </div>
             ))}
 
-
             <hr className="divider" />
 
             <div className="total">
@@ -97,7 +111,11 @@ export default function SeatPlanPay() {
               <span className="total-price">{totalPrice} грн</span>
             </div>
 
-            <button className="pay-btn" disabled={totalTickets === 0}>
+            <button
+              className="pay-btn"
+              disabled={totalTickets === 0}
+              onClick={handlePayment}
+            >
               Оплатити сеанс
             </button>
           </div>
