@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 import axios from 'axios';
-import './Screenings.css';
+import './UnifiedStyles.css';
 
 function Screenings() {
   const [screenings, setScreenings] = useState([]);
@@ -128,9 +128,9 @@ function Screenings() {
   };
 
   return (
-    <div className="container screenings-container">
+    <div className="container">
       <h2>Управління сеансами</h2>
-      <form onSubmit={handleSubmit} className="screenings-form">
+      <form onSubmit={handleSubmit} className="form">
         <label>Фільм</label>
         <select
           value={form.movie}
@@ -187,7 +187,7 @@ function Screenings() {
         <button type="button" onClick={addTime}>Додати час</button>
         <button type="submit">{editId ? 'Оновити' : 'Додати'}</button>
       </form>
-      <table className="screenings-table">
+      <table className="table">
         <thead>
           <tr>
             <th>Фільм</th>

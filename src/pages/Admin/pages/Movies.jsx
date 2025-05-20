@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 import axios from 'axios';
-import './Movies.css';
+import './UnifiedStyles.css';
 
 function Movies() {
   const [movies, setMovies] = useState([]);
@@ -63,9 +63,9 @@ function Movies() {
   };
 
   return (
-    <div className="movies-container">
+    <div className="container">
       <h2>Управління фільмами</h2>
-      <form onSubmit={handleSubmit} className="movies-form">
+      <form onSubmit={handleSubmit} className="form">
         <label>Назва</label>
         <input
           type="text"
@@ -81,7 +81,7 @@ function Movies() {
         />
         <button type="submit">{editId ? 'Оновити' : 'Додати'}</button>
       </form>
-      <table className="movies-table">
+      <table className="table">
         <thead>
           <tr>
             <th>Назва</th>

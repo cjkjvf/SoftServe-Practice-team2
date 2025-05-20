@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 import axios from 'axios';
-import './Halls.css';
+import './UnifiedStyles.css';
 
 function Halls() {
   const [halls, setHalls] = useState([]);
@@ -64,9 +64,9 @@ function Halls() {
   };
 
   return (
-    <div className="container halls-container">
+    <div className="container">
       <h2>Управління залами</h2>
-      <form onSubmit={handleSubmit} className="halls-form">
+      <form onSubmit={handleSubmit} className="form">
         <label>Назва</label>
         <input
           type="text"
@@ -90,7 +90,7 @@ function Halls() {
         />
         <button type="submit">{editId ? 'Оновити' : 'Додати'}</button>
       </form>
-      <table className="halls-table">
+      <table className="table">
         <thead>
           <tr>
             <th>Назва</th>

@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 import axios from 'axios';
-import './Casts.css';
+import './UnifiedStyles.css';
 
 function Casts() {
   const [casts, setCasts] = useState([]);
@@ -63,9 +63,9 @@ function Casts() {
   };
 
   return (
-    <div className="container casts-container">
+    <div className="container">
       <h2>Управління акторами</h2>
-      <form onSubmit={handleSubmit} className="casts-form">
+      <form onSubmit={handleSubmit} className="form">
         <label>Ім'я</label>
         <input
           type="text"
@@ -89,7 +89,7 @@ function Casts() {
         />
         <button type="submit">{editId ? 'Оновити' : 'Додати'}</button>
       </form>
-      <table className="casts-table">
+      <table className="table">
         <thead>
           <tr>
             <th>Ім'я</th>

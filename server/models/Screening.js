@@ -8,6 +8,15 @@ const screeningSchema = new mongoose.Schema({
   times: [{
     time: { type: String, required: true }, // Наприклад, "14:30"
     available_formats: [{ type: String, required: true }], // Наприклад, ["2D", "3D"]
+    occupiedSeats: [{
+      row: Number,
+      number: Number
+    }],
+    seatPrices: [{
+      type: { type: String, enum: ['GOOD', 'SUPER LUX'], required: true },
+      price: { type: Number, required: true }
+    }],
+    _id: mongoose.Schema.Types.ObjectId
   }],
 }, { timestamps: true });
 

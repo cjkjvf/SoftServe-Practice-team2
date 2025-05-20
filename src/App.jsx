@@ -8,7 +8,7 @@ import MovieDetails from './pages/MovieDetails';
 import Login from './Autorize/Login';
 import Register from './Autorize/Register';
 import ListFilms from './Home/ListFilms';
-// import Catalog from './Catalog/Catalog';
+import Catalog from './Catalog/Catalog';
 import './global.css';
 import './styles/index.css';
 import AdminLogin from './pages/Admin/pages/Login';
@@ -19,6 +19,7 @@ import Halls from './pages/Admin/pages/Halls';
 import Screenings from './pages/Admin/pages/Screenings';
 import Navbar from './pages/Admin/components/Navbar';
 import ProtectedRoute from './pages/Admin/components/ProtectedRoute';
+import CatalogFilm from "./pages/CatalogFilm";
 function App() {
   return (
     <BrowserRouter>
@@ -30,7 +31,8 @@ function App() {
           <Route path="favorites" element={<Favorites />} />
           <Route path="movies/:movieId" element={<MovieDetails />} />
           <Route path="listfilms" element={<ListFilms />} />
-          {/* <Route path="catalog" element={<Catalog />} /> */}
+          <Route path="catalog" element={<Catalog />} />
+          <Route path="catalogfilm" element={<CatalogFilm />} />
         </Route>
 
         {/* Маршрути поза Layout (без header/footer) */}

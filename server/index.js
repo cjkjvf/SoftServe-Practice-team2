@@ -19,11 +19,14 @@ const castRoutes = require('./routes/castRoutes');
 const hallRoutes = require('./routes/hallRoutes');
 const screeningRoutes = require('./routes/screeningRoutes');
 const adminRoutes = require('./routes/adminRoutes');
+const bookingRoutes = require('./routes/bookingRoutes');
+
 app.use('/api/movies', movieRoutes);
 app.use('/api/casts', castRoutes);
 app.use('/api/halls', hallRoutes);
 app.use('/api/screenings', screeningRoutes);
 app.use('/api/admin', adminRoutes);
+app.use('/api', bookingRoutes);
 
 // Підключення до MongoDB
 mongoose

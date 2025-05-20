@@ -7,7 +7,7 @@ const MovieInfo = () => {
   const [selectedLocation, setSelectedLocation] = useState('');
   const [selectedDate, setSelectedDate] = useState('');
   const [selectedHall, setSelectedHall] = useState('Зал №1');
-  const navigate = useNavigate(); 
+  const navigate = useNavigate();
 
   useEffect(() => {
     const saved = localStorage.getItem('selectedMovie');
@@ -15,9 +15,9 @@ const MovieInfo = () => {
       const parsed = JSON.parse(saved);
       setMovie(parsed);
 
-      const defaultLocation = parsed.Listlocation?.[0]?.location || '';
-      const defaultDate = parsed.Listdate?.[0]?.date || '';
-      const defaultHall = parsed.hall?.[0]?.hall || 'Зал №1';
+      const defaultLocation = parsed.Listlocation || '';
+      const defaultDate = parsed.Listdate || '';
+      const defaultHall = parsed.hall || 'Зал №1';
 
       setSelectedLocation(defaultLocation);
       setSelectedDate(defaultDate);
@@ -59,7 +59,7 @@ const MovieInfo = () => {
   };
 
   const goToDetails = () => {
-    navigate(`/movies/${movie.movieId}`); 
+    navigate(`/movies/${movie.movieId}`);
   };
 
   if (!movie) return <p>Завантаження інформації...</p>;
@@ -92,7 +92,7 @@ const MovieInfo = () => {
               className="movieInfo-tag light"
               onClick={() => navigate(`/catalogfilm?genre=${encodeURIComponent(genre)}`)}
               style={{ cursor: "pointer" }}
-              >
+            >
               {genre}
             </span>
           ))}
@@ -102,29 +102,13 @@ const MovieInfo = () => {
           <div className="movieInfo-card">
             <img src="/images/location2.svg" alt="Локація" />
             <div className="movieInfo-card-label">Локація</div>
-            <select
-              className="movieInfo-select"
-              value={selectedLocation}
-              onChange={(e) => handleLocationChange(e.target.value)}
-            >
-              {movie.Listlocation?.map((loc, i) => (
-                <option key={i} value={loc.location}>{loc.location}</option>
-              ))}
-            </select>
+            <div className="movieInfo-card-value">{selectedLocation}</div>
           </div>
 
           <div className="movieInfo-card">
             <img src="/images/calendar.svg" alt="Дата" />
             <div className="movieInfo-card-label">Дата</div>
-            <select
-              className="movieInfo-select"
-              value={selectedDate}
-              onChange={(e) => handleDateChange(e.target.value)}
-            >
-              {movie.Listdate?.map((d, i) => (
-                <option key={i} value={d.date}>{d.date}</option>
-              ))}
-            </select>
+            <div className="movieInfo-card-value">{selectedDate}</div>
           </div>
 
           <div className="movieInfo-card">

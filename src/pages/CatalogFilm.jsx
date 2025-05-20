@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { Link, useSearchParams, useNavigate } from "react-router-dom";
+import axios from "axios";
 import "../styles/CatalogFilm.css";
-import data from '../data/movie.json'; 
 
 const genres = [
   "ВСІ", "Жахи", "Романтика", "Комедія", "Драма", "Бойовик",
@@ -25,18 +25,25 @@ const CatalogFilm = () => {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        if (!Array.isArray(data)) {
+        const response = await axios.get("http://localhost:5000/api/movies");
+        const movies = response.data.movies.map(movie => ({
+          id: movie._id,
+          title: movie.title,
+          imageURL: movie.imageURL || '/placeholder.svg',
+          genres: movie.genres || [],
+        }));
+
+        if (!Array.isArray(movies)) {
           throw new Error("Невірний формат даних фільмів");
         }
 
-        setMoviesData(data);
+        setMoviesData(movies);
 
-        // ✅ Читаємо жанр з URL (наприклад ?genre=Комедія)
+        // Читаємо жанр з URL (наприклад ?genre=Комедія)
         const genreFromUrl = searchParams.get("genre");
         if (genreFromUrl && genres.includes(genreFromUrl)) {
           setSelectedGenre(genreFromUrl);
         }
-
       } catch (err) {
         console.error("Помилка при завантаженні даних:", err);
         setError(err.message);
@@ -52,7 +59,7 @@ const CatalogFilm = () => {
     setSelectedGenre(genre);
     setCurrentPage(1);
 
-    // 🧭 Оновлюємо URL при натисканні
+    // Оновлюємо URL при натисканні
     if (genre === "ВСІ") {
       navigate("/catalogfilm");
     } else {
@@ -98,7 +105,7 @@ const CatalogFilm = () => {
         {currentMovies.map((movie, index) => (
           <Link key={index} to={`/movies/${movie.id}`} className="catalog-movie-card">
             <img
-              src={movie.imageURL || "./thunderbolts.jpeg"}
+              src={movie.imageURL}
               alt={movie.title}
               className="catalog-movie-poster"
             />
@@ -129,4 +136,3 @@ const CatalogFilm = () => {
 };
 
 export default CatalogFilm;
-
