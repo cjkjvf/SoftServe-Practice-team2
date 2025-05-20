@@ -4,7 +4,7 @@ import { Search, User, Menu } from "lucide-react";
 import { useState, useEffect } from "react";
 import FullscreenMenu from "../components/FullscreenMenu";
 
-export default function Header() {
+export default function Header({ onSearchClick }) {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isClosing, setIsClosing] = useState(false);
 
@@ -42,8 +42,13 @@ export default function Header() {
         <div className="hero-nav">
           <Link to="/" className="logo">MIRAGE</Link>
           <nav className="nav-icons">
-            <span className="icon-circle"><Search size={20} /></span>
-
+            <span
+              className="icon-circle"
+              onClick={onSearchClick}  
+              style={{ cursor: 'pointer' }}
+            >
+              <Search size={20} />
+            </span>
 
             <span
               className="icon-circle"
