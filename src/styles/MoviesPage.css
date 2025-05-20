@@ -1,0 +1,30 @@
+.movies-container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+  font-family: Arial, sans-serif;
+}
+
+.controls {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.controls input,
+.controls select {
+  padding: 6px 8px;
+  font-size: 14px;
+}
+
+.movies-list {
+  list-style: none;
+  padding: 0;
+}
+
+.movie-card {
+  border: 1px solid #ccc;
+  padding: 12px;
+  margin-bottom: 12px;
+  border-radius: 4px;
+}

@@ -3,6 +3,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    margin-bottom: 90px;
   }
   
   .other-movies-grid {
@@ -94,8 +95,8 @@
   .other-movies-title {
     text-align: center;
     color: var(--color-light, #fff);
-    font-size: 24px;
+    font-size: 28px;
     margin: 60px;
-    font-family: var(--text-secondary);
+    font-family: "Inter";
   }
   
