@@ -113,21 +113,15 @@ const ListFilms = () => {
               formats: time.available_formats,
             }));
 
-            // Перетворюємо seatPrices у масив
-            let seatPrices = movie.seatPrices || [];
-            if (!Array.isArray(seatPrices)) {
-              seatPrices = [
-                { type: "GOOD", price: seatPrices.standard || 10 },
-                { type: "SUPER LUX", price: seatPrices.vip || 15 }
-              ];
-            }
-
             return {
               movieId: movie._id,
               name: movie.title,
               img: movie.imageURL || 'https://via.placeholder.com/150',
               genres: movie.genres || [],
-              seatPrices,
+              seatPrices: screening.times[0]?.seatPrices || [
+                { type: "GOOD", price: 100 },
+                { type: "SUPER LUX", price: 150 }
+              ],
               listOption,
               hall: screening.hall || 'Unknown Hall',
               Listlocation: screening.cinema || 'Unknown Cinema',
@@ -212,7 +206,7 @@ const ListFilms = () => {
       movieId: film.movieId,
       imageURL: film.img,
       name: film.name,
-      seatPrices: film.seatPrices, // Вже масив
+      seatPrices: film.seatPrices,
       genres: film.genres,
       selectedTime: option.time,
       selectedFormat: option.option,
@@ -255,14 +249,44 @@ const ListFilms = () => {
               <div className="mobile down">{day.day}</div>
             </div>
           ))}
-          <div className="select-date-button">
-            <button
+          <div className="list-date-item select-day" id="select-day">
+            {availableDates.findIndex(d => d.date === selectedDate) < 7 ? (
+              <div className="text">
+                <div className="up">Вибрати</div>
+                <div className="down">день</div>
+              </div>
+            ) : (
+              availableDates.length > 0 && (
+                <div
+                  style={{
+                    display: 'flex',
+                    flexDirection: 'column',
+                    justifyContent: 'left',
+                    gap: '5px',
+                  }}
+                >
+                  <div className="pc up">
+                    {availableDates.find(d => d.date === selectedDate)?.day}{' '}
+                    {availableDates.find(d => d.date === selectedDate)?.month}
+                  </div>
+                  <div className="mobile up">
+                    {availableDates.find(d => d.date === selectedDate)?.weekdayAbbreviated}
+                  </div>
+                  <div className="pc down">
+                    {availableDates.find(d => d.date === selectedDate)?.weekday}
+                  </div>
+                  <div className="mobile down">
+                    {availableDates.find(d => d.date === selectedDate)?.day}
+                  </div>
+                </div>
+              )
+            )}
+            <img
               onClick={() => setIsDateDropdownOpen(!isDateDropdownOpen)}
-              style={{ cursor: 'pointer', display: 'flex', alignItems: 'center', gap: '5px' }}
-            >
-              Вибрати дату
-              <img src={BottomSVG} alt="Date icon" />
-            </button>
+              src={BottomSVG}
+              alt="Date icon"
+              style={{ cursor: 'pointer' }}
+            />
             {isDateDropdownOpen && (
               <div className="list-additional">
                 {availableDates.map(d => (
