@@ -21,7 +21,6 @@ const movieSchema = new mongoose.Schema({
   cast: [{ type: mongoose.Schema.Types.ObjectId, ref: 'Cast' }],
 }, { timestamps: true });
 
-// Індекси для швидшого пошуку
 movieSchema.index({ title: 1 });
 movieSchema.index({ 'details.year': 1 });
 movieSchema.index({ 'details.release_date': 1 });

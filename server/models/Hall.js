@@ -1,10 +1,10 @@
 const mongoose = require('mongoose');
 
 const hallSchema = new mongoose.Schema({
-  name: { type: String, required: true, unique: true }, // Наприклад, "Зал 1"
-  cinema: { type: String, required: true }, // Наприклад, "Планета Кіно"
-  seats: [[{ type: Number, required: true }]], // Матриця місць (0, 1, 2)
-  capacity: { type: Number, required: true }, // Загальна кількість місць
+  name: { type: String, required: true, unique: true }, 
+  cinema: { type: String, required: true },
+  seats: [[{ type: Number, required: true }]],
+  capacity: { type: Number, required: true }, 
 }, { timestamps: true });
 
 hallSchema.index({ name: 1, cinema: 1 });

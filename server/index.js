@@ -37,26 +37,6 @@ mongoose
   .then(() => console.log('MongoDB connected'))
   .catch((err) => console.error('MongoDB connection error:', err));
 
-// Створення адміністратора
-const createAdmin = async () => {
-  try {
-    const username = 'admin';
-    const password = 'admin123';
-    const existingAdmin = await Admin.findOne({ username });
-    if (!existingAdmin) {
-      const hashedPassword = await bcrypt.hash(password, 10);
-      const admin = new Admin({ username, password: hashedPassword });
-      await admin.save();
-      console.log('Admin created');
-    }
-  } catch (err) {
-    console.error('Error creating admin:', err);
-  }
-};
-
-createAdmin();
-
-// Запуск сервера
 const PORT = process.env.PORT || 5000;
 app.listen(PORT, () => {
   console.log(`Server running on port ${PORT}`);
