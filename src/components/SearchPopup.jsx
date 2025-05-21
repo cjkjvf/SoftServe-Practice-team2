@@ -9,6 +9,11 @@ export default function SearchPopup({ isOpen, onClose }) {
   const [foundMovies, setFoundMovies] = useState([]);
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState(null);
+
+  const [selectedYear, setSelectedYear] = useState("");
+  const [selectedAge, setSelectedAge] = useState("");
+  const [selectedRating, setSelectedRating] = useState("");
+
   const navigate = useNavigate();
 
   useEffect(() => {
@@ -16,34 +21,68 @@ export default function SearchPopup({ isOpen, onClose }) {
       setSearchTerm("");
       setFoundMovies([]);
       setError(null);
+      setSelectedYear("");
+      setSelectedAge("");
+      setSelectedRating("");
     }
   }, [isOpen]);
 
   const handleSearch = async () => {
-  if (!searchTerm.trim()) {
-    setFoundMovies([]);
-    setError(null);
-    return;
-  }
+    const query = searchTerm.trim().toLowerCase();
 
-  try {
-    setLoading(true);
-    setError(null);
-    const response = await axios.get("http://localhost:5000/api/movies");
+    if (!query && !selectedYear && !selectedAge && !selectedRating) {
+      setFoundMovies([]);
+      setError(null);
+      return;
+    }
 
-    const allMovies = response.data.movies || [];
-    const filteredMovies = allMovies.filter((movie) =>
-      movie.title.toLowerCase().includes(searchTerm.trim().toLowerCase())
-    );
+    try {
+      setLoading(true);
+      setError(null);
+      const response = await axios.get("http://localhost:5000/api/movies");
+      const allMovies = response.data.movies || [];
 
-    setFoundMovies(filteredMovies);
-  } catch (err) {
-    console.error("Помилка пошуку фільмів:", err);
-    setError("Не вдалося виконати пошук. Спробуйте ще раз.");
-  } finally {
-    setLoading(false);
-  }
-};
+      const filteredMovies = allMovies.filter((movie) => {
+        const title = movie.title?.toLowerCase() || "";
+        const year = String(movie.details?.year || "");
+        const ratingRaw = movie.details?.rating || "";
+        const rating = parseFloat(ratingRaw);
+        const ageRestriction = (movie.details?.age_restriction || "").replace(/\s+/g, "");
+        const genres = movie.genres || []; // жанри (масив)
+
+        // Пошук за назвою
+        const matchTitle = query && title.includes(query);
+        // Пошук за роком
+        const matchYear = query && year.startsWith(query);
+        // Пошук за рейтингом (як число)
+        const matchRating =
+          query && !isNaN(query) && !isNaN(rating) && rating >= parseFloat(query);
+        // Пошук за жанром (перевіряємо чи query міститься у будь-якому жанрі)
+        const matchGenre = query && genres.some(g => g.toLowerCase().includes(query));
+
+        // Базова відповідність — якщо query порожній, або є співпадіння по одному з полів
+        const baseMatch = !query || matchTitle || matchYear || matchRating || matchGenre;
+
+        const yearFilter = selectedYear ? year === selectedYear : true;
+        const ageFilter = selectedAge
+          ? ageRestriction === selectedAge.replace(/\s+/g, "")
+          : true;
+        const ratingFilter = selectedRating
+          ? !isNaN(rating) && rating >= parseFloat(selectedRating)
+          : true;
+
+        return baseMatch && yearFilter && ageFilter && ratingFilter;
+      });
+      
+
+      setFoundMovies(filteredMovies);
+    } catch (err) {
+      console.error("Помилка пошуку фільмів:", err);
+      setError("Не вдалося виконати пошук. Спробуйте ще раз.");
+    } finally {
+      setLoading(false);
+    }
+  };
 
   const handleKeyDown = (e) => {
     if (e.key === "Enter") {
@@ -53,7 +92,7 @@ export default function SearchPopup({ isOpen, onClose }) {
 
   const handleMovieClick = (movieId) => {
     navigate(`/movies/${movieId}`);
-    onClose(); // Закриваємо попап після кліку
+    onClose();
   };
 
   if (!isOpen) return null;
@@ -63,7 +102,7 @@ export default function SearchPopup({ isOpen, onClose }) {
       <div className="popup-content" onClick={(e) => e.stopPropagation()}>
         <input
           type="text"
-          placeholder="Введіть назву фільму..."
+          placeholder="Пошук за назвою, жанром, роком або рейтингом..."
           value={searchTerm}
           onChange={(e) => setSearchTerm(e.target.value)}
           onKeyDown={handleKeyDown}
@@ -71,6 +110,42 @@ export default function SearchPopup({ isOpen, onClose }) {
         <button onClick={handleSearch} disabled={loading}>
           {loading ? "Пошук..." : "Пошук"}
         </button>
+
+        {/* Фільтри */}
+        <div className="filters">
+          <select
+            value={selectedYear}
+            onChange={(e) => setSelectedYear(e.target.value)}
+          >
+            <option value="">Рік</option>
+            <option value="2025">2025</option>
+            <option value="2024">2024</option>
+            <option value="2023">2023</option>
+          </select>
+
+          <select
+            value={selectedAge}
+            onChange={(e) => setSelectedAge(e.target.value)}
+          >
+            <option value="">Вік</option>
+            <option value="0+">0+</option>
+            <option value="6+">6+</option>
+            <option value="12+">12+</option>
+            <option value="16+">16+</option>
+            <option value="18+">18+</option>
+          </select>
+
+          <select
+            value={selectedRating}
+            onChange={(e) => setSelectedRating(e.target.value)}
+          >
+            <option value="">Рейтинг</option>
+            <option value="9">9+</option>
+            <option value="8">8+</option>
+            <option value="7">7+</option>
+            <option value="6">6+</option>
+          </select>
+        </div>
 
         {error && <p className="error-message">{error}</p>}
 
@@ -83,10 +158,7 @@ export default function SearchPopup({ isOpen, onClose }) {
                   onClick={() => handleMovieClick(movie._id)}
                   style={{ cursor: "pointer" }}
                 >
-                  <MovieCard
-                    movie={movie}
-                    customClass="search-movie-card"
-                  />
+                  <MovieCard movie={movie} customClass="search-movie-card" />
                 </div>
               ))}
             </div>
