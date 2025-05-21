@@ -46,7 +46,7 @@ export default function SeatPlanPay() {
         .join(", ");
       const message = `Ви оплатили ${totalPrice} грн за місця: ${seatsSummary}`;
       alert(message);
-      // navigate('/confirmation');
+      window.location.reload();
     } else {
       alert('Помилка бронювання. Спробуйте ще раз.');
     }

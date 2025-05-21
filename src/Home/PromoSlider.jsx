@@ -27,7 +27,7 @@ export default function PromoSlider() {
         const fetchedMovies = response.data.movies.map(movie => ({
           id: movie._id,
           title: movie.title,
-          image: movie.imageURL || '/placeholder.svg',
+          image: movie.image || '/placeholder.svg',
           brief_description: movie.brief_description,
           genres: movie.genres || [],
           details: {

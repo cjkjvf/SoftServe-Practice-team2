@@ -10,7 +10,9 @@ dotenv.config();
 const app = express();
 
 // Middleware
-app.use(cors({ origin: 'http://localhost:5173' }));
+app.use(cors({
+  origin: ['http://localhost:5173', 'http://localhost:3000', 'https://2f2e-185-204-68-242.ngrok-free.app','chhclcfz8t.eu.loclx.io'],
+}));
 app.use(express.json());
 
 // Routes
@@ -37,7 +39,27 @@ mongoose
   .then(() => console.log('MongoDB connected'))
   .catch((err) => console.error('MongoDB connection error:', err));
 
+// Створення адміністратора
+const createAdmin = async () => {
+  try {
+    const username = 'admin';
+    const password = 'admin123';
+    const existingAdmin = await Admin.findOne({ username });
+    if (!existingAdmin) {
+      const hashedPassword = await bcrypt.hash(password, 10);
+      const admin = new Admin({ username, password: hashedPassword });
+      await admin.save();
+      console.log('Admin created');
+    }
+  } catch (err) {
+    console.error('Error creating admin:', err);
+  }
+};
+
+createAdmin();
+
+// Запуск сервера
 const PORT = process.env.PORT || 5000;
-app.listen(PORT, () => {
-  console.log(`Server running on port ${PORT}`);
+app.listen(PORT, '0.0.0.0', () => {
+  console.log(`Server running on pot ${PORT}`);
 });
