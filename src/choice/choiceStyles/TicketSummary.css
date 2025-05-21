@@ -1,0 +1,235 @@
+.seatplan-wrapper {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-start;
+  width: 100%;
+  min-height: 100vh;
+}
+
+.left-content {
+  width: 70%;
+  max-height: 100vh;
+  box-sizing: border-box;   
+  position: relative;
+}
+
+.right-summary {
+  position: fixed;            
+  top: 0;                    
+  right: 0;                  
+  width: 30vw;                
+  height: 100dvh;            
+  background-color: #0e0e1b;
+  border-left: 2px solid var(--color-light, #fff);
+  box-sizing: border-box;
+  padding: 24px;
+  display: flex;
+  overflow-y: auto;
+  flex-direction: column;
+  align-items: center;
+  color:var(--color-light, #fff);           
+  transition: all 0.3s ease;
+  box-shadow: -10px 0 30px rgba(0, 0, 0, 0.7);
+}
+
+
+.right-summary .summary-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 16px;
+  font-weight: 600;
+  margin-bottom: 20px;
+  width: 100%;
+}
+
+.right-summary .qr-box {
+  background-color: #166f14;
+  border-radius: 10px;
+  text-align: center;
+  padding: 16px;
+  margin-bottom: 20px;
+  width: 100%;
+}
+
+.right-summary .qr-box img {
+  max-width: 100%;
+  height: auto;
+  margin-bottom: 8px;
+}
+
+.right-summary .qr-box p {
+  font-size: 14px;
+  color: #b5b5c2;
+  line-height: 1.4;
+}
+
+.right-summary .ticket-item {
+  border: 1px solid #2e2e42;
+  border-radius: 6px;
+  padding: 10px 12px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+  width: 100%;
+}
+
+.right-summary .seat-info {
+  display: flex;
+  flex-direction: column;
+  font-size: 14px;
+  gap: 2px;
+}
+
+.seat-type.good {
+  color: #2196f3;
+  font-weight: 600;
+}
+
+.seat-type.vip {
+  color: var(--color-orange);
+  font-weight: 600;
+}
+
+.right-summary .price {
+  font-weight: 600;
+}
+
+.right-summary .divider {
+  border: none;
+  border-top: 1px solid #2e2e42;
+  margin: 16px 0;
+  width: 100%;
+}
+
+.right-summary .total {
+  display: flex;
+  justify-content: space-between;
+  font-size: 16px;
+  margin-bottom: 16px;
+  width: 100%;
+}
+
+.right-summary .total-price {
+  font-weight: bold;
+}
+
+.right-summary .pay-btn {
+  width: 100%;
+  background-color: #f26522;
+  color: #fff;
+  border: none;
+  padding: 12px;
+  font-size: 16px;
+  border-radius: 6px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+
+.right-summary .pay-btn:hover {
+  background-color: #d4551a;
+}
+
+.ticket-item {
+  position: relative;
+  overflow-y: auto;
+}
+
+.remove-seat {
+  position: absolute;
+  top: 1px;
+  right: 1px;
+  background: transparent;
+  border: none;
+  color: #9b1010;
+  font-size: 16px;
+  cursor: pointer;
+  transition: color 0.2s ease;
+}
+
+.remove-seat:hover {
+  color: #0b7330;
+}
+
+ 
+/* === Планшети: від 768px до 1024px === */
+@media (min-width: 768px) and (max-width: 1024px) {
+  .left-content {
+    width: 65%;
+  }
+
+  .right-summary {
+    position: fixed;
+    right: 0;
+    width: 35%;
+    height: 100dvh;
+    padding: 20px;
+    border-left: 2px solid var(--color-light, #fff);
+    border-top: none;
+  }
+}
+
+/* === Мобілки: до 767px включно === */
+@media (max-width: 767px) {
+  .seatplan-wrapper {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .left-content,
+  .right-summary {
+    width: 100%;
+  }
+
+  .right-summary {
+    
+    position: relative;
+    top: auto;
+    bottom: 0;
+    height: auto;
+    padding: 16px;
+    margin-top: 32px;
+    border-left: none;
+    border-top: 2px solid var(--color-light, #fff);
+    background-color: #0e0e1b;
+  }
+
+  .right-summary .summary-top,
+  .right-summary .total {
+    font-size: 15px;
+  }
+
+  .right-summary .pay-btn {
+    font-size: 15px;
+    padding: 10px;
+  }
+
+  .right-summary .ticket-item {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 6px;
+  }
+
+  .remove-seat {
+    top: 6px;
+    right: 6px;
+  }
+
+  .right-summary .qr-box p {
+    font-size: 13px;
+  }
+
+  .right-summary .pay-btn {
+    font-size: 14px;
+    padding: 10px;
+  }
+}
+
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}

@@ -1,0 +1,184 @@
+@import '../mixin.scss';
+
+.form-login-cont {
+  @include responsive-width;
+  .form-login {
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+    justify-content: center;
+    height: 100vh;
+    width: 50%;
+    @media (max-width: 1024px) {
+        align-items: center;
+        width: 95%;
+      }
+    @media (max-width: 768px) {
+      align-items: center;
+      width: 95%;
+    }
+    h1 {
+      margin: 0 auto;
+      max-width: 75%;
+      font-family: Inter;
+      font-weight: 700;
+      font-size: 32px;
+      line-height: 40px;
+      letter-spacing: 0%;
+      text-align: center;
+      color: #111826;
+      @media (max-width: 768px) {
+        font-size: 24px;
+        line-height: 25px;
+        margin-top: 0;
+      }
+    }
+    form {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: self-start;
+      width: 75%;
+      .formMainElement{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: start;
+        width: 75%;
+        margin: 0 auto;
+        label {
+          font-family: Inter;
+          font-weight: 600;
+          font-size: 18px;
+          line-height: 24px;
+          letter-spacing: 0%;
+          color: #111826;
+          margin-top: 20px;
+          text-align: left;
+        }
+        input {
+          border: 1px solid #e8590c;
+          background-color: #e8590c;
+          font-family: Inter;
+          font-weight: 400;
+          font-size: 16px;
+          line-height: 24px;
+          letter-spacing: 0%;
+          width: 100%;
+          height: 52px;
+          max-width: 100%;
+          margin-top: 10px;
+          border-radius: 4px;
+          color: #ffffff;
+          padding-left: 10px;
+          box-sizing: border-box;
+          &::placeholder {
+            color: #ffffff;
+          }
+        }
+      }
+      .btn {
+        margin: 30px auto 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        button {
+          background-color: #e8590c;
+          width: 190px;
+          height: 52px;
+          border-radius: 30px;
+          font-family: Inter;
+          font-weight: 500;
+          font-size: 18px;
+          line-height: 28px;
+          letter-spacing: 0%;
+          text-align: center;
+          color: #ffffff;
+          opacity: 0.8;
+          border: none;
+          &.active {
+            opacity: 1;
+            cursor: pointer;
+          }
+        }
+      }
+      .error {
+        text-align: left;
+        color: red;
+        font-size: 14px;
+        margin-top: 5px;
+      }
+      @media (max-width: 1024px) {
+        width: 80%;
+      }
+      @media (max-width: 650px) {
+        width: 100%;
+      }
+    }
+    .additional {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      max-width: 100%;
+      margin: 30px auto 0;
+      @media (max-width: 768px) {
+        gap: 10px;
+      }
+      .register-link {
+        a {
+          font-family: Inter;
+          font-weight: 600;
+          font-size: 20px;
+          line-height: 24px;
+          letter-spacing: 0%;
+          color: #000000;
+          text-decoration: none;
+          cursor: pointer;
+        }
+      }
+      button {
+        width: 320px;
+        max-width: 100%;
+        background-color: #e8590c;
+        font-family: Inter;
+        font-weight: 400;
+        font-size: 18px;
+        line-height: 22px;
+        text-align: center;
+        color: #ffffff;
+        border-radius: 25px;
+        border: none;
+        padding: 5px;
+        box-sizing: border-box;
+      }
+      .list-icon {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        width: 100%;
+        @media (max-width: 768px) {
+          svg {
+          }
+        }
+      }
+      .beck-to-site {
+        margin-top: 30px;
+        @media (max-width: 768px) {
+          margin-top: 0;
+        }
+        a {
+          font-family: Inter;
+          font-weight: 600;
+          font-size: 20px;
+          line-height: 20px;
+          letter-spacing: 0%;
+
+          text-align: center;
+          color: #111826;
+          text-decoration: none;
+          cursor: pointer;
+        }
+      }
+    }
+  }
+}

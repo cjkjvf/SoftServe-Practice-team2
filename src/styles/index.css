@@ -1,0 +1,23 @@
+  
+@media (min-width: 320px) {
+    .section {
+      padding: var(--padding-mobile);
+      margin-bottom: var(--margin-mobile);
+    }
+  }
+  
+  @media (min-width: 768px) {
+    .section {
+      padding: var(--padding-tablet);
+      margin-bottom: var(--margin-tablet);
+    }
+  }
+  
+  @media (min-width: 1024px) {
+    .section {
+      padding: var(--padding-desktop);
+      margin-bottom: var(--margin-desktop);
+    }
+  }
+
+  

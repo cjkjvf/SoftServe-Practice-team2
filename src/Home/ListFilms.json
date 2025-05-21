@@ -1,0 +1,818 @@
+[
+  {
+    "movieId": 1,
+    "img": "/images/839e2e589778246c63945ae625643b64905fab12.jpg",
+    "imageURL": "https://cdn.planetakino.ua/568_thunderbolts_2025/Media/Posters/vertical/opt_5b792940-c02a-46bf-8c93-8e60146ac064.webp",
+    "name": "Громовержці",
+    "Listdate":
+     [ 
+      {"date":"2025-04-29"},
+      {"date":"2025-04-30"},
+      {"date":"2025-05-01"},
+      {"date":"2025-05-02"},
+      {"date":"2025-05-03"},
+      {"date":"2025-05-04"},
+      {"date":"2025-05-05"},
+      {"date":"2025-05-06"},
+      {"date":"2025-05-07"},
+      {"date":"2025-05-08"},
+      {"date":"2025-05-09"},
+      {"date":"2025-05-10"},
+      {"date":"2025-05-11"},
+      {"date":"2025-05-12"},
+      {"date":"2025-05-13"},
+      {"date":"2025-05-14"},
+      {"date":"2025-05-15"},
+      {"date":"2025-05-16"},
+      {"date":"2025-05-17"},
+      {"date":"2025-05-18"},
+      {"date":"2025-05-19"},
+      {"date":"2025-05-20"}
+    ],
+    "seatPrices": [
+      { "type": "GOOD", "price": 150 },
+      { "type": "SUPER LUX", "price": 260 }
+    ],
+    "genres": [
+            "Екшн",
+            "Пригоди",
+            "Комедія",
+            "Шпигунський трилер"],
+    "hall":[ {"hall": "Зал №1"}, {"hall": "Зал №2"}, {"hall": "Зал №3"}, {"hall": "Зал №4"},{"hall": "Зал №5"}],
+    "Listlocation":  [
+        { "location": "Київ, River Mall" },
+        { "location": "Київ, Блокбастер" },
+        { "location": "Львів, Forum Lviv" },
+        { "location": "Львів, King Cross Leopolis" },
+        { "location": "Львів, ТРЦ \"Victoria Gardens\"" },
+        { "location": "Одеса, City Center Таїрова" },
+        { "location": "Одеса, City Center Котовський" },
+        { "location": "Харків, Французький Бульвар" },
+        { "location": "Харків, ТРЦ \"Караван\""},
+        { "location": "Дніпро, ТРЦ \"Караван\""},
+        { "location": "Дніпро, ТРЦ \"Мост-Сіті\""},
+        { "location": "Запоріжжя, ТРЦ \"Ашан\""},
+        { "location": "Запоріжжя, ТРЦ \"Екватор\""},
+        { "location": "Кривий Ріг, ТРЦ \"Сонячна Галерея\""},
+        { "location": "Полтава, ТРЦ \"Екватор\""},
+        { "location": "Черкаси, ТРЦ \"Любава\""},
+        { "location": "Чернігів, ТРЦ \"Мегацентр\""},
+        { "location": "Тернопіль, ТРЦ \"Подоляни\""},
+        { "location": "Івано-Франківськ, ТРЦ \"Велес\""},
+        { "location": "Ужгород, ТРЦ \"Дастор\""},
+        { "location": "Луцьк, ТРЦ \"ПортCity\""},
+        { "location": "Хмельницький, ТРЦ \"Оазис\""},
+        { "location": "Рівне, ТРЦ \"Злата Плаза\""},
+        { "location": "Миколаїв, ТРЦ \"Таврія\""},
+        { "location": "Суми, ТРЦ \"Мануфактура\""},
+        { "location": "Кам'янець-Подільський, ТРЦ \"Епіцентр\""},
+        { "location": "Чернівці, ТРЦ \"Депот\""},
+        { "location": "Львів, ТРЦ \"King Cross Leopolis\""}
+      ],
+    "listOption": [
+      { "time": "10:30", "endTime":"12:30", "option": "2D" },
+      { "time": "13:20", "endTime":"12:30", "option": "2D" },
+      { "time": "14:40", "endTime":"12:30", "option": "3D" },
+      { "time": "16:10", "endTime":"12:30", "option": "4DX" },
+      { "time": "17:30", "endTime":"12:30", "option": "2D" },
+      { "time": "19:00", "endTime":"12:30", "option": "3D" }
+    ]
+  },
+  { 
+    "movieId": 2,
+    "img": "/images/839e2e589778246c63945ae625643b64905fab12.jpg",
+    "imageURL": "https://cdn.planetakino.ua/16890_pre-premiere-final-destination-bloodlines_2025/Media/Posters/vertical/opt_58764797-3483-4f77-af82-2d2398cf9439.webp",
+    "name": "Пункт призначення: Родове прокляття",
+    "Listdate":
+     [ 
+      {"date":"2025-04-29"},
+      {"date":"2025-04-30"},
+      {"date":"2025-05-01"},
+      {"date":"2025-05-02"},
+      {"date":"2025-05-03"},
+      {"date":"2025-05-04"},
+      {"date":"2025-05-05"},
+      {"date":"2025-05-06"},
+      {"date":"2025-05-07"},
+      {"date":"2025-05-08"},
+      {"date":"2025-05-09"},
+      {"date":"2025-05-10"},
+      {"date":"2025-05-11"},
+      {"date":"2025-05-12"},
+      {"date":"2025-05-13"},
+      {"date":"2025-05-14"},
+      {"date":"2025-05-15"},
+      {"date":"2025-05-16"},
+      {"date":"2025-05-17"},
+      {"date":"2025-05-18"},
+      {"date":"2025-05-19"},
+      {"date":"2025-05-20"}
+    ],
+    "seatPrices": [
+      { "type": "GOOD", "price": 160 },
+      { "type": "SUPER LUX", "price": 280 }
+    ],
+    "genres":  [
+            "Трилер",
+            "Жахи"
+          ],
+    "hall":[ {"hall": "Зал №1"}, {"hall": "Зал №2"}, {"hall": "Зал №3"}, {"hall": "Зал №4"},{"hall": "Зал №5"}],
+    "Listlocation":  [
+        { "location": "Київ, River Mall" },
+        { "location": "Київ, Блокбастер" },
+        { "location": "Львів, Forum Lviv" },
+        { "location": "Львів, King Cross Leopolis" },
+        { "location": "Львів, ТРЦ \"Victoria Gardens\"" },
+        { "location": "Одеса, City Center Таїрова" },
+        { "location": "Одеса, City Center Котовський" },
+        { "location": "Харків, Французький Бульвар" },
+        { "location": "Харків, ТРЦ \"Караван\""},
+        { "location": "Дніпро, ТРЦ \"Караван\""},
+        { "location": "Дніпро, ТРЦ \"Мост-Сіті\""},
+        { "location": "Запоріжжя, ТРЦ \"Ашан\""},
+        { "location": "Запоріжжя, ТРЦ \"Екватор\""},
+        { "location": "Кривий Ріг, ТРЦ \"Сонячна Галерея\""},
+        { "location": "Полтава, ТРЦ \"Екватор\""},
+        { "location": "Черкаси, ТРЦ \"Любава\""},
+        { "location": "Чернігів, ТРЦ \"Мегацентр\""},
+        { "location": "Тернопіль, ТРЦ \"Подоляни\""},
+        { "location": "Івано-Франківськ, ТРЦ \"Велес\""},
+        { "location": "Ужгород, ТРЦ \"Дастор\""},
+        { "location": "Луцьк, ТРЦ \"ПортCity\""},
+        { "location": "Хмельницький, ТРЦ \"Оазис\""},
+        { "location": "Рівне, ТРЦ \"Злата Плаза\""},
+        { "location": "Миколаїв, ТРЦ \"Таврія\""},
+        { "location": "Суми, ТРЦ \"Мануфактура\""},
+        { "location": "Кам'янець-Подільський, ТРЦ \"Епіцентр\""},
+        { "location": "Чернівці, ТРЦ \"Депот\""},
+        { "location": "Львів, ТРЦ \"King Cross Leopolis\""}
+      ],
+    "listOption": [
+      { "time": "11:00", "endTime":"12:30", "option": "2D" },
+      { "time": "12:45", "endTime":"12:30","option": "3D" },
+      { "time": "12:45", "endTime":"12:30","option": "3D" },
+      { "time": "15:00", "endTime":"12:30","option": "2D" },
+      { "time": "17:15", "endTime":"12:30","option": "IMAX" },
+      { "time": "19:30", "endTime":"12:30","option": "4DX" }
+    ]
+  },
+  { 
+    "movieId": 3,
+    "img": "/images/839e2e589778246c63945ae625643b64905fab12.jpg",
+    "imageURL": "https://cdn.planetakino.ua/4612_minecraft_2025/Media/Posters/vertical/a3294ee7-607d-4c93-9d38-228e46e36884.jpg",
+    "name": "MINECRAFT: Фільм",
+    "Listdate":
+     [ 
+      {"date":"2025-04-29"},
+      {"date":"2025-04-30"},
+      {"date":"2025-05-01"},
+      {"date":"2025-05-02"},
+      {"date":"2025-05-03"},
+      {"date":"2025-05-04"},
+      {"date":"2025-05-05"},
+      {"date":"2025-05-06"},
+      {"date":"2025-05-07"},
+      {"date":"2025-05-08"},
+      {"date":"2025-05-09"},
+      {"date":"2025-05-10"},
+      {"date":"2025-05-11"},
+      {"date":"2025-05-12"},
+      {"date":"2025-05-13"},
+      {"date":"2025-05-14"},
+      {"date":"2025-05-15"},
+      {"date":"2025-05-16"},
+      {"date":"2025-05-17"},
+      {"date":"2025-05-18"},
+      {"date":"2025-05-19"},
+      {"date":"2025-05-20"}
+    ],
+    "seatPrices": [
+      { "type": "GOOD", "price": 150 },
+      { "type": "SUPER LUX", "price": 260 }
+    ],
+    "genres": [
+            "Сімейний",
+            "Пригоди",
+            "Екшн"],
+    "hall":[ {"hall": "Зал №1"}, {"hall": "Зал №2"}, {"hall": "Зал №3"}, {"hall": "Зал №4"},{"hall": "Зал №5"}],
+    "Listlocation":  [
+        { "location": "Київ, River Mall" },
+        { "location": "Київ, Блокбастер" },
+        { "location": "Львів, Forum Lviv" },
+        { "location": "Львів, King Cross Leopolis" },
+        { "location": "Львів, ТРЦ \"Victoria Gardens\"" },
+        { "location": "Одеса, City Center Таїрова" },
+        { "location": "Одеса, City Center Котовський" },
+        { "location": "Харків, Французький Бульвар" },
+        { "location": "Харків, ТРЦ \"Караван\""},
+        { "location": "Дніпро, ТРЦ \"Караван\""},
+        { "location": "Дніпро, ТРЦ \"Мост-Сіті\""},
+        { "location": "Запоріжжя, ТРЦ \"Ашан\""},
+        { "location": "Запоріжжя, ТРЦ \"Екватор\""},
+        { "location": "Кривий Ріг, ТРЦ \"Сонячна Галерея\""},
+        { "location": "Полтава, ТРЦ \"Екватор\""},
+        { "location": "Черкаси, ТРЦ \"Любава\""},
+        { "location": "Чернігів, ТРЦ \"Мегацентр\""},
+        { "location": "Тернопіль, ТРЦ \"Подоляни\""},
+        { "location": "Івано-Франківськ, ТРЦ \"Велес\""},
+        { "location": "Ужгород, ТРЦ \"Дастор\""},
+        { "location": "Луцьк, ТРЦ \"ПортCity\""},
+        { "location": "Хмельницький, ТРЦ \"Оазис\""},
+        { "location": "Рівне, ТРЦ \"Злата Плаза\""},
+        { "location": "Миколаїв, ТРЦ \"Таврія\""},
+        { "location": "Суми, ТРЦ \"Мануфактура\""},
+        { "location": "Кам'янець-Подільський, ТРЦ \"Епіцентр\""},
+        { "location": "Чернівці, ТРЦ \"Депот\""},
+        { "location": "Львів, ТРЦ \"King Cross Leopolis\""}
+      ],
+    "listOption": [
+      { "time": "09:50", "endTime":"12:30","option": "2D" },
+      { "time": "13:30", "endTime":"12:30","option": "2D" },
+      { "time": "16:00", "endTime":"12:30","option": "3D" },
+      { "time": "18:20", "endTime":"12:30","option": "4DX" }
+    ]
+  },
+  { 
+    "movieId": 4,
+    "img": "/images/839e2e589778246c63945ae625643b64905fab12.jpg",
+    "imageURL": "https://cdn.planetakino.ua/14540_greedy-people_2024/Media/Posters/vertical/opt_67f8ce41-21ed-479e-a8d3-01143b3501c8.webp",
+    "name": "Шалені копи",
+    "Listdate":
+     [ 
+      {"date":"2025-04-29"},
+      {"date":"2025-04-30"},
+      {"date":"2025-05-01"},
+      {"date":"2025-05-02"},
+      {"date":"2025-05-03"},
+      {"date":"2025-05-04"},
+      {"date":"2025-05-05"},
+      {"date":"2025-05-06"},
+      {"date":"2025-05-07"},
+      {"date":"2025-05-08"},
+      {"date":"2025-05-09"},
+      {"date":"2025-05-10"},
+      {"date":"2025-05-11"},
+      {"date":"2025-05-12"},
+      {"date":"2025-05-13"},
+      {"date":"2025-05-14"},
+      {"date":"2025-05-15"},
+      {"date":"2025-05-16"},
+      {"date":"2025-05-17"},
+      {"date":"2025-05-18"},
+      {"date":"2025-05-19"},
+      {"date":"2025-05-20"}
+    ],
+    "seatPrices": [
+      { "type": "GOOD", "price": 150 },
+      { "type": "SUPER LUX", "price": 260 }
+    ],
+    "genres": [
+            "Комедія",
+            "Кримінал",
+            "Екшн"
+        ],
+    "hall":[ {"hall": "Зал №1"}, {"hall": "Зал №2"}, {"hall": "Зал №3"}, {"hall": "Зал №4"},{"hall": "Зал №5"}],
+    "Listlocation":  [
+        { "location": "Київ, River Mall" },
+        { "location": "Київ, Блокбастер" },
+        { "location": "Львів, Forum Lviv" },
+        { "location": "Львів, King Cross Leopolis" },
+        { "location": "Львів, ТРЦ \"Victoria Gardens\"" },
+        { "location": "Одеса, City Center Таїрова" },
+        { "location": "Одеса, City Center Котовський" },
+        { "location": "Харків, Французький Бульвар" },
+        { "location": "Харків, ТРЦ \"Караван\""},
+        { "location": "Дніпро, ТРЦ \"Караван\""},
+        { "location": "Дніпро, ТРЦ \"Мост-Сіті\""},
+        { "location": "Запоріжжя, ТРЦ \"Ашан\""},
+        { "location": "Запоріжжя, ТРЦ \"Екватор\""},
+        { "location": "Кривий Ріг, ТРЦ \"Сонячна Галерея\""},
+        { "location": "Полтава, ТРЦ \"Екватор\""},
+        { "location": "Черкаси, ТРЦ \"Любава\""},
+        { "location": "Чернігів, ТРЦ \"Мегацентр\""},
+        { "location": "Тернопіль, ТРЦ \"Подоляни\""},
+        { "location": "Івано-Франківськ, ТРЦ \"Велес\""},
+        { "location": "Ужгород, ТРЦ \"Дастор\""},
+        { "location": "Луцьк, ТРЦ \"ПортCity\""},
+        { "location": "Хмельницький, ТРЦ \"Оазис\""},
+        { "location": "Рівне, ТРЦ \"Злата Плаза\""},
+        { "location": "Миколаїв, ТРЦ \"Таврія\""},
+        { "location": "Суми, ТРЦ \"Мануфактура\""},
+        { "location": "Кам'янець-Подільський, ТРЦ \"Епіцентр\""},
+        { "location": "Чернівці, ТРЦ \"Депот\""},
+        { "location": "Львів, ТРЦ \"King Cross Leopolis\""}
+      ],
+    "listOption": [
+      { "time": "10:30", "endTime":"12:30", "option": "2D" },
+      { "time": "13:20", "endTime":"12:30","option": "2D" },
+      { "time": "14:40", "endTime":"12:30","option": "3D" },
+      { "time": "16:10", "endTime":"12:30", "option": "4DX" },
+      { "time": "17:30", "endTime":"12:30", "option": "2D" },
+      { "time": "19:00", "endTime":"12:30", "option": "3D" }
+    ]
+  },
+  {
+    "movieId": 5,
+    "img": "/images/839e2e589778246c63945ae625643b64905fab12.jpg",
+    "imageURL": "https://cdn.planetakino.ua/10187_28-years-later_2025/Media/Posters/vertical/opt_489f4f66-c9b0-4292-b17c-a13c6cb285fe.jpg",
+    "name": "28 років потому",
+    "Listdate":
+     [ 
+      {"date":"2025-04-29"},
+      {"date":"2025-04-30"},
+      {"date":"2025-05-01"},
+      {"date":"2025-05-02"},
+      {"date":"2025-05-03"},
+      {"date":"2025-05-04"},
+      {"date":"2025-05-05"},
+      {"date":"2025-05-06"},
+      {"date":"2025-05-07"},
+      {"date":"2025-05-08"},
+      {"date":"2025-05-09"},
+      {"date":"2025-05-10"},
+      {"date":"2025-05-11"},
+      {"date":"2025-05-12"},
+      {"date":"2025-05-13"},
+      {"date":"2025-05-14"},
+      {"date":"2025-05-15"},
+      {"date":"2025-05-16"},
+      {"date":"2025-05-17"},
+      {"date":"2025-05-18"},
+      {"date":"2025-05-19"},
+      {"date":"2025-05-20"}
+    ],
+    "seatPrices": [
+      { "type": "GOOD", "price": 150 },
+      { "type": "SUPER LUX", "price": 260 }
+    ],
+    "genres": [
+            "Жахи",
+            "Трилер"
+        ],
+    "hall":[ {"hall": "Зал №1"}, {"hall": "Зал №2"}, {"hall": "Зал №3"}, {"hall": "Зал №4"},{"hall": "Зал №5"}],
+    "Listlocation":  [
+        { "location": "Київ, River Mall" },
+        { "location": "Київ, Блокбастер" },
+        { "location": "Львів, Forum Lviv" },
+        { "location": "Львів, King Cross Leopolis" },
+        { "location": "Львів, ТРЦ \"Victoria Gardens\"" },
+        { "location": "Одеса, City Center Таїрова" },
+        { "location": "Одеса, City Center Котовський" },
+        { "location": "Харків, Французький Бульвар" },
+        { "location": "Харків, ТРЦ \"Караван\""},
+        { "location": "Дніпро, ТРЦ \"Караван\""},
+        { "location": "Дніпро, ТРЦ \"Мост-Сіті\""},
+        { "location": "Запоріжжя, ТРЦ \"Ашан\""},
+        { "location": "Запоріжжя, ТРЦ \"Екватор\""},
+        { "location": "Кривий Ріг, ТРЦ \"Сонячна Галерея\""},
+        { "location": "Полтава, ТРЦ \"Екватор\""},
+        { "location": "Черкаси, ТРЦ \"Любава\""},
+        { "location": "Чернігів, ТРЦ \"Мегацентр\""},
+        { "location": "Тернопіль, ТРЦ \"Подоляни\""},
+        { "location": "Івано-Франківськ, ТРЦ \"Велес\""},
+        { "location": "Ужгород, ТРЦ \"Дастор\""},
+        { "location": "Луцьк, ТРЦ \"ПортCity\""},
+        { "location": "Хмельницький, ТРЦ \"Оазис\""},
+        { "location": "Рівне, ТРЦ \"Злата Плаза\""},
+        { "location": "Миколаїв, ТРЦ \"Таврія\""},
+        { "location": "Суми, ТРЦ \"Мануфактура\""},
+        { "location": "Кам'янець-Подільський, ТРЦ \"Епіцентр\""},
+        { "location": "Чернівці, ТРЦ \"Депот\""},
+        { "location": "Львів, ТРЦ \"King Cross Leopolis\""}
+      ],
+    "listOption": [
+      { "time": "11:00", "endTime":"12:30", "option": "2D" },
+      { "time": "12:45", "endTime":"12:30","option": "3D" },
+      { "time": "15:00", "endTime":"12:30","option": "2D" },
+      { "time": "17:15", "endTime":"12:30", "option": "IMAX" },
+      { "time": "19:30", "endTime":"12:30","option": "4DX" }
+    ]
+  },
+  {
+    "movieId": 6,
+    "img": "/images/839e2e589778246c63945ae625643b64905fab12.jpg",
+    "imageURL": "https://cdn.planetakino.ua/13779_clown-in-a-cornfield_2025/Media/Posters/vertical/opt_7db12742-5097-405b-b7cb-38ae83538eec.webp",
+    "name": "Клоун Френдо",
+    "Listdate":
+     [ 
+      {"date":"2025-04-29"},
+      {"date":"2025-04-30"},
+      {"date":"2025-05-01"},
+      {"date":"2025-05-02"},
+      {"date":"2025-05-03"},
+      {"date":"2025-05-04"},
+      {"date":"2025-05-05"},
+      {"date":"2025-05-06"},
+      {"date":"2025-05-07"},
+      {"date":"2025-05-08"},
+      {"date":"2025-05-09"},
+      {"date":"2025-05-10"},
+      {"date":"2025-05-11"},
+      {"date":"2025-05-12"},
+      {"date":"2025-05-13"},
+      {"date":"2025-05-14"},
+      {"date":"2025-05-15"},
+      {"date":"2025-05-16"},
+      {"date":"2025-05-17"},
+      {"date":"2025-05-18"},
+      {"date":"2025-05-19"},
+      {"date":"2025-05-20"}
+    ],
+    "seatPrices": [
+      { "type": "GOOD", "price": 150 },
+      { "type": "SUPER LUX", "price": 260 }
+    ],
+    "genres": [
+            "Жахи",
+            "Трилер",
+            "Комедія"
+        ],
+    "hall":[ {"hall": "Зал №1"}, {"hall": "Зал №2"}, {"hall": "Зал №3"}, {"hall": "Зал №4"},{"hall": "Зал №5"}],
+    "Listlocation":  [
+        { "location": "Київ, River Mall" },
+        { "location": "Київ, Блокбастер" },
+        { "location": "Львів, Forum Lviv" },
+        { "location": "Львів, King Cross Leopolis" },
+        { "location": "Львів, ТРЦ \"Victoria Gardens\"" },
+        { "location": "Одеса, City Center Таїрова" },
+        { "location": "Одеса, City Center Котовський" },
+        { "location": "Харків, Французький Бульвар" },
+        { "location": "Харків, ТРЦ \"Караван\""},
+        { "location": "Дніпро, ТРЦ \"Караван\""},
+        { "location": "Дніпро, ТРЦ \"Мост-Сіті\""},
+        { "location": "Запоріжжя, ТРЦ \"Ашан\""},
+        { "location": "Запоріжжя, ТРЦ \"Екватор\""},
+        { "location": "Кривий Ріг, ТРЦ \"Сонячна Галерея\""},
+        { "location": "Полтава, ТРЦ \"Екватор\""},
+        { "location": "Черкаси, ТРЦ \"Любава\""},
+        { "location": "Чернігів, ТРЦ \"Мегацентр\""},
+        { "location": "Тернопіль, ТРЦ \"Подоляни\""},
+        { "location": "Івано-Франківськ, ТРЦ \"Велес\""},
+        { "location": "Ужгород, ТРЦ \"Дастор\""},
+        { "location": "Луцьк, ТРЦ \"ПортCity\""},
+        { "location": "Хмельницький, ТРЦ \"Оазис\""},
+        { "location": "Рівне, ТРЦ \"Злата Плаза\""},
+        { "location": "Миколаїв, ТРЦ \"Таврія\""},
+        { "location": "Суми, ТРЦ \"Мануфактура\""},
+        { "location": "Кам'янець-Подільський, ТРЦ \"Епіцентр\""},
+        { "location": "Чернівці, ТРЦ \"Депот\""},
+        { "location": "Львів, ТРЦ \"King Cross Leopolis\""}
+      ],
+    "listOption": [
+      { "time": "09:50", "endTime":"12:30", "option": "2D" },
+      { "time": "13:30", "endTime":"12:30","option": "2D" },
+      { "time": "16:00", "endTime":"12:30","option": "3D" },
+      { "time": "18:20", "endTime":"12:30","option": "4DX" }
+    ]
+  },
+  {
+    "movieId": 7,
+    "img": "/images/839e2e589778246c63945ae625643b64905fab12.jpg",
+    "imageURL": "https://cdn.planetakino.ua/9069_mission-impossible-the-final-reckoning_2024/Media/Posters/vertical/opt_f6b487e0-45f2-45fe-8d57-078e142c61a7.webp",
+    "name": "Місія неможлива: Фінальна розплата",
+    "Listdate":
+     [ 
+      {"date":"2025-04-29"},
+      {"date":"2025-04-30"},
+      {"date":"2025-05-01"},
+      {"date":"2025-05-02"},
+      {"date":"2025-05-03"},
+      {"date":"2025-05-04"},
+      {"date":"2025-05-05"},
+      {"date":"2025-05-06"},
+      {"date":"2025-05-07"},
+      {"date":"2025-05-08"},
+      {"date":"2025-05-09"},
+      {"date":"2025-05-10"},
+      {"date":"2025-05-11"},
+      {"date":"2025-05-12"},
+      {"date":"2025-05-13"},
+      {"date":"2025-05-14"},
+      {"date":"2025-05-15"},
+      {"date":"2025-05-16"},
+      {"date":"2025-05-17"},
+      {"date":"2025-05-18"},
+      {"date":"2025-05-19"},
+      {"date":"2025-05-20"}
+    ],
+    "seatPrices": [
+      { "type": "GOOD", "price": 150 },
+      { "type": "SUPER LUX", "price": 260 }
+    ],
+    "genres": [
+            "Пригоди",
+            "Eкшн"
+        ],
+    "hall":[ {"hall": "Зал №1"}, {"hall": "Зал №2"}, {"hall": "Зал №3"}, {"hall": "Зал №4"},{"hall": "Зал №5"}],
+    "Listlocation":  [
+        { "location": "Київ, River Mall" },
+        { "location": "Київ, Блокбастер" },
+        { "location": "Львів, Forum Lviv" },
+        { "location": "Львів, King Cross Leopolis" },
+        { "location": "Львів, ТРЦ \"Victoria Gardens\"" },
+        { "location": "Одеса, City Center Таїрова" },
+        { "location": "Одеса, City Center Котовський" },
+        { "location": "Харків, Французький Бульвар" },
+        { "location": "Харків, ТРЦ \"Караван\""},
+        { "location": "Дніпро, ТРЦ \"Караван\""},
+        { "location": "Дніпро, ТРЦ \"Мост-Сіті\""},
+        { "location": "Запоріжжя, ТРЦ \"Ашан\""},
+        { "location": "Запоріжжя, ТРЦ \"Екватор\""},
+        { "location": "Кривий Ріг, ТРЦ \"Сонячна Галерея\""},
+        { "location": "Полтава, ТРЦ \"Екватор\""},
+        { "location": "Черкаси, ТРЦ \"Любава\""},
+        { "location": "Чернігів, ТРЦ \"Мегацентр\""},
+        { "location": "Тернопіль, ТРЦ \"Подоляни\""},
+        { "location": "Івано-Франківськ, ТРЦ \"Велес\""},
+        { "location": "Ужгород, ТРЦ \"Дастор\""},
+        { "location": "Луцьк, ТРЦ \"ПортCity\""},
+        { "location": "Хмельницький, ТРЦ \"Оазис\""},
+        { "location": "Рівне, ТРЦ \"Злата Плаза\""},
+        { "location": "Миколаїв, ТРЦ \"Таврія\""},
+        { "location": "Суми, ТРЦ \"Мануфактура\""},
+        { "location": "Кам'янець-Подільський, ТРЦ \"Епіцентр\""},
+        { "location": "Чернівці, ТРЦ \"Депот\""},
+        { "location": "Львів, ТРЦ \"King Cross Leopolis\""}
+      ],
+    "listOption": [
+      { "time": "10:00", "endTime":"12:30","option": "3D" },
+      { "time": "12:30", "endTime":"12:30","option": "IMAX" },
+      { "time": "15:45", "endTime":"12:30","option": "2D" },
+      { "time": "18:00", "endTime":"12:30","option": "4DX" }
+    ]
+  },
+  {
+    "movieId": 8,
+    "img": "/images/839e2e589778246c63945ae625643b64905fab12.jpg",
+    "imageURL": "https://cdn.planetakino.ua/14969_being-maria_2024/Media/Posters/vertical/opt_b58a5b8e-9794-4069-a401-53481f2ad451.webp",
+    "name": "Непристойна пропозиція",
+    "Listdate":
+     [ 
+      {"date":"2025-04-29"},
+      {"date":"2025-04-30"},
+      {"date":"2025-05-01"},
+      {"date":"2025-05-02"},
+      {"date":"2025-05-03"},
+      {"date":"2025-05-04"},
+      {"date":"2025-05-05"},
+      {"date":"2025-05-06"},
+      {"date":"2025-05-07"},
+      {"date":"2025-05-08"},
+      {"date":"2025-05-09"},
+      {"date":"2025-05-10"},
+      {"date":"2025-05-11"},
+      {"date":"2025-05-12"},
+      {"date":"2025-05-13"},
+      {"date":"2025-05-14"},
+      {"date":"2025-05-15"},
+      {"date":"2025-05-16"},
+      {"date":"2025-05-17"},
+      {"date":"2025-05-18"},
+      {"date":"2025-05-19"},
+      {"date":"2025-05-20"}
+    ],
+    "seatPrices": [
+      { "type": "GOOD", "price": 150 },
+      { "type": "SUPER LUX", "price": 260 }
+    ],
+    "genres": [
+            "Мелодрама",
+            "Біографічний"
+        ],
+    "hall":[ {"hall": "Зал №1"}, {"hall": "Зал №2"}, {"hall": "Зал №3"}, {"hall": "Зал №4"},{"hall": "Зал №5"}],
+    "Listlocation":  [
+        { "location": "Київ, River Mall" },
+        { "location": "Київ, Блокбастер" },
+        { "location": "Львів, Forum Lviv" },
+        { "location": "Львів, King Cross Leopolis" },
+        { "location": "Львів, ТРЦ \"Victoria Gardens\"" },
+        { "location": "Одеса, City Center Таїрова" },
+        { "location": "Одеса, City Center Котовський" },
+        { "location": "Харків, Французький Бульвар" },
+        { "location": "Харків, ТРЦ \"Караван\""},
+        { "location": "Дніпро, ТРЦ \"Караван\""},
+        { "location": "Дніпро, ТРЦ \"Мост-Сіті\""},
+        { "location": "Запоріжжя, ТРЦ \"Ашан\""},
+        { "location": "Запоріжжя, ТРЦ \"Екватор\""},
+        { "location": "Кривий Ріг, ТРЦ \"Сонячна Галерея\""},
+        { "location": "Полтава, ТРЦ \"Екватор\""},
+        { "location": "Черкаси, ТРЦ \"Любава\""},
+        { "location": "Чернігів, ТРЦ \"Мегацентр\""},
+        { "location": "Тернопіль, ТРЦ \"Подоляни\""},
+        { "location": "Івано-Франківськ, ТРЦ \"Велес\""},
+        { "location": "Ужгород, ТРЦ \"Дастор\""},
+        { "location": "Луцьк, ТРЦ \"ПортCity\""},
+        { "location": "Хмельницький, ТРЦ \"Оазис\""},
+        { "location": "Рівне, ТРЦ \"Злата Плаза\""},
+        { "location": "Миколаїв, ТРЦ \"Таврія\""},
+        { "location": "Суми, ТРЦ \"Мануфактура\""},
+        { "location": "Кам'янець-Подільський, ТРЦ \"Епіцентр\""},
+        { "location": "Чернівці, ТРЦ \"Депот\""},
+        { "location": "Львів, ТРЦ \"King Cross Leopolis\""}
+      ],
+    "listOption": [
+      { "time": "11:15", "endTime":"12:30", "option": "2D" },
+      { "time": "13:45", "endTime":"12:30", "option": "3D" },
+      { "time": "16:10", "endTime":"12:30", "option": "IMAX" }
+    ]
+  },
+  {
+    "img": "/images/839e2e589778246c63945ae625643b64905fab12.jpg",
+    "name": "Місто у вогні",
+    "listOption": [
+      { "time": "10:20", "option": "2D" },
+      { "time": "14:00", "option": "3D" },
+      { "time": "17:30", "option": "4DX" },
+      { "time": "20:00", "option": "IMAX" }
+    ]
+  },
+
+  {
+    "img": "/images/839e2e589778246c63945ae625643b64905fab12.jpg",
+    "name": "Таємний агент",
+    "listOption": [
+      { "time": "09:40", "option": "2D" },
+      { "time": "12:10", "option": "3D" },
+      { "time": "15:00", "option": "IMAX" },
+      { "time": "18:25", "option": "4DX" }
+    ]
+  },
+  {
+    "img": "/images/839e2e589778246c63945ae625643b64905fab12.jpg",
+    "name": "Виживання",
+    "listOption": [
+      { "time": "10:15", "option": "2D" },
+      { "time": "13:40", "option": "2D" },
+      { "time": "16:50", "option": "3D" }
+    ]
+  },
+  {
+    "img": "/images/839e2e589778246c63945ae625643b64905fab12.jpg",
+    "name": "Останній рубіж",
+    "listOption": [
+      { "time": "11:00", "option": "IMAX" },
+      { "time": "14:30", "option": "4DX" },
+      { "time": "19:10", "option": "2D" }
+    ]
+  },
+  {
+    "img": "/images/839e2e589778246c63945ae625643b64905fab12.jpg",
+    "name": "Загублений світ",
+    "listOption": [
+      { "time": "09:55", "option": "2D" },
+      { "time": "13:15", "option": "3D" },
+      { "time": "16:40", "option": "IMAX" }
+    ]
+  },
+  {
+    "img": "/images/839e2e589778246c63945ae625643b64905fab12.jpg",
+    "name": "Нічні вогні",
+    "listOption": [
+      { "time": "10:05", "option": "2D" },
+      { "time": "13:50", "option": "2D" },
+      { "time": "17:00", "option": "4DX" }
+    ]
+  },
+  {
+    "img": "/images/839e2e589778246c63945ae625643b64905fab12.jpg",
+    "name": "Аудитор 2",
+    "listOption": [
+      { "time": "10:30", "option": "2D" },
+      { "time": "13:20", "option": "2D" },
+      { "time": "14:40", "option": "3D" },
+      { "time": "16:10", "option": "4DX" },
+      { "time": "17:30", "option": "2D" },
+      { "time": "19:00", "option": "3D" }
+    ]
+  },
+  {
+    "img": "/images/839e2e589778246c63945ae625643b64905fab12.jpg",
+    "name": "Вогні великого міста",
+    "listOption": [
+      { "time": "11:00", "option": "2D" },
+      { "time": "12:45", "option": "3D" },
+      { "time": "15:00", "option": "2D" },
+      { "time": "17:15", "option": "IMAX" },
+      { "time": "19:30", "option": "4DX" }
+    ]
+  },
+  {
+    "img": "/images/839e2e589778246c63945ae625643b64905fab12.jpg",
+    "name": "Небезпечна гра",
+    "listOption": [
+      { "time": "09:50", "option": "2D" },
+      { "time": "13:30", "option": "2D" },
+      { "time": "16:00", "option": "3D" },
+      { "time": "18:20", "option": "4DX" }
+    ]
+  },
+  {
+    "img": "/images/839e2e589778246c63945ae625643b64905fab12.jpg",
+    "name": "Аудитор 2",
+    "listOption": [
+      { "time": "10:30", "option": "2D" },
+      { "time": "13:20", "option": "2D" },
+      { "time": "14:40", "option": "3D" },
+      { "time": "16:10", "option": "4DX" },
+      { "time": "17:30", "option": "2D" },
+      { "time": "19:00", "option": "3D" }
+    ]
+  },
+  {
+    "img": "/images/839e2e589778246c63945ae625643b64905fab12.jpg",
+    "name": "Вогні великого міста",
+    "listOption": [
+      { "time": "11:00", "option": "2D" },
+      { "time": "12:45", "option": "3D" },
+      { "time": "15:00", "option": "2D" },
+      { "time": "17:15", "option": "IMAX" },
+      { "time": "19:30", "option": "4DX" }
+    ]
+  },
+  {
+    "img": "/images/839e2e589778246c63945ae625643b64905fab12.jpg",
+    "name": "Небезпечна гра",
+    "listOption": [
+      { "time": "09:50", "option": "2D" },
+      { "time": "13:30", "option": "2D" },
+      { "time": "16:00", "option": "3D" },
+      { "time": "18:20", "option": "4DX" }
+    ]
+  },
+  {
+    "img": "/images/839e2e589778246c63945ae625643b64905fab12.jpg",
+    "name": "Зоряна Одисея",
+    "listOption": [
+      { "time": "10:00", "option": "3D" },
+      { "time": "12:30", "option": "IMAX" },
+      { "time": "15:45", "option": "2D" },
+      { "time": "18:00", "option": "4DX" }
+    ]
+  },
+  {
+    "img": "/images/839e2e589778246c63945ae625643b64905fab12.jpg",
+    "name": "Таємниці океану",
+    "listOption": [
+      { "time": "11:15", "option": "2D" },
+      { "time": "13:45", "option": "3D" },
+      { "time": "16:10", "option": "IMAX" }
+    ]
+  },
+  {
+    "img": "/images/839e2e589778246c63945ae625643b64905fab12.jpg",
+    "name": "Місто у вогні",
+    "listOption": [
+      { "time": "10:20", "option": "2D" },
+      { "time": "14:00", "option": "3D" },
+      { "time": "17:30", "option": "4DX" },
+      { "time": "20:00", "option": "IMAX" }
+    ]
+  },
+
+  {
+    "img": "/images/839e2e589778246c63945ae625643b64905fab12.jpg",
+    "name": "Таємний агент",
+    "listOption": [
+      { "time": "09:40", "option": "2D" },
+      { "time": "12:10", "option": "3D" },
+      { "time": "15:00", "option": "IMAX" },
+      { "time": "18:25", "option": "4DX" }
+    ]
+  },
+  {
+    "img": "/images/839e2e589778246c63945ae625643b64905fab12.jpg",
+    "name": "Виживання",
+    "listOption": [
+      { "time": "10:15", "option": "2D" },
+      { "time": "13:40", "option": "2D" },
+      { "time": "16:50", "option": "3D" }
+    ]
+  },
+  {
+    "img": "/images/839e2e589778246c63945ae625643b64905fab12.jpg",
+    "name": "Останній рубіж",
+    "listOption": [
+      { "time": "11:00", "option": "IMAX" },
+      { "time": "14:30", "option": "4DX" },
+      { "time": "19:10", "option": "2D" }
+    ]
+  },
+  {
+    "img": "/images/839e2e589778246c63945ae625643b64905fab12.jpg",
+    "name": "Загублений світ",
+    "listOption": [
+      { "time": "09:55", "option": "2D" },
+      { "time": "13:15", "option": "3D" },
+      { "time": "16:40", "option": "IMAX" }
+    ]
+  },
+  {
+    "img": "/images/839e2e589778246c63945ae625643b64905fab12.jpg",
+    "name": "Нічні вогні",
+    "listOption": [
+      { "time": "10:05", "option": "2D" },
+      { "time": "13:50", "option": "2D" },
+      { "time": "17:00", "option": "4DX" }
+    ]
+  }
+]
