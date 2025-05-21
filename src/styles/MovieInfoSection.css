@@ -1,6 +1,5 @@
 .movie-container {
     color: var(--color-light);
-    margin: 90px 30px;
 }
 
 .movie-content {
@@ -101,6 +100,27 @@
     transform: scale(1.1);
 }
 
+.genre-link {
+    background-color: rgba(160, 190, 217, 0.2);
+    color: var(--color-primary);
+    padding: 8px 16px;
+    border-radius: 20px;
+    font-size: 14px;
+    text-decoration: none;
+    border: 2px solid transparent;
+    transition: border-color 0.3s ease;
+    cursor: pointer;
+    user-select: none;
+    display: inline-block;
+    margin-right: 6px; 
+  }
+  
+  .genre-link:hover,
+  .genre-link:focus {
+    border-color: var(--color-neutral); 
+    outline: none; 
+  }
+  
 @media (max-width: 1023px) {
     .movie-content {
         flex-direction: column;
