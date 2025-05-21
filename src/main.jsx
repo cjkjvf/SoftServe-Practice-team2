@@ -6,9 +6,9 @@ import App from './App.jsx';
 import BookingProvider from './choice/choiceContext/BookingContext';
 
 createRoot(document.getElementById('root')).render(
-  <StrictMode>
+  // <StrictMode>
     <BookingProvider> 
       <App />
     </BookingProvider>
-  </StrictMode>
+  // </StrictMode>
 );
