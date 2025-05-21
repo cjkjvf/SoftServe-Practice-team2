@@ -43,101 +43,7 @@
     color: var(--color-light);
     border: none;
     padding: 10px 20px;
-    font-size:var(--text-size);
-    border-radius: 8px;
-    cursor: pointer;
-    margin-top: 8px;
-    align-self: center;
-    white-space: nowrap;
-    transition: background-color 0.3s ease;
-}
-
-.found-movies-scroll-wrapper {
-    width: 100%;
-    margin-top: 16px;
-    overflow-y: auto;
-    flex-grow: 1;
-}
-
-.found-movies-container {
-    display: flex;
-    flex-direction: column;
-    gap: 16px;
-    width: 100%;
-    padding-bottom: 8px;
-    box-sizing: border-box;
-}
-
-.search-movie-card {
-    background-color: #222a45;
-    border-radius: 12px;
-    padding: 12px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    width: 100%;
-    box-sizing: border-box;
-    color:var(--color-neutral);
-}
-
-.search-movie-card img {
-    width: 100%;
-    border-radius: 8px;
-    object-fit: cover;
-    margin-bottom: 8px;
-}
-
-.search-movie-card h3 {
-    margin: 0;
-    font-size: 18px;
-    text-align: center;
-}
-.popup-overlay {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100vw;
-    height: 100vh;
-    background-color: rgba(17, 24, 38, 0.7);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    z-index: 9999;
-    padding: 20px;
-    box-sizing: border-box;
-}
-
-.popup-content {
-    background-color: var(--color-light);
-    padding: 24px;
-    border-radius: 12px;
-    width: 90%;
-    max-width: 500px;
-    max-height: 80vh;
-    color: var(--color-bg);
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    box-sizing: border-box;
-    overflow: auto;
-}
-
-.popup-content input[type="text"] {
-    width: 100%;
-    padding: 12px 16px;
-    border-radius: 8px;
-    border: 1px solid #ccc;
     font-size: var(--text-size);
-    box-sizing: border-box;
-    outline: none;
-}
-
-.popup-content button {
-    background-color: var(--color-orange);
-    color: var(--color-light);
-    border: none;
-    padding: 10px 20px;
-    font-size:var(--text-size);
     border-radius: 8px;
     cursor: pointer;
     margin-top: 8px;
@@ -151,7 +57,15 @@
     margin-top: 16px;
     overflow-y: auto;
     flex-grow: 1;
+
+    -ms-overflow-style: none;  
+    scrollbar-width: none;     
 }
+
+.found-movies-scroll-wrapper::-webkit-scrollbar {
+    display: none;      
+}
+
 
 .found-movies-container {
     display: flex;
@@ -171,7 +85,7 @@
     align-items: center;
     width: 100%;
     box-sizing: border-box;
-    color:var(--color-neutral);
+    color: var(--color-neutral);
 }
 
 .search-movie-card img {
@@ -186,3 +100,85 @@
     font-size: 18px;
     text-align: center;
 }
+
+.error-message {
+    color: red;
+    margin-top: 10px;
+    font-size: 14px;
+}
+
+.search-header {
+    display: flex;
+    gap: 8px;
+    align-items: center;
+    margin-bottom: 10px;
+  }
+  
+  .filter-toggle {
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    padding: 4px;
+  }
+  
+  .filters-wrapper {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 10px;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  
+  .filters-wrapper select {
+    padding: 6px 10px;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+  }
+  .filters {
+    display: flex;
+    flex-direction: row;
+    gap: 16px;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 16px;
+  }
+  
+  .filters select {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    background-color: #fff8f0;  
+    border: 2px solid #f97316; 
+    color: #c2410c;           
+    padding: 10px 40px 10px 15px;
+    border-radius: 8px;
+    font-size: 16px;
+    cursor: pointer;
+    box-shadow: 0 2px 6px rgba(249, 115, 22, 0.3);
+    background-repeat: no-repeat;
+    background-position: right 15px center;
+    background-size: 12px 8px;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .filters select:focus {
+    outline: none;
+    border-color: #ea580c;
+    box-shadow: 0 0 8px #ea580c;
+  }
+  
+  
+  .filters select {
+    background-repeat: no-repeat;
+    background-position: right 15px center;
+    background-size: 12px 8px;
+  }
+  
+  @media (max-width: 480px) {
+    .filters select {
+      font-size: 14px;
+      min-width: 100px; 
+      max-width: none;
+    }
+  }
+  
